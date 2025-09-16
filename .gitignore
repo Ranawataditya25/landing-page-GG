@@ -21,6 +21,7 @@ vite.config.ts.*
 
 # IDE / local settings
 .replit
+replit.md
 settings.json
 
 attached_assets/
