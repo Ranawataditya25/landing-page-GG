@@ -1,19 +1,19 @@
 # dependencies
-node_modules
+node_modules/
 .DS_Store
 
 # build
-dist
+dist/
 *.tar.gz
 
 # backend/server stuff (not needed for frontend)
-server
-shared
+server/
+shared/
 
 # misc
-server/public
-/server/index.ts
-/shared/schema.ts
+server/public/
+server/index.ts
+shared/schema.ts
 
 # ignore only backup configs, not the real one
 vite.config.ts.*
