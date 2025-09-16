@@ -1,0 +1,134 @@
+✅ 📄 Landing Page Design Prompt for "Good Guiders for India"
+🎯 Objective:
+Design and develop a responsive landing page for the “Good Guiders for India” platform that:
+
+Clearly presents the app’s features and benefits
+
+Encourages early student registration
+
+Offers referral and earning opportunities
+
+Integrates WhatsApp communication and a contact email form
+
+Provides a seamless experience across web, tablet, and mobile screens
+
+✨ Visual & Functional Guidelines:
+1. Header Section
+Logo on the left (Placeholder: "Good Guiders for India")
+
+Navigation links:
+
+Home
+
+Features
+
+About
+
+Contact
+
+Login / Register
+
+Call-to-action (CTA) button: “Get Early Access – 20% Off!”
+
+2. Hero Section
+A clean, visually appealing hero banner with:
+
+Tagline: "India’s #1 Mentorship & Career Guidance App for Students"
+
+Sub-tagline: "From Class 6 to Career – One App, All Answers"
+
+CTA Button: “Join Now & Save 20%”
+
+A vector or image representing mentorship (students + mentors on screen)
+
+WhatsApp floating button (bottom-right corner, responsive)
+
+3. Core Features Section (Use icons + brief text)
+Grid layout (2 or 3 per row, responsive):
+
+🎓 Academic Mentorship
+
+🧭 Career Counseling
+
+🌍 Study Abroad Guidance
+
+👩‍💼 HR & Job Assistance
+
+🧠 Psychological Support
+
+🧪 Mock Tests & Practice
+
+🤝 One-to-One Mentorship
+
+📈 Skill Development & Training
+
+📚 Stream & Subject Help
+
+📅 Career Events & Alerts
+
+Each feature has:
+
+A small icon
+
+Title
+
+Short one-line explanation
+
+4. Refer & Earn Section
+Highlight with contrasting background color:
+
+Title: “Refer Your Friends & Earn Rewards!”
+
+Description: “Help others join our community and earn up to ₹500 per referral!”
+
+CTA: “Refer Now” button with form/modal
+
+5. Early Registration Offer Section
+Promo banner or card-style section
+
+Headline: “Register Early and Get 20% Off!”
+
+Small print: “Limited offer for the first 500 students”
+
+CTA button: “Claim Your Discount”
+
+6. Contact & WhatsApp Integration
+Embed a WhatsApp chat button:
+
+Use WhatsApp API: https://wa.me/91XXXXXXXXXX?text=Hello%20Team%20GoodGuiders
+
+Opens WhatsApp chat directly
+
+Simple Contact Us form (HTML):
+
+Name
+
+Email
+
+Subject
+
+Message
+
+Button: “Send Message”
+
+Shows: “Thank you for contacting us. Our team will reach out shortly.”
+
+7. Testimonials / Success Stories (Optional)
+Carousel or grid of 2–3 testimonials
+
+From students who got help via mentorship, job prep, career counseling, etc.
+
+8. Footer Section
+Include:
+
+About Us
+
+Terms & Conditions
+
+Privacy Policy
+
+Social Media Icons (Instagram, LinkedIn, Twitter, WhatsApp)
+
+Newsletter subscription input
+
+Copyright © 2025

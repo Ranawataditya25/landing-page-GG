@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+.DS_Store
+
+# build
+dist
+*.tar.gz
+
+# backend/server stuff (not needed for frontend)
+server
+shared
+
+# misc
+server/public
+/server/index.ts
+/shared/schema.ts
+
+# ignore only backup configs, not the real one
+vite.config.ts.*
+!vite.config.ts
