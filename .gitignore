@@ -18,3 +18,10 @@ shared/schema.ts
 # ignore only backup configs, not the real one
 vite.config.ts.*
 !vite.config.ts
+
+# IDE / local settings
+.replit
+settings.json
+components.json
+
+attached_assets/
