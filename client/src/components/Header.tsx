@@ -13,6 +13,18 @@ export function Header() {
     }
   };
 
+const navigateToMainApp = (path: string) => {
+  const mainAppBase = "http://localhost:5173/bootstrapreact/medixo";
+
+  if (window.parent && window.parent !== window) {
+    window.parent.postMessage({ action: "navigate", path }, mainAppBase);
+  } else {
+    window.location.href = `${mainAppBase}${path}`;
+  }
+};
+
+
+
   return (
     <header className="bg-'hsl(222, 36%, 72%)' shadow-'0 2px 4px rgba(59, 130, 246, 0.5)' top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,11 +61,12 @@ export function Header() {
               Contact
             </button>
             <button
-              onClick={() => scrollToSection("login")}
-              className="text-gray-700 hover:text-primary font-medium transition-colors"
-            >
-              Login / Register
-            </button>
+  onClick={() => navigateToMainApp("/login")}
+  className="text-gray-700 hover:text-primary font-medium transition-colors"
+>
+  Login 
+</button>
+
           </nav>
 
           {/* CTA Button */}
@@ -106,11 +119,12 @@ export function Header() {
                 Contact
               </button>
               <button
-                onClick={() => scrollToSection("login")}
-                className="text-gray-700 hover:text-orange font-medium py-2 text-left"
-              >
-                Login / Register
-              </button>
+  onClick={() => navigateToMainApp("/login")}
+  className="text-gray-700 hover:text-orange font-medium py-2 text-left"
+>
+  Login
+</button>
+
               <Button
                 className="bg-secondary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-lg mt-4 w-full"
                 onClick={() => scrollToSection("early-registration")}
