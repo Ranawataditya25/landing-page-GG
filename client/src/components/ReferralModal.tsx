@@ -1,13 +1,11 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertReferralSchema, type InsertReferral } from "@/lib/schema";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
 interface ReferralModalProps {
@@ -17,7 +15,7 @@ interface ReferralModalProps {
 
 export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
   const { toast } = useToast();
-  
+
   const form = useForm<InsertReferral>({
     resolver: zodResolver(insertReferralSchema),
     defaultValues: {
@@ -30,21 +28,36 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertReferral) => {
-      const response = await apiRequest("POST", "/api/referral", data);
+      const response = await fetch(
+        "https://goodguiders-maxbrain.onrender.com/api/storage/referral",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData?.error || "Failed to submit referral");
+      }
+
       return response.json();
     },
     onSuccess: (data) => {
       toast({
         title: "Success!",
-        description: data.message,
+        description: data.message || "Referral submitted successfully!",
       });
       form.reset();
       onClose();
     },
-    onError: (error) => {
+    onError: (error: any) => {
       toast({
         title: "Error",
-        description: "Failed to submit referral. Please try again.",
+        description: error?.message || "Failed to submit referral. Please try again.",
         variant: "destructive",
       });
     },
@@ -60,7 +73,7 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-gray-900">Refer & Earn</DialogTitle>
         </DialogHeader>
-        
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
@@ -76,7 +89,7 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="referrerEmail"
@@ -90,7 +103,7 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="friendName"
@@ -104,7 +117,7 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="friendEmail"
@@ -118,9 +131,9 @@ export function ReferralModal({ isOpen, onClose }: ReferralModalProps) {
                 </FormItem>
               )}
             />
-            
-            <Button 
-              type="submit" 
+
+            <Button
+              type="submit"
               className="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
               disabled={mutation.isPending}
             >
