@@ -14,7 +14,7 @@ export function Header() {
   };
 
 const navigateToMainApp = (path: string) => {
-  const mainAppBase = "http://localhost:5173/bootstrapreact/medixo";
+  const mainAppBase = "https://goodguiders.onrender.com";
 
   if (window.parent && window.parent !== window) {
     window.parent.postMessage({ action: "navigate", path }, mainAppBase);
