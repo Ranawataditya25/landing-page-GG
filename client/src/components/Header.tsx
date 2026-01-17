@@ -14,13 +14,10 @@ export function Header() {
   };
 
 const navigateToMainApp = (path: string) => {
-  const mainAppBase = "http://localhost:5173/bootstrapreact/medixo";
+  const mainAppBase = "https://goodguiders.onrender.com"; 
+  // ↑ yahan apna MAIN FRONTEND static site URL daalna
 
-  if (window.parent && window.parent !== window) {
-    window.parent.postMessage({ action: "navigate", path }, mainAppBase);
-  } else {
-    window.location.href = `${mainAppBase}${path}`;
-  }
+  window.location.href = `${mainAppBase}${path}`;
 };
 
 
