@@ -15,6 +15,7 @@ export default function Home() {
       <Hero />
       <Features />
       <ReferEarn />
+      
       <EarlyRegistration />
       <Testimonials />
       <Contact />
