@@ -1127,7 +1127,7 @@ export function Header() {
   };
 
   const navigateToMainApp = (path: string) => {
-    const mainAppBase = "https://goodguiders.onrender.com";
+    const mainAppBase = "https://app.goodguiders.com";
     window.location.href = `${mainAppBase}${path}`;
   };
 
