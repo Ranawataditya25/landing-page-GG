@@ -3524,19 +3524,21 @@ import {
 const features = [
   {
     icon: Users,
-    title: "🤝 1:1 Mentorship",
+    // title: "🤝 1:1 Mentorship",
+     title: "🤝 Evaluate",
     description:
       "Personalized guidance sessions with experienced mentors to help students achieve their academic and career goals.",
   },
   {
     icon: FileText,
-    title: "🧪 Mock Tests & Practice",
+    // title: "🧪 Mock Tests & Practice",
+     title: "🧪 Educate",
     description:
       "Practice with realistic mock tests, previous year papers, and detailed performance analytics.",
   },
   {
     icon: Heart,
-    title: "🧠 Psychological Support",
+    title: "🧠 Elevate",
     description:
       "Mental health support, stress management, and counseling for academic and personal challenges.",
   },
