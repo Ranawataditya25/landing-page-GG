@@ -979,15 +979,27 @@ export default function News() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("https://goodguiders-maxbrain.onrender.com/api/news");
+      const apiUrl = import.meta.env.VITE_NEWS_API_URL || "https://goodguiders-maxbrain.onrender.com/api/news";
+      
+      // Use CORS proxy as fallback if direct fetch fails
+      const corsProxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
+      
+      console.log("Fetching from:", corsProxyUrl);
+      const response = await fetch(corsProxyUrl);
+      console.log("Response status:", response.status);
+      
       if (!response.ok) {
-        throw new Error("सर्वर से डेटा नहीं मिल पाया!");
+        throw new Error("Failed to load news");
       }
-      const data = await response.json();
-      setNews(Array.isArray(data) ? data : []);
+      const responseData = await response.json();
+      console.log("API Response data:", responseData);
+      
+      // Extract the data array from the response
+      const newsArray = responseData.data && Array.isArray(responseData.data) ? responseData.data : [];
+      setNews(newsArray);
     } catch (err: any) {
-      // अगर सर्वर सो रहा है या CORS एरर है तो आसान संदेश दिखाएं
-      setError("Failed to fetch. सर्वर लोड हो रहा है, कृपया नीचे बटन पर क्लिक करके दोबारा कोशिश करें।");
+      console.error("Fetch error:", err);
+      setError("Failed to fetch news. Please try again.");
     } finally {
       setLoading(false);
     }
