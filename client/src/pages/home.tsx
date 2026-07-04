@@ -5,6 +5,7 @@ import { ReferEarn } from "@/components/ReferEarn";
 import { EarlyRegistration } from "@/components/EarlyRegistration";
 import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
+import News from "@/components/News";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <EarlyRegistration />
       <Testimonials />
       <Contact />
+      <News />
       <Footer />
       <WhatsAppFloat />
     </div>

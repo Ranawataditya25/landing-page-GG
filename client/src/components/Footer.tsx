@@ -321,13 +321,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">Copyright © 2025 Good Guiders for India. All rights reserved.</p>
-        </div>
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center space-y-2">
-  <p className="text-gray-400">
-    Copyright © 2025 Good Guiders for India. All rights reserved.
-  </p>
-
-  <p className="text-gray-400 text-sm">
+           <p className="text-gray-400 text-sm">
     Designed &amp; Developed by{" "}
     <a
       href="https://maxbraintech.com/"
@@ -338,7 +332,8 @@ export function Footer() {
       Maxbrain Technologies
     </a>
   </p>
-</div>
+        </div>
+  
       </div>
     </footer>
   );
