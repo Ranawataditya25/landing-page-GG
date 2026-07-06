@@ -976,34 +976,47 @@ export default function News() {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const fetchNews = async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const apiUrl = import.meta.env.VITE_NEWS_API_URL || "https://goodguiders-maxbrain.onrender.com/api/news";
-      
-      // Use CORS proxy as fallback if direct fetch fails
-      const corsProxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
-      
-      console.log("Fetching from:", corsProxyUrl);
-      const response = await fetch(corsProxyUrl);
-      console.log("Response status:", response.status);
-      
-      if (!response.ok) {
-        throw new Error("Failed to load news");
-      }
-      const responseData = await response.json();
-      console.log("API Response data:", responseData);
-      
-      // Extract the data array from the response
-      const newsArray = responseData.data && Array.isArray(responseData.data) ? responseData.data : [];
-      setNews(newsArray);
-    } catch (err: any) {
-      console.error("Fetch error:", err);
-      setError("Failed to fetch news. Please try again.");
-    } finally {
-      setLoading(false);
+  setLoading(true);
+  setError(null);
+
+  try {
+    const apiUrl =
+      import.meta.env.VITE_NEWS_API_URL ||
+      "https://api.goodguiders.com/api/news";
+
+    console.log("Fetching from:", apiUrl);
+
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    console.log("Response status:", response.status);
+
+    if (!response.ok) {
+      throw new Error(`Failed to load news. Status: ${response.status}`);
     }
-  };
+
+    const responseData = await response.json();
+    console.log("API Response data:", responseData);
+
+    const newsArray =
+      responseData.data && Array.isArray(responseData.data)
+        ? responseData.data
+        : Array.isArray(responseData)
+        ? responseData
+        : [];
+
+    setNews(newsArray);
+  } catch (err: any) {
+    console.error("Fetch error:", err);
+    setError("Failed to fetch news. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     fetchNews();
