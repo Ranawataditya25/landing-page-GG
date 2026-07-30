@@ -254,7 +254,7 @@ export function Footer() {
             <p className="text-gray-400 mb-6">
               Empowering students with quality mentorship and career guidance across India.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-white text-blue-500 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
@@ -267,7 +267,7 @@ export function Footer() {
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white text-blue-500 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
                 <MessageSquare className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

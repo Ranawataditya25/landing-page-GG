@@ -17,7 +17,7 @@ export default function Home() {
       <Features />
       <ReferEarn />
       
-      <EarlyRegistration />
+      {/* <EarlyRegistration /> */}
       <Testimonials />
       <Contact />
       <News />

@@ -3061,7 +3061,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { ReferralModal } from "./ReferralModal";
-
+import Logo from "../Assets/icon-logo.png";
 export function ReferEarn() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -3195,7 +3195,7 @@ export function ReferEarn() {
               HOW OUR PROGRAM COMPARES
             </span>
             <h2 className="text-xl sm:text-3xl md:text-4xl font-black mt-1 text-slate-900 leading-tight">
-              What sets this <span className="text-blue-600">program apart?</span>
+              What sets this <span className="text-orange-600">program apart?</span>
             </h2>
           </div>
 
@@ -3205,7 +3205,7 @@ export function ReferEarn() {
               <thead>
                 <tr>
                   <th className="w-[28%] text-left p-4"></th>
-                  <th className="w-[38%] text-center text-xl font-black text-blue-600 bg-white border border-blue-200 rounded-t-2xl shadow-sm p-4">
+                  <th className="w-[38%] text-center text-xl font-black text-orange-600 bg-white border border-blue-200 rounded-t-2xl shadow-sm p-4">
                     Good Guiders
                   </th>
                   <th className="w-[34%] text-center text-lg font-bold text-slate-700 p-4">
@@ -3308,7 +3308,8 @@ export function ReferEarn() {
               </div>
 
               {/* Download App Button */}
-              <div className="flex justify-center w-full pt-4 lg:pt-0">
+              
+              {/* <div className="flex justify-center w-full pt-4 lg:pt-0">
                 <Button
                   variant="default"
                   className="text-white px-8 py-5 md:py-6 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto min-w-[260px] max-w-[320px]"
@@ -3319,7 +3320,7 @@ export function ReferEarn() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Button>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Column: Mobile Devices + Refer Now Button */}
@@ -3374,9 +3375,22 @@ export function ReferEarn() {
 
                 {/* Device 2: Conversational AI Engine */}
                 <div className="w-[230px] sm:w-[250px] h-[460px] sm:h-[495px] bg-[#0c0827] rounded-[32px] shadow-2xl border-[6px] border-slate-900 relative overflow-hidden flex flex-col justify-between p-5 text-white text-center flex-shrink-0">
-                  <div className="text-left font-black tracking-tight text-[10px] opacity-70">
-                    infinity<span className="text-blue-400">learn</span>
-                  </div>
+                  {/* <div className="text-left font-black tracking-tight text-[10px] opacity-70">
+                    Good<span className="text-blue-400">Guiders</span>
+                  </div> */}
+
+
+<div className="flex items-center gap-1">
+  <img
+    src={Logo}
+    alt="GoodGuiders Logo"
+    className="w-6 h-6 object-contain"
+  />
+
+  <div className="text-left font-black tracking-tight text-[15px] opacity-70">
+    Good<span className="text-orange-400">Guiders</span>
+  </div>
+</div>
 
                   <div className="my-auto space-y-4">
                     <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto flex items-center justify-center">
@@ -3389,8 +3403,8 @@ export function ReferEarn() {
 
                     <div className="space-y-1">
                       <h5 className="text-xs sm:text-sm font-bold leading-tight">
-                        Meet AINA — <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-black">Your AI Mentor</span>
+                        Meet Dharmendra <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 font-black">Your Mentor</span>
                       </h5>
                       <p className="text-[9px] text-slate-300 leading-relaxed font-light px-1">
                         Ask me anything — doubts, prep tips or even help deciding <span className="text-blue-300 font-normal">preparing for NEET/JEE.</span>
@@ -3406,7 +3420,7 @@ export function ReferEarn() {
               </div>
 
               {/* Refer Now Button */}
-              <div className="flex justify-center w-full pt-4 lg:pt-0">
+              {/* <div className="flex justify-center w-full pt-4 lg:pt-0">
                 <Button
                   onClick={() => setIsModalOpen(true)}
                   variant="outline"
@@ -3415,13 +3429,26 @@ export function ReferEarn() {
                 >
                   Refer Earn
                 </Button>
-              </div>
+              </div> */}
 
             </div>
 
           </div>
-
+  
         </div>
+
+         <div className="flex justify-center w-full pt-4 lg:pt-0 mt-8">
+                <Button
+                  variant="default"
+                  className="text-white px-8 py-5 md:py-6 rounded-xl md:rounded-2xl font-bold text-base md:text-lg shadow-lg flex items-center justify-center gap-2 w-full sm:w-auto min-w-[260px] max-w-[320px]"
+                  style={{ backgroundColor: '#05306c' }}
+                >
+                  Download App 
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Button>
+              </div>
       </section>
 
       <ReferralModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

@@ -1501,7 +1501,7 @@ export function Contact() {
                 </div>
                 <div className="ml-4">
                   <h4 className="font-semibold text-gray-900">Email Support</h4>
-                  <p className="text-gray-600">support@goodguiders.in</p>
+                  <p className="text-gray-600">support@goodguiders.com</p>
                 </div>
               </div>
 
