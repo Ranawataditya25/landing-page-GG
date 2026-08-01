@@ -8,13 +8,14 @@ import { Contact } from "@/components/Contact";
 import News from "@/components/News";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
-
+import  Compitive  from "@/components/Compitive";
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
       <Features />
+      <Compitive/>
       <ReferEarn />
       
       {/* <EarlyRegistration /> */}
