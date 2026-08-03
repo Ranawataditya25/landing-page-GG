@@ -9,13 +9,16 @@ import News from "@/components/News";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import  Compitive  from "@/components/Compitive";
+import  TopMentors  from "@/components/TopMentor";
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
       <Features />
-      <Compitive/>
+
+      <Compitive />
+      <TopMentors />
       <ReferEarn />
       
       {/* <EarlyRegistration /> */}

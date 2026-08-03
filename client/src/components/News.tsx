@@ -1,565 +1,5 @@
-
-
-// // // import { useState, useEffect } from "react";
-// // // import { Newspaper, Search, X, RefreshCw } from "lucide-react";
-
-// // // interface NewsItem {
-// // //   date?: string;
-// // //   title?: string;
-// // // }
-
-// // // export default function News() {
-// // //   const [news, setNews] = useState<NewsItem[]>([]);
-// // //   const [loading, setLoading] = useState<boolean>(true);
-// // //   const [error, setError] = useState<string | null>(null);
-// // //   const [showModal, setShowModal] = useState<boolean>(false);
-
-// // //   const fetchNews = async () => {
-// // //   setLoading(true);
-// // //   setError(null);
-
-// // //   try {
-// // //     const apiUrl =
-// // //       import.meta.env.VITE_NEWS_API_URL ||
-// // //       "https://api.goodguiders.com/api/news";
-
-// // //     console.log("Fetching from:", apiUrl);
-
-// // //     const response = await fetch(apiUrl, {
-// // //       method: "GET",
-// // //       headers: {
-// // //         "Content-Type": "application/json",
-// // //       },
-// // //     });
-
-// // //     console.log("Response status:", response.status);
-
-// // //     if (!response.ok) {
-// // //       throw new Error(`Failed to load news. Status: ${response.status}`);
-// // //     }
-
-// // //     const responseData = await response.json();
-// // //     console.log("API Response data:", responseData);
-
-// // //     const newsArray =
-// // //       responseData.data && Array.isArray(responseData.data)
-// // //         ? responseData.data
-// // //         : Array.isArray(responseData)
-// // //         ? responseData
-// // //         : [];
-
-// // //     setNews(newsArray);
-// // //   } catch (err: any) {
-// // //     console.error("Fetch error:", err);
-// // //     setError("Failed to fetch news. Please try again.");
-// // //   } finally {
-// // //     setLoading(false);
-// // //   }
-// // // };
-
-// // //   useEffect(() => {
-// // //     fetchNews();
-// // //   }, []);
-
-// // //   return (
-// // //     <>
-// // //       <style>{`
-// // //         .news-container { height: 280px; overflow: hidden; position: relative; }
-// // //         .news-scroll { animation: scrollUp 18s linear infinite; }
-// // //         .news-scroll:hover { animation-play-state: paused; }
-// // //         @keyframes scrollUp { 0% { transform: translateY(100%); } 100% { transform: translateY(-100%); } }
-// // //       `}</style>
-
-// // //       <section className="py-10 bg-gray-100">
-// // //         <div className="max-w-5xl mx-auto bg-white rounded-xl border-2 border-yellow-500 shadow-lg overflow-hidden">
-          
-// // //           {/* Header */}
-// // //           <div className="bg-yellow-500 py-3">
-// // //             <h2 className="flex justify-center items-center gap-2 text-3xl font-bold text-black">
-// // //               <Newspaper size={30} />
-// // //               News & Events
-// // //             </h2>
-// // //           </div>
-
-// // //           {/* Main Content Area */}
-// // //           <div className="news-container p-4">
-// // //             {loading && (
-// // //               <div className="flex justify-center items-center h-full text-gray-500 font-semibold gap-2">
-// // //                 <RefreshCw className="animate-spin" size={20} />
-// // //                 Loading News from Server...
-// // //               </div>
-// // //             )}
-
-// // //             {error && (
-// // //               <div className="flex flex-col justify-center items-center h-full text-center p-4">
-// // //                 <p className="text-red-500 font-semibold mb-3">{error}</p>
-// // //                 <button 
-// // //                   onClick={fetchNews}
-// // //                   className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg font-bold text-sm shadow"
-// // //                 >
-// // //                   <RefreshCw size={16} /> Try Again
-// // //                 </button>
-// // //               </div>
-// // //             )}
-
-// // //             {!loading && !error && news.length === 0 && (
-// // //               <div className="flex justify-center items-center h-full text-gray-500 font-semibold">
-// // //                 No News Available.
-// // //               </div>
-// // //             )}
-
-// // //             {!loading && !error && news.length > 0 && (
-// // //               <div className="news-scroll space-y-3">
-// // //                 {[...news, ...news].map((item, index) => (
-// // //                   <div key={index} className="flex items-center gap-3 border rounded-lg p-3 bg-white hover:bg-gray-50">
-// // //                     <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" alt="new" className="w-8 h-8" />
-// // //                     <div className="border-2 border-black rounded-md px-3 py-1 font-bold text-sm whitespace-nowrap">
-// // //                       {item?.date || "N/A"}
-// // //                     </div>
-// // //                     <p className="text-gray-800 text-sm">{item?.title || "No Title"}</p>
-// // //                   </div>
-// // //                 ))}
-// // //               </div>
-// // //             )}
-// // //           </div>
-
-// // //           {/* Modal */}
-// // //           {showModal && (
-// // //             <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 p-4">
-// // //               <div className="bg-white w-full max-w-4xl rounded-xl shadow-xl">
-// // //                 <div className="bg-yellow-500 px-5 py-4 flex justify-between items-center rounded-t-xl">
-// // //                   <h2 className="text-2xl font-bold flex items-center gap-2 text-black"><Newspaper size={26} />All News & Events</h2>
-// // //                   <button onClick={() => setShowModal(false)} className="hover:bg-white/30 p-2 rounded-full text-black"><X size={28} /></button>
-// // //                 </div>
-// // //                 <div className="max-h-[70vh] overflow-y-auto p-5 space-y-4">
-// // //                   {news.map((item, index) => (
-// // //                     <div key={index} className="flex gap-3 border rounded-lg p-4 hover:bg-gray-50">
-// // //                       <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" className="w-8 h-8 mt-1" alt="icon" />
-// // //                       <div>
-// // //                         <span className="border-2 border-black rounded-md px-3 py-1 text-sm font-bold inline-block mb-2">{item?.date || "N/A"}</span>
-// // //                         <p className="text-gray-800 leading-7">{item?.title || "No Title"}</p>
-// // //                       </div>
-// // //                     </div>
-// // //                   ))}
-// // //                 </div>
-// // //                 <div className="border-t p-4 flex justify-end">
-// // //                   <button onClick={() => setShowModal(false)} className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-semibold">Close</button>
-// // //                 </div>
-// // //               </div>
-// // //             </div>
-// // //           )}
-
-// // //           {/* Footer */}
-// // //           <div className="border-t p-4 flex justify-end">
-// // //             <button
-// // //               onClick={() => setShowModal(true)}
-// // //               disabled={loading || news.length === 0}
-// // //               className={`flex items-center gap-2 font-semibold ${loading || news.length === 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-700 hover:underline"}`}
-// // //             >
-// // //               <Search size={18} /> View All
-// // //             </button>
-// // //           </div>
-
-// // //         </div>
-// // //       </section>
-// // //     </>
-// // //   );
-// // // }
-
-
-
-
-
-// // import { useState, useEffect } from "react";
-// // import { Newspaper, Search, X, RefreshCw } from "lucide-react";
-
-// // interface NewsItem {
-// //   date?: string;
-// //   title?: string;
-// // }
-
-// // export default function News() {
-// //   const [news, setNews] = useState<NewsItem[]>([]);
-// //   const [loading, setLoading] = useState<boolean>(true);
-// //   const [error, setError] = useState<string | null>(null);
-// //   const [showModal, setShowModal] = useState<boolean>(false);
-
-// //   // Fungsi untuk mengubah format ISO string menjadi "DD MMM YYYY"
-// //   const formatDate = (dateString?: string) => {
-// //     if (!dateString) return "N/A";
-// //     try {
-// //       const date = new Date(dateString);
-// //       // Validasi apakah string tanggal valid
-// //       if (isNaN(date.getTime())) return dateString;
-
-// //       return new Intl.DateTimeFormat("en-GB", {
-// //         day: "2-digit",
-// //         month: "short",
-// //         year: "numeric",
-// //       }).format(date); // Output Contoh: "09 Jul 2026"
-// //     } catch (e) {
-// //       return dateString || "N/A";
-// //     }
-// //   };
-
-// //   const fetchNews = async () => {
-// //     setLoading(true);
-// //     setError(null);
-
-// //     try {
-// //       const apiUrl =
-// //         import.meta.env.VITE_NEWS_API_URL ||
-// //         "https://api.goodguiders.com/api/news";
-
-// //       console.log("Fetching from:", apiUrl);
-
-// //       const response = await fetch(apiUrl, {
-// //         method: "GET",
-// //         headers: {
-// //           "Content-Type": "application/json",
-// //         },
-// //       });
-
-// //       console.log("Response status:", response.status);
-
-// //       if (!response.ok) {
-// //         throw new Error(`Failed to load news. Status: ${response.status}`);
-// //       }
-
-// //       const responseData = await response.json();
-// //       console.log("API Response data:", responseData);
-
-// //       const newsArray =
-// //         responseData.data && Array.isArray(responseData.data)
-// //           ? responseData.data
-// //           : Array.isArray(responseData)
-// //           ? responseData
-// //           : [];
-
-// //       setNews(newsArray);
-// //     } catch (err: any) {
-// //       console.error("Fetch error:", err);
-// //       setError("Failed to fetch news. Please try again.");
-// //     } finally {
-// //       setLoading(false);
-// //     }
-// //   };
-
-// //   useEffect(() => {
-// //     fetchNews();
-// //   }, []);
-
-// //   return (
-// //     <>
-// //       <style>{`
-// //         .news-container { height: 280px; overflow: hidden; position: relative; }
-// //         .news-scroll { animation: scrollUp 18s linear infinite; }
-// //         .news-scroll:hover { animation-play-state: paused; }
-// //         @keyframes scrollUp { 0% { transform: translateY(100%); } 100% { transform: translateY(-100%); } }
-// //       `}</style>
-
-// //       <section className="py-10 bg-gray-100">
-// //         <div className="max-w-5xl mx-auto bg-white rounded-xl border-2 border-yellow-500 shadow-lg overflow-hidden">
-          
-// //           {/* Header */}
-// //           <div className="bg-yellow-500 py-3">
-// //             <h2 className="flex justify-center items-center gap-2 text-3xl font-bold text-black">
-// //               <Newspaper size={30} />
-// //               News & Events
-// //             </h2>
-// //           </div>
-
-// //           {/* Main Content Area */}
-// //           <div className="news-container p-4">
-// //             {loading && (
-// //               <div className="flex justify-center items-center h-full text-gray-500 font-semibold gap-2">
-// //                 <RefreshCw className="animate-spin" size={20} />
-// //                 Loading News from Server...
-// //               </div>
-// //             )}
-
-// //             {error && (
-// //               <div className="flex flex-col justify-center items-center h-full text-center p-4">
-// //                 <p className="text-red-500 font-semibold mb-3">{error}</p>
-// //                 <button 
-// //                   onClick={fetchNews}
-// //                   className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg font-bold text-sm shadow"
-// //                 >
-// //                   <RefreshCw size={16} /> Try Again
-// //                 </button>
-// //               </div>
-// //             )}
-
-// //             {!loading && !error && news.length === 0 && (
-// //               <div className="flex justify-center items-center h-full text-gray-500 font-semibold">
-// //                 No News Available.
-// //               </div>
-// //             )}
-
-// //             {!loading && !error && news.length > 0 && (
-// //               <div className="news-scroll space-y-3">
-// //                 {[...news, ...news].map((item, index) => (
-// //                   <div key={index} className="flex items-center gap-3 border rounded-lg p-3 bg-white hover:bg-gray-50">
-// //                     <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" alt="new" className="w-8 h-8" />
-// //                     <div className="border-2 border-black rounded-md px-3 py-1 font-bold text-sm whitespace-nowrap">
-// //                       {formatDate(item?.date)}
-// //                     </div>
-// //                     <p className="text-gray-800 text-sm">{item?.title || "No Title"}</p>
-// //                   </div>
-// //                 ))}
-// //               </div>
-// //             )}
-// //           </div>
-
-// //           {/* Modal */}
-// //           {showModal && (
-// //             <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 p-4">
-// //               <div className="bg-white w-full max-w-4xl rounded-xl shadow-xl">
-// //                 <div className="bg-yellow-500 px-5 py-4 flex justify-between items-center rounded-t-xl">
-// //                   <h2 className="text-2xl font-bold flex items-center gap-2 text-black"><Newspaper size={26} />All News & Events</h2>
-// //                   <button onClick={() => setShowModal(false)} className="hover:bg-white/30 p-2 rounded-full text-black"><X size={28} /></button>
-// //                 </div>
-// //                 <div className="max-h-[70vh] overflow-y-auto p-5 space-y-4">
-// //                   {news.map((item, index) => (
-// //                     <div key={index} className="flex gap-3 border rounded-lg p-4 hover:bg-gray-50">
-// //                       <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" className="w-8 h-8 mt-1" alt="icon" />
-// //                       <div>
-// //                         <span className="border-2 border-black rounded-md px-3 py-1 text-sm font-bold inline-block mb-2">
-// //                           {formatDate(item?.date)}
-// //                         </span>
-// //                         <p className="text-gray-800 leading-7">{item?.title || "No Title"}</p>
-// //                       </div>
-// //                     </div>
-// //                   ))}
-// //                 </div>
-// //                 <div className="border-t p-4 flex justify-end">
-// //                   <button onClick={() => setShowModal(false)} className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-semibold">Close</button>
-// //                 </div>
-// //               </div>
-// //             </div>
-// //           )}
-
-// //           {/* Footer */}
-// //           <div className="border-t p-4 flex justify-end">
-// //             <button
-// //               onClick={() => setShowModal(true)}
-// //               disabled={loading || news.length === 0}
-// //               className={`flex items-center gap-2 font-semibold ${loading || news.length === 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-700 hover:underline"}`}
-// //             >
-// //               <Search size={18} /> View All
-// //             </button>
-// //           </div>
-
-// //         </div>
-// //       </section>
-// //     </>
-// //   );
-// // }
-
-
-
-
-// import { useState, useEffect } from "react";
-// import { Newspaper, Search, X, RefreshCw } from "lucide-react";
-
-// interface NewsItem {
-//   date?: string;
-//   title?: string;
-// }
-
-// export default function News() {
-//   const [news, setNews] = useState<NewsItem[]>([]);
-//   const [loading, setLoading] = useState<boolean>(true);
-//   const [error, setError] = useState<string | null>(null);
-//   const [showModal, setShowModal] = useState<boolean>(false);
-
-//   // Fungsi untuk mengubah format ISO string menjadi "DD MMM YYYY"
-//   const formatDate = (dateString?: string) => {
-//     if (!dateString) return "N/A";
-//     try {
-//       const date = new Date(dateString);
-//       if (isNaN(date.getTime())) return dateString;
-
-//       return new Intl.DateTimeFormat("en-GB", {
-//         day: "2-digit",
-//         month: "short",
-//         year: "numeric",
-//       }).format(date);
-//     } catch (e) {
-//       return dateString || "N/A";
-//     }
-//   };
-
-//   const fetchNews = async () => {
-//     setLoading(true);
-//     setError(null);
-//     setNews([]); // Kosongkan state sebelum fetch baru
-
-//     try {
-//       const apiUrl =
-//         import.meta.env.VITE_NEWS_API_URL ||
-//         "https://api.goodguiders.com/api/news";
-
-//       console.log("Fetching from:", apiUrl);
-
-//       const response = await fetch(apiUrl, {
-//         method: "GET",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       });
-
-//       console.log("Response status:", response.status);
-
-//       if (!response.ok) {
-//         throw new Error(`Failed to load news. Status: ${response.status}`);
-//       }
-
-//       const responseData = await response.json();
-//       console.log("API Response data:", responseData);
-
-//       // Validasi struktur data dari API secara aman
-//       let newsArray: NewsItem[] = [];
-//       if (responseData && responseData.data && Array.isArray(responseData.data)) {
-//         newsArray = responseData.data;
-//       } else if (Array.isArray(responseData)) {
-//         newsArray = responseData;
-//       }
-
-//       setNews(newsArray);
-//     } catch (err: any) {
-//       console.error("Fetch error:", err);
-//       setError("Failed to fetch news. Please try again.");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchNews();
-//   }, []);
-
-//   return (
-//     <>
-//       <style>{`
-//         .news-container { height: 280px; overflow: hidden; position: relative; }
-//         .news-scroll { animation: scrollUp 18s linear infinite; }
-//         .news-scroll:hover { animation-play-state: paused; }
-//         @keyframes scrollUp { 0% { transform: translateY(100%); } 100% { transform: translateY(-100%); } }
-//       `}</style>
-
-//       <section className="py-10 bg-gray-100">
-//         <div className="max-w-5xl mx-auto bg-white rounded-xl border-2 border-yellow-500 shadow-lg overflow-hidden">
-          
-//           {/* Header */}
-//           <div className="bg-yellow-500 py-3">
-//             <h2 className="flex justify-center items-center gap-2 text-3xl font-bold text-black">
-//               <Newspaper size={30} />
-//               News 
-//             </h2>
-//           </div>
-
-//           {/* Main Content Area */}
-//           <div className="news-container p-4">
-//             {loading && (
-//               <div className="flex justify-center items-center h-full text-gray-500 font-semibold gap-2">
-//                 <RefreshCw className="animate-spin" size={20} />
-//                 Loading News from Server...
-//               </div>
-//             )}
-
-//             {/* JIKA TERJADI ERROR (Gagal Fetch / Server Mati) */}
-//             {!loading && error && (
-//               <div className="flex flex-col justify-center items-center h-full text-center p-4">
-//                 <p className="text-red-500 font-semibold mb-3">{error}</p>
-//                 <button 
-//                   onClick={fetchNews}
-//                   className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg font-bold text-sm shadow"
-//                 >
-//                   <RefreshCw size={16} /> Try Again
-//                 </button>
-//               </div>
-//             )}
-
-//             {/* JIKA BERHASIL CONNECT TAPI DATA BERITA KOSONG [] */}
-//             {!loading && !error && news.length === 0 && (
-//               <div className="flex justify-center items-center h-full text-gray-500 font-semibold">
-//                 No News Available.
-//               </div>
-//             )}
-
-//             {/* JIKA DATA BERITA ADA */}
-//             {!loading && !error && news.length > 0 && (
-//               <div className="news-scroll space-y-3">
-//                 {[...news, ...news].map((item, index) => (
-//                   <div key={index} className="flex items-center gap-3 border rounded-lg p-3 bg-white hover:bg-gray-50">
-//                     <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" alt="new" className="w-8 h-8" />
-//                     <div className="border-2 border-black rounded-md px-3 py-1 font-bold text-sm whitespace-nowrap">
-//                       {formatDate(item?.date)}
-//                     </div>
-//                     <p className="text-gray-800 text-sm">{item?.title || "No Title"}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-
-//           {/* Modal */}
-//           {showModal && (
-//             <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 p-4">
-//               <div className="bg-white w-full max-w-4xl rounded-xl shadow-xl">
-//                 <div className="bg-yellow-500 px-5 py-4 flex justify-between items-center rounded-t-xl">
-//                   <h2 className="text-2xl font-bold flex items-center gap-2 text-black"><Newspaper size={26} />All News</h2>
-//                   <button onClick={() => setShowModal(false)} className="hover:bg-white/30 p-2 rounded-full text-black"><X size={28} /></button>
-//                 </div>
-//                 <div className="max-h-[70vh] overflow-y-auto p-5 space-y-4">
-//                   {news.map((item, index) => (
-//                     <div key={index} className="flex gap-3 border rounded-lg p-4 hover:bg-gray-50">
-//                       <img src="https://cdn-icons-png.flaticon.com/512/5709/5709755.png" className="w-8 h-8 mt-1" alt="icon" />
-//                       <div>
-//                         <span className="border-2 border-black rounded-md px-3 py-1 text-sm font-bold inline-block mb-2">
-//                           {formatDate(item?.date)}
-//                         </span>
-//                         <p className="text-gray-800 leading-7">{item?.title || "No Title"}</p>
-//                       </div>
-//                     </div>
-//                   ))}
-//                 </div>
-//                 <div className="border-t p-4 flex justify-end">
-//                   <button onClick={() => setShowModal(false)} className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-semibold">Close</button>
-//                 </div>
-//               </div>
-//             </div>
-//           )}
-
-//           {/* Footer */}
-//           <div className="border-t p-4 flex justify-end">
-//             <button
-//               onClick={() => setShowModal(true)}
-//               disabled={loading || news.length === 0}
-//               className={`flex items-center gap-2 font-semibold ${loading || news.length === 0 ? "text-gray-400 cursor-not-allowed" : "text-blue-700 hover:underline"}`}
-//             >
-//               <Search size={18} /> View All
-//             </button>
-//           </div>
-
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
-
-
-
-//////updated //////
-
-
-
-
-
-import { useState, useEffect } from "react";
-import { Newspaper, RefreshCw, Calendar, ExternalLink, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Newspaper, RefreshCw, Calendar, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface NewsItem {
   _id?: string | number;
@@ -580,6 +20,17 @@ export default function News() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Track scroll position to freeze Left button when at 0
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+
+  const handleContainerScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 5);
+    }
+  };
 
   const fetchNews = async () => {
     setLoading(true);
@@ -623,6 +74,63 @@ export default function News() {
     fetchNews();
   }, []);
 
+  // Listen to scroll & window resize events to update the scroll state
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      container.addEventListener("scroll", handleContainerScroll);
+      window.addEventListener("resize", handleContainerScroll);
+      // Run once initially (after a small timeout to let the DOM settle)
+      const timeout = setTimeout(handleContainerScroll, 200);
+      return () => {
+        container.removeEventListener("scroll", handleContainerScroll);
+        window.removeEventListener("resize", handleContainerScroll);
+        clearTimeout(timeout);
+      };
+    }
+  }, [news, loading]);
+
+  const handleScroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth, scrollWidth } = scrollRef.current;
+      const maxScrollVal = scrollWidth - clientWidth;
+      const scrollAmount = 320; // Scroll by roughly one card width
+
+      if (direction === "left") {
+        const targetScroll = Math.max(0, scrollLeft - scrollAmount);
+        scrollRef.current.scrollTo({ left: targetScroll, behavior: "smooth" });
+      } else {
+        // If at the end, scroll back to 0 automatically
+        if (scrollLeft >= maxScrollVal - 5) {
+          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          const targetScroll = Math.min(maxScrollVal, scrollLeft + scrollAmount);
+          scrollRef.current.scrollTo({ left: targetScroll, behavior: "smooth" });
+        }
+      }
+    }
+  };
+
+  // Modal navigation index check
+  const currentNewsIndex = selectedNews 
+    ? news.findIndex((item) => (item._id || item.id) === (selectedNews._id || selectedNews.id))
+    : -1;
+
+  // Modal navigation functions
+  const handlePrevNews = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (currentNewsIndex > 0) {
+      setSelectedNews(news[currentNewsIndex - 1]);
+    }
+  };
+
+  const handleNextNews = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (currentNewsIndex !== -1 && currentNewsIndex < news.length - 1) {
+      setSelectedNews(news[currentNewsIndex + 1]);
+    }
+  };
+
   const getTitle = (item: NewsItem) => item.title || item.name || "Untitled News";
 
   const formatDate = (rawDate?: string): string => {
@@ -656,24 +164,16 @@ export default function News() {
   const getDate = (item: NewsItem) => formatDate(item.date);
   const getImage = (item: NewsItem) => item.image || item.imageUrl || item.img || "";
 
-  // Continuous infinite scroll ke liye double array (agar items extra hain)
-  const displayNews = news.length > 0 ? [...news, ...news] : [];
-
   return (
     <section className="py-12 bg-gray-50 overflow-hidden">
-      {/* Custom Keyframe CSS for Infinite Continuous Auto-Scroll */}
+      {/* Hide scrollbar for a clean design */}
       <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
+        .news-scroll-container::-webkit-scrollbar {
+          display: none;
         }
-        .animate-marquee {
-          display: flex;
-          width: max-content;
-          animation: marquee 30s linear infinite;
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
+        .news-scroll-container {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
 
@@ -714,11 +214,38 @@ export default function News() {
             </div>
           )}
 
-          {/* Automatic Horizontal Scrolling Container */}
+          {/* Horizontal scrolling news container with left/right buttons */}
           {!loading && !error && news.length > 0 && (
-            <div className="relative w-full overflow-hidden py-2">
-              <div className="animate-marquee gap-6 flex">
-                {displayNews.map((item, index) => (
+            <div className="relative w-full py-2">
+              {/* Left Scroll Button */}
+              <button
+                onClick={() => handleScroll("left")}
+                disabled={!canScrollLeft}
+                className={`absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full shadow-lg transition duration-200 border hidden md:flex items-center justify-center ${
+                  !canScrollLeft
+                    ? "bg-gray-300 text-gray-400 border-gray-400 cursor-not-allowed opacity-50"
+                    : "bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600"
+                }`}
+                aria-label="Scroll Left"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Right Scroll Button */}
+              <button
+                onClick={() => handleScroll("right")}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-yellow-500 hover:bg-yellow-600 text-black p-2.5 rounded-full shadow-lg transition duration-200 hidden md:flex items-center justify-center border border-yellow-600"
+                aria-label="Scroll Right"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              <div 
+                ref={scrollRef}
+                onScroll={handleContainerScroll}
+                className="news-scroll-container flex gap-6 overflow-x-auto pb-4 justify-start px-12 scroll-smooth"
+              >
+                {news.map((item, index) => (
                   <div
                     key={`${item._id || item.id || index}-${index}`}
                     onClick={() => setSelectedNews(item)}
@@ -787,11 +314,39 @@ export default function News() {
           onClick={() => setSelectedNews(null)}
         >
           <div 
-            className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-in fade-in zoom-in-95 duration-200"
+            className="relative bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-in fade-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()} // Modal content click won't close modal
           >
+            {/* Modal Left Navigation Button */}
+            <button
+              onClick={handlePrevNews}
+              disabled={currentNewsIndex === 0}
+              className={`absolute left-3 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full shadow-lg transition duration-200 border flex items-center justify-center ${
+                currentNewsIndex === 0
+                  ? "bg-gray-300 text-gray-400 border-gray-400 cursor-not-allowed opacity-50"
+                  : "bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600"
+              }`}
+              aria-label="Previous News"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            {/* Modal Right Navigation Button */}
+            <button
+              onClick={handleNextNews}
+              disabled={currentNewsIndex === news.length - 1}
+              className={`absolute right-3 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full shadow-lg transition duration-200 border flex items-center justify-center ${
+                currentNewsIndex === news.length - 1
+                  ? "bg-gray-300 text-gray-400 border-gray-400 cursor-not-allowed opacity-50"
+                  : "bg-yellow-500 hover:bg-yellow-600 text-black border-yellow-600"
+              }`}
+              aria-label="Next News"
+            >
+              <ChevronRight size={20} />
+            </button>
+
             {/* Modal Header */}
-            <div className="bg-yellow-500 px-6 py-4 flex justify-between items-center border-b border-yellow-600">
+            <div className="bg-yellow-500 px-14 md:px-16 py-4 flex justify-between items-center border-b border-yellow-600">
               <h3 className="text-xl font-bold flex items-center gap-2 text-black line-clamp-1">
                 <Newspaper size={24} />
                 {getTitle(selectedNews)}
@@ -805,7 +360,7 @@ export default function News() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 overflow-y-auto space-y-4">
+            <div className="px-14 md:px-16 py-6 overflow-y-auto space-y-4">
               {getImage(selectedNews) && (
                 <div className="relative w-full h-64 md:h-80 bg-gray-100 rounded-xl overflow-hidden">
                   <img
@@ -832,18 +387,7 @@ export default function News() {
             </div>
 
             {/* Modal Footer */}
-            <div className="border-t bg-gray-50 p-4 flex justify-between items-center">
-              {(selectedNews.link || selectedNews.url) ? (
-                <a
-                  href={selectedNews.link || selectedNews.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg font-bold text-sm shadow transition"
-                >
-                  Visit Official Link <ExternalLink size={16} />
-                </a>
-              ) : <div />}
-
+            <div className="border-t bg-gray-50 p-4 px-14 md:px-16 flex justify-end">
               <button
                 onClick={() => setSelectedNews(null)}
                 className="bg-gray-800 hover:bg-gray-900 text-white px-5 py-2 rounded-lg font-semibold text-sm transition"
