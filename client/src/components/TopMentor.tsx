@@ -345,14 +345,14 @@ export const MentorsSection: React.FC = () => {
 
       {/* NEW BOTTOM SECTION (From Image) */}
       <section className="bg-slate-50/60 py-16 px-4 md:px-12 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto text-center space-y-2">
+        {/* <div className="max-w-7xl mx-auto text-center space-y-2">
           <span className="text-xs font-extrabold tracking-widest text-slate-500 uppercase">
             HOW OUR PROGRAM COMPARES
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
             What sets this <span className="text-orange-500">program apart?</span>
           </h2>
-        </div>
+        </div> */}
       </section>
     </div>
   );
