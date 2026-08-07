@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-import { Link, useInRouterContext } from 'react-router-dom';
 import { 
   Video, 
   Users, 
@@ -17,15 +16,6 @@ import {
   Sparkles,
   ArrowRight
 } from 'lucide-react';
-
-// Helper component: Safely uses React Router Link if inside a Router, else uses standard HTML <a> tag
-const SafeLink: React.FC<{ to: string; className?: string; children: React.ReactNode }> = ({ to, className, children }) => {
-  const isInRouter = useInRouterContext();
-  if (isInRouter) {
-    return <Link to={to} className={className}>{children}</Link>;
-  }
-  return <a href={to} className={className}>{children}</a>;
-};
 
 // Data for feature cards
 const featureSteps = [
@@ -97,7 +87,7 @@ const statsData = [
   },
 ];
 
-export const MentorsSection: React.FC = () => {
+export const MentorsSection = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8 space-y-6 font-sans text-gray-800">
       
@@ -127,15 +117,15 @@ export const MentorsSection: React.FC = () => {
             At GoodGuiders, our mentors are experienced educators, subject experts and successful achievers who are passionate about guiding students towards their goals.
           </p>
 
-          {/* Safe Navigation Link */}
+          {/* Standard Anchor Link */}
           <div className="pt-3">
-            <SafeLink
-              to="/mentordetail"
+            <a
+              href="/mentordetail"
               className="inline-flex items-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md transition-all duration-200 hover:shadow-lg active:scale-95"
             >
               <span>Explore Mentor Details</span>
               <ArrowRight className="w-4 h-4" />
-            </SafeLink>
+            </a>
           </div>
         </div>
 
@@ -170,9 +160,9 @@ export const MentorsSection: React.FC = () => {
           {/* Cards Horizontal List */}
           <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3 pt-2 lg:pt-0 overflow-x-auto">
             {featureSteps.map((step) => (
-              <SafeLink 
+              <a 
                 key={step.id} 
-                to="/mentordetail"
+                href="/mentordetail"
                 className="flex flex-col space-y-2 p-2 rounded-xl hover:bg-orange-50/30 transition-colors block"
               >
                 <div className="flex items-center space-x-2">
@@ -186,7 +176,7 @@ export const MentorsSection: React.FC = () => {
                 <p className="text-[11px] text-gray-500 leading-tight">
                   {step.description}
                 </p>
-              </SafeLink>
+              </a>
             ))}
           </div>
 

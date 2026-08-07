@@ -594,19 +594,13 @@
 
 
 
-
-
-
-
-
 import React, { useState } from 'react';
-import { 
-  Search, Star, Heart, Clock, Award, ShieldCheck, 
+import { Search, Star, Heart, Clock, Award, ShieldCheck, 
   Users, CheckCircle2, ChevronRight, ChevronLeft, X, 
   Info, Filter, Grid, List, Sparkles, MessageSquare, 
   Headphones, Calendar, Lock
 } from 'lucide-react';
-import TopBanner  from './components/TopBanner'
+import  Banner from './components/Banner'
 
 // --- TYPES ---
 interface Mentor {
@@ -780,6 +774,7 @@ export default function MentorsPage() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-gray-800 font-sans text-xs">
       {/* Top Navbar / Header Container */}
+        <Banner/>
       <div className="max-w-7xl mx-auto px-4 py-4">
         {/* Breadcrumb */}
         <nav className="text-gray-400 text-xs mb-2 flex items-center gap-1">
@@ -787,7 +782,7 @@ export default function MentorsPage() {
           <span>&gt;</span>
           <span>Mentorship</span>
           <span>&gt;</span>
-          <span className="text-gray-700 font-medium">All Mentors</span>
+          <span className="text-gray-700 font-medium">All Mentornnnnns</span>
         </nav>
 
         <div className="flex flex-col md:flex-row gap-6">
@@ -915,19 +910,25 @@ export default function MentorsPage() {
 
           {/* ================= MAIN CONTENT ================= */}
           <main className="flex-1 space-y-6">
-            {/* Title Section */}
-            <TopBanner/>
+          
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 
 
 
               <div>
-                <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                {/* <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
                   All Mentors
                   <span className="text-xs font-normal text-orange-500 bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200">
                     (326 Mentors Found)
                   </span>
-                </h1>
+                </h1> */}
+
+ <h1 className="text-2xl font-bold text-orange-500 flex items-center gap-2">
+  All Mentors
+  <span className="text-xs font-normal text-orange-500 bg-orange-50 px-2 py-0.5 rounded-full border border-orange-200">
+    (326 Mentors Found)
+  </span>
+</h1>
                 <p className="text-gray-500 text-xs mt-0.5">
                   Connect with expert mentors and achieve your academic and career goals.
                 </p>
