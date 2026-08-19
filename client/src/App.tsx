@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import Mentordetail from "./Mentordetail";
 import  MentorProfileDetail from "./MentorProfileDetail";
 import Mysubjectdetail from "./Mysubjectdetail";
+import JuniorOlympiad from "./JuniorOlympiad";
 import SelectedSubjects from "./SelectedSubjects";
 
 
@@ -20,9 +21,9 @@ function Router() {
          <Route path="/mentorprofile" component={MentorProfileDetail} />
            <Route path="/mysubjectdetail" component={ Mysubjectdetail} />
               <Route path="/selectedsubjects" component={ SelectedSubjects} />
-              
+              <Route path="/juniorolympiad" component={   JuniorOlympiad} />
 
-        
+      
       <Route component={NotFound} />
     </Switch>
   );

@@ -2014,6 +2014,709 @@
 //             ))}
 //           </div>
 //         </div>
+//       </div
+//     </section>
+//   );
+// }
+
+// export default Features;
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import {
+//   Users,
+//   ArrowRight,
+//   Bookmark,
+//   CheckCircle2,
+//   Star,
+//   Clock,
+//   Sparkles,
+//   GraduationCap,
+// } from "lucide-react";
+
+// // Safe Navigation helper to prevent router crashes
+// function useSafeNavigate() {
+//   try {
+//     return useNavigate();
+//   } catch (error) {
+//     return (path: string, options?: { state?: any }) => {
+//       window.location.href = path;
+//     };
+//   }
+// }
+
+// // 1. TOP 3 PILLARS
+// const topFeatures = [
+//   {
+//     id: 0,
+//     title: "Evaluate",
+//     icon: "🤝",
+//     description: "1-on-1 personalized guidance with top mentors to calibrate your academic roadmap.",
+//     gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
+//     border: "border-emerald-200/60",
+//     btnColor: "bg-emerald-600 hover:bg-emerald-700",
+//   },
+//   {
+//     id: 1,
+//     title: "Educate",
+//     icon: "🧪",
+//     description: "Adaptive mock tests, 10+ years PYQs, and AI-driven deep performance diagnostics.",
+//     gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
+//     border: "border-rose-200/60",
+//     btnColor: "bg-rose-600 hover:bg-rose-700",
+//   },
+//   {
+//     id: 2,
+//     title: "Elevate",
+//     icon: "🧠",
+//     description: "Mental well-being, strategic stress mitigation, and continuous counselor support.",
+//     gradient: "from-cyan-500/10 via-cyan-500/5 to-transparent",
+//     border: "border-cyan-200/60",
+//     btnColor: "bg-cyan-600 hover:bg-cyan-700",
+//   },
+// ];
+
+// // 2. CLASSES 1-5
+// const class1to5Data = [
+//   {
+//     id: 101,
+//     classNumber: "1-5",
+//     title: "Learn Maths",
+//     subtitle: "Build strong numbers, mental arithmetic & logic foundation",
+//     badge: "FOUNDATION",
+//     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
+//     color: "text-purple-700",
+//     bgGradient: "from-purple-50/50 via-white to-white",
+//     borderColor: "border-purple-200 hover:border-purple-300",
+//     btnBg: "bg-purple-600 hover:bg-purple-700",
+//     tagText: "Interactive Maths",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3771/3771278.png",
+//   },
+//   {
+//     id: 102,
+//     classNumber: "1-5",
+//     title: "Learn English",
+//     subtitle: "Enhance vocabulary, grammar, phonics & reading mastery",
+//     badge: "LANGUAGE",
+//     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
+//     color: "text-rose-700",
+//     bgGradient: "from-rose-50/50 via-white to-white",
+//     borderColor: "border-rose-200 hover:border-rose-300",
+//     btnBg: "bg-rose-600 hover:bg-rose-700",
+//     tagText: "Fun English",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3389/3389011.png",
+//   },
+//   {
+//     id: 103,
+//     classNumber: "1-5",
+//     title: "Science Discovery",
+//     subtitle: "Explore natural phenomena and fun visual experiments",
+//     badge: "DISCOVERY",
+//     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
+//     color: "text-emerald-700",
+//     bgGradient: "from-emerald-50/50 via-white to-white",
+//     borderColor: "border-emerald-200 hover:border-emerald-300",
+//     btnBg: "bg-emerald-600 hover:bg-emerald-700",
+//     tagText: "Basic Science",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
+//   },
+//   {
+//     id: 104,
+//     classNumber: "1-5",
+//     title: "General Knowledge",
+//     subtitle: "Discover world facts, geography & dynamic current affairs",
+//     badge: "AWARENESS",
+//     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
+//     color: "text-amber-700",
+//     bgGradient: "from-amber-50/50 via-white to-white",
+//     borderColor: "border-amber-200 hover:border-amber-300",
+//     btnBg: "bg-amber-600 hover:bg-amber-700",
+//     tagText: "GK Essentials",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2784/2784403.png",
+//   },
+//   {
+//     id: 105,
+//     classNumber: "6",
+//     title: "JNV Entrance",
+//     subtitle: "Targeted entrance prep for Jawahar Navodaya Vidyalaya",
+//     badge: "ENTRANCE",
+//     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
+//     color: "text-blue-700",
+//     bgGradient: "from-blue-50/50 via-white to-white",
+//     borderColor: "border-blue-200 hover:border-blue-300",
+//     btnBg: "bg-blue-600 hover:bg-blue-700",
+//     tagText: "JNV Special",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2231/2231605.png",
+//   },
+//   {
+//     id: 106,
+//     classNumber: "1-5",
+//     title: "KVS Prep",
+//     subtitle: "Structured syllabus modules for Kendriya Vidyalayas",
+//     badge: "SCHOOL PREP",
+//     badgeBg: "bg-teal-50 text-teal-700 border border-teal-200",
+//     color: "text-teal-700",
+//     bgGradient: "from-teal-50/50 via-white to-white",
+//     borderColor: "border-teal-200 hover:border-teal-300",
+//     btnBg: "bg-teal-600 hover:bg-teal-700",
+//     tagText: "KVS Curriculum",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2997/2997295.png",
+//   },
+//   {
+//     id: 107,
+//     classNumber: "6",
+//     title: "Sainik School",
+//     subtitle: "Comprehensive entrance training for AISSEE examination",
+//     badge: "DEFENCE PREP",
+//     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
+//     color: "text-orange-700",
+//     bgGradient: "from-orange-50/50 via-white to-white",
+//     borderColor: "border-orange-200 hover:border-orange-300",
+//     btnBg: "bg-orange-600 hover:bg-orange-700",
+//     tagText: "Sainik Entrance",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/167/167707.png",
+//   },
+//   {
+//     id: 108,
+//     classNumber: "1-5",
+//     title: "Junior Olympiad",
+//     subtitle: "Early competitive aptitude, logical reasoning & analytical mind",
+//     badge: "COMPETITIVE",
+//     badgeBg: "bg-indigo-50 text-indigo-700 border border-indigo-200",
+//     color: "text-indigo-700",
+//     bgGradient: "from-indigo-50/50 via-white to-white",
+//     borderColor: "border-indigo-200 hover:border-indigo-300",
+//     btnBg: "bg-indigo-600 hover:bg-indigo-700",
+//     tagText: "Olympiad Level",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
+//   },
+// ];
+
+// // 3. CLASSES 6-10
+// const class6to10Data = [
+//   {
+//     id: 3,
+//     classNumber: "6",
+//     title: "Class 6",
+//     subtitle: "Solidify core fundamentals in Maths, Science & Languages",
+//     badge: "FOUNDATION",
+//     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
+//     color: "text-blue-700",
+//     bgGradient: "from-blue-50/50 via-white to-white",
+//     borderColor: "border-blue-200 hover:border-blue-300",
+//     btnBg: "bg-blue-600 hover:bg-blue-700",
+//     tagText: "Class 6 Prep",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2883/2883823.png",
+//   },
+//   {
+//     id: 4,
+//     classNumber: "7",
+//     title: "Class 7",
+//     subtitle: "Strengthen concepts and intermediate problem solving",
+//     badge: "FOUNDATION",
+//     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
+//     color: "text-emerald-700",
+//     bgGradient: "from-emerald-50/50 via-white to-white",
+//     borderColor: "border-emerald-200 hover:border-emerald-300",
+//     btnBg: "bg-emerald-600 hover:bg-emerald-700",
+//     tagText: "Class 7 Prep",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3429/3429149.png",
+//   },
+//   {
+//     id: 5,
+//     classNumber: "8",
+//     title: "Class 8",
+//     subtitle: "Prepare critical bridging concepts for senior high school",
+//     badge: "ADVANCED",
+//     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
+//     color: "text-amber-700",
+//     bgGradient: "from-amber-50/50 via-white to-white",
+//     borderColor: "border-amber-200 hover:border-amber-300",
+//     btnBg: "bg-amber-600 hover:bg-amber-700",
+//     tagText: "Class 8 Prep",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
+//   },
+//   {
+//     id: 6,
+//     classNumber: "9",
+//     title: "Class 9",
+//     subtitle: "Pre-board rigor with extensive numerical & theory practice",
+//     badge: "BOARD PREP",
+//     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
+//     color: "text-orange-700",
+//     bgGradient: "from-orange-50/50 via-white to-white",
+//     borderColor: "border-orange-200 hover:border-orange-300",
+//     btnBg: "bg-orange-600 hover:bg-orange-700",
+//     tagText: "Class 9 Prep",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/29/29302.png",
+//   },
+//   {
+//     id: 7,
+//     classNumber: "10",
+//     title: "Class 10",
+//     subtitle: "Complete Board exam mastery with test series & PYQs",
+//     badge: "BOARD MASTER",
+//     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
+//     color: "text-rose-700",
+//     bgGradient: "from-rose-50/50 via-white to-white",
+//     borderColor: "border-rose-200 hover:border-rose-300",
+//     btnBg: "bg-rose-600 hover:bg-rose-700",
+//     tagText: "Class 10 Board",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
+//   },
+//   {
+//     id: 8,
+//     classNumber: "Olympiad",
+//     title: "Olympiad & NTSE",
+//     subtitle: "High-tier competitive aptitude, NTSE & national Olympiads",
+//     badge: "COMPETITIVE",
+//     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
+//     color: "text-purple-700",
+//     bgGradient: "from-purple-50/50 via-white to-white",
+//     borderColor: "border-purple-200 hover:border-purple-300",
+//     btnBg: "bg-purple-600 hover:bg-purple-700",
+//     tagText: "Competitive Prep",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2583/2583319.png",
+//   },
+// ];
+
+// // 4. CLASSES 11-12
+// const class11to12Data = [
+//   {
+//     id: 9,
+//     classNumber: "11",
+//     title: "Class 11",
+//     stream: "Arts & Humanities",
+//     tagline: "History, Political Science, Psychology & Sociology",
+//     color: "text-purple-700",
+//     bgGradient: "from-purple-50/40 via-white to-white",
+//     borderColor: "border-purple-200 hover:border-purple-300",
+//     btnBg: "bg-purple-600 hover:bg-purple-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
+//   },
+//   {
+//     id: 10,
+//     classNumber: "11",
+//     title: "Class 11",
+//     stream: "Commerce",
+//     tagline: "Accountancy, Business Studies, Economics & Core Maths",
+//     color: "text-emerald-700",
+//     bgGradient: "from-emerald-50/40 via-white to-white",
+//     borderColor: "border-emerald-200 hover:border-emerald-300",
+//     btnBg: "bg-emerald-600 hover:bg-emerald-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/2422/2422796.png",
+//   },
+//   {
+//     id: 11,
+//     classNumber: "11",
+//     title: "Class 11",
+//     stream: "Science (PCM / PCB)",
+//     tagline: "Physics, Chemistry, Advanced Maths & Biology",
+//     color: "text-blue-700",
+//     bgGradient: "from-blue-50/40 via-white to-white",
+//     borderColor: "border-blue-200 hover:border-blue-300",
+//     btnBg: "bg-blue-600 hover:bg-blue-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/1085/1085461.png",
+//   },
+//   {
+//     id: 12,
+//     classNumber: "12",
+//     title: "Class 12",
+//     stream: "Arts & Humanities",
+//     tagline: "Target 98%+ in Boards & CUET entrance preparation",
+//     color: "text-orange-700",
+//     bgGradient: "from-orange-50/40 via-white to-white",
+//     borderColor: "border-orange-200 hover:border-orange-300",
+//     btnBg: "bg-orange-600 hover:bg-orange-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
+//   },
+//   {
+//     id: 13,
+//     classNumber: "12",
+//     title: "Class 12",
+//     stream: "Commerce",
+//     tagline: "CA Foundation alignment, Board tests & case analysis",
+//     color: "text-teal-700",
+//     bgGradient: "from-teal-50/40 via-white to-white",
+//     borderColor: "border-teal-200 hover:border-teal-300",
+//     btnBg: "bg-teal-600 hover:bg-teal-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/3076/3076416.png",
+//   },
+//   {
+//     id: 14,
+//     classNumber: "12",
+//     title: "Class 12",
+//     stream: "Science (PCM / PCB)",
+//     tagline: "Master Board Syllabus alongside JEE & NEET prep",
+//     color: "text-sky-700",
+//     bgGradient: "from-sky-50/40 via-white to-white",
+//     borderColor: "border-sky-200 hover:border-sky-300",
+//     btnBg: "bg-blue-600 hover:bg-blue-700",
+//     imgUrl: "https://cdn-icons-png.flaticon.com/512/1356/1356479.png",
+//   },
+// ];
+
+// // 5. MENTORS
+// const mentorsList = [
+//   {
+//     id: 1,
+//     name: "Rahul Sharma",
+//     badge: "JEE MAIN & ADV",
+//     badgeBg: "bg-orange-500 text-white",
+//     college: "IIT Delhi Alumnus",
+//     role: "JEE Physics Lead",
+//     roleColor: "text-orange-600",
+//     rating: "4.9",
+//     students: "1,200+ Students",
+//     exp: "8+ Years",
+//     imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+//   },
+//   {
+//     id: 2,
+//     name: "Dr. Aditi Verma",
+//     badge: "NEET SPECIALIST",
+//     badgeBg: "bg-emerald-600 text-white",
+//     college: "AIIMS Delhi Graduate",
+//     role: "NEET Biology Mentor",
+//     roleColor: "text-emerald-600",
+//     rating: "4.9",
+//     students: "950+ Students",
+//     exp: "7+ Years",
+//     imgUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
+//   },
+//   {
+//     id: 3,
+//     name: "Ankit Jain",
+//     badge: "CLASS 6-10",
+//     badgeBg: "bg-blue-600 text-white",
+//     college: "IIT Bombay Alumnus",
+//     role: "Maths Olympiad Head",
+//     roleColor: "text-blue-600",
+//     rating: "4.8",
+//     students: "1,500+ Students",
+//     exp: "9+ Years",
+//     imgUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+//   },
+//   {
+//     id: 4,
+//     name: "Neha Kapoor",
+//     badge: "CAREER & PROFILE",
+//     badgeBg: "bg-purple-600 text-white",
+//     college: "Ex-Career Analyst",
+//     role: "Higher Education Counselor",
+//     roleColor: "text-purple-600",
+//     rating: "4.9",
+//     students: "1,100+ Students",
+//     exp: "6+ Years",
+//     imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+//   },
+// ];
+
+// function MentorSlider() {
+//   const navigate = useSafeNavigate();
+
+//   return (
+//     <div className="w-full py-2">
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//         {mentorsList.map((mentor) => (
+//           <div
+//             key={mentor.id}
+//             className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between h-[390px]"
+//           >
+//             <div>
+//               <div className="flex justify-between items-center mb-3">
+//                 <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${mentor.badgeBg}`}>
+//                   {mentor.badge}
+//                 </span>
+//                 <button className="text-slate-300 hover:text-orange-500">
+//                   <Bookmark className="w-4 h-4" />
+//                 </button>
+//               </div>
+
+//               <div className="flex justify-center my-3">
+//                 <div className="w-20 h-20 rounded-full overflow-hidden p-1 ring-2 ring-slate-100">
+//                   <img src={mentor.imgUrl} alt={mentor.name} className="w-full h-full object-cover rounded-full" />
+//                 </div>
+//               </div>
+
+//               <div className="text-center">
+//                 <div className="flex items-center justify-center gap-1.5">
+//                   <h3 className="text-base font-bold text-slate-900">{mentor.name}</h3>
+//                   <CheckCircle2 className="w-4 h-4 text-orange-500" />
+//                 </div>
+//                 <p className="text-xs text-slate-400 font-medium">{mentor.college}</p>
+//                 <p className={`text-xs font-bold mt-1 ${mentor.roleColor}`}>{mentor.role}</p>
+//               </div>
+//             </div>
+
+//             <div>
+//               <div className="flex items-center justify-between text-[11px] font-semibold text-slate-500 px-3 py-2 bg-slate-50 rounded-xl mb-3">
+//                 <div className="flex items-center gap-1">
+//                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+//                   <span className="text-slate-800 font-bold">{mentor.rating}</span>
+//                 </div>
+//                 <div className="flex items-center gap-1">
+//                   <Users className="w-3.5 h-3.5 text-slate-400" />
+//                   <span>{mentor.students}</span>
+//                 </div>
+//                 <div className="flex items-center gap-1">
+//                   <Clock className="w-3.5 h-3.5 text-slate-400" />
+//                   <span>{mentor.exp}</span>
+//                 </div>
+//               </div>
+
+//               <div className="grid grid-cols-2 gap-2">
+//                 <button
+//                   onClick={() => navigate("/mentordetail")}
+//                   className="py-2 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition"
+//                 >
+//                   Profile
+//                 </button>
+//                 <button
+//                   onClick={() => navigate("/mentordetail")}
+//                   className="py-2 text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition shadow-sm"
+//                 >
+//                   Book Slot
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// function DynamicSectionBlock({
+//   sectionTitle,
+//   sectionBadge,
+//   data,
+// }: {
+//   sectionTitle: string;
+//   sectionBadge: string;
+//   data: any[];
+// }) {
+//   const [activeView, setActiveView] = useState<"classes" | "mentors">("classes");
+//   const navigate = useSafeNavigate();
+
+//   const handleCardClick = (item: any) => {
+//     const classNum =
+//       item.classNumber || (item.title.match(/\d+/) ? item.title.match(/\d+/)[0] : "6");
+//     navigate(`/mysubjectdetail?class=${classNum}`, {
+//       state: {
+//         id: item.id,
+//         title: item.title,
+//         subtitle: item.subtitle,
+//         tag: item.tagText || item.badge,
+//         classNumber: classNum,
+//       },
+//     });
+//   };
+
+//   return (
+//     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+//       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-slate-100 gap-4">
+//         <div>
+//           <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-xs uppercase mb-1">
+//             <GraduationCap className="w-4 h-4" />
+//             <span>{sectionBadge}</span>
+//           </div>
+//           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+//             {activeView === "classes" ? sectionTitle : "Verified Subject Mentors"}
+//           </h2>
+//         </div>
+
+//         <div className="inline-flex p-1 bg-slate-100 rounded-2xl self-start md:self-auto">
+//           <button
+//             onClick={() => setActiveView("classes")}
+//             className={`px-5 py-2 text-xs font-bold rounded-xl transition-all ${
+//               activeView === "classes"
+//                 ? "bg-white text-slate-900 shadow-sm"
+//                 : "text-slate-500 hover:text-slate-800"
+//             }`}
+//           >
+//             Explore Classes
+//           </button>
+//           <button
+//             onClick={() => setActiveView("mentors")}
+//             className={`px-5 py-2 text-xs font-bold rounded-xl transition-all ${
+//               activeView === "mentors"
+//                 ? "bg-slate-900 text-white shadow-sm"
+//                 : "text-slate-500 hover:text-slate-800"
+//             }`}
+//           >
+//             Online Mentors
+//           </button>
+//         </div>
+//       </div>
+
+//       {activeView === "mentors" ? (
+//         <MentorSlider />
+//       ) : (
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {data.map((item) => (
+//             <div
+//               key={item.id}
+//               onClick={() => handleCardClick(item)}
+//               className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[280px] cursor-pointer group`}
+//             >
+//               <div>
+//                 <div className="flex items-center justify-between mb-4">
+//                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${item.badgeBg}`}>
+//                     {item.badge}
+//                   </span>
+//                   <div className="w-12 h-12 p-1.5 flex items-center justify-center">
+//                     <img src={item.imgUrl} alt={item.title} className="w-full h-full object-contain" />
+//                   </div>
+//                 </div>
+
+//                 <h3 className={`text-xl font-bold mb-1.5 ${item.color}`}>{item.title}</h3>
+//                 <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
+//                   {item.subtitle}
+//                 </p>
+//               </div>
+
+//               <div className="flex items-center justify-between pt-4 border-t border-slate-100 mt-4">
+//                 <span className="text-[11px] font-semibold text-slate-500">
+//                   {item.tagText || "Curriculum"}
+//                 </span>
+//                 <div
+//                   className={`px-3 py-1.5 text-xs font-bold text-white rounded-xl ${item.btnBg} transition-all flex items-center gap-1 shadow-sm`}
+//                 >
+//                   <span>Explore</span>
+//                   <ArrowRight className="w-3.5 h-3.5" />
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export function Features() {
+//   const navigate = useSafeNavigate();
+
+//   const handleStreamClick = (item: any) => {
+//     navigate(`/mysubjectdetail?class=${item.classNumber}&stream=${encodeURIComponent(item.stream)}`, {
+//       state: {
+//         id: item.id,
+//         title: item.title,
+//         stream: item.stream,
+//         classNumber: item.classNumber,
+//       },
+//     });
+//   };
+
+//   return (
+//     <section id="features" className="py-12 bg-slate-50 font-sans text-slate-800">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+//         {/* Header */}
+//         <div className="text-center max-w-3xl mx-auto space-y-3">
+//           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1 rounded-full text-orange-700 text-xs font-bold tracking-wide uppercase">
+//             <Sparkles className="w-3.5 h-3.5" />
+//             <span>Targeted Learning & Mentorship</span>
+//           </div>
+//           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+//             Comprehensive Guidance for Every Student
+//           </h2>
+//           <p className="text-sm sm:text-base text-slate-600">
+//             Good Guiders brings together realistic Mock Tests, interactive Online Learning, and personalized Mentorship to help students learn smarter.
+//           </p>
+//         </div>
+
+//         {/* Top 3 Core Features */}
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//           {topFeatures.map((feat) => (
+//             <div
+//               key={feat.id}
+//               className={`bg-gradient-to-b ${feat.gradient} bg-white border ${feat.border} rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
+//             >
+//               <div>
+//                 <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
+//                   {feat.icon}
+//                 </div>
+//                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
+//                 <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
+//               </div>
+//               <button
+//                 onClick={() => navigate("/mentordetail")}
+//                 className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${feat.btnColor}`}
+//               >
+//                 Learn More
+//               </button>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Section 1: Classes 1-5 */}
+//         <DynamicSectionBlock
+//           sectionBadge="Classes 1–5"
+//           sectionTitle="Explore. Learn. Grow."
+//           data={class11to12Data ? class1to5Data : []}
+//         />
+
+//         {/* Section 2: Classes 6-10 */}
+//         <DynamicSectionBlock
+//           sectionBadge="Classes 6–10"
+//           sectionTitle="Choose Your Class"
+//           data={class6to10Data}
+//         />
+
+//         {/* Section 3: Classes 11-12 */}
+//         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+//           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-slate-100 gap-2">
+//             <div>
+//               <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-xs uppercase mb-1">
+//                 <GraduationCap className="w-4 h-4" />
+//                 <span>Senior Secondary</span>
+//               </div>
+//               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+//                 Classes 11 & 12 Specialized Streams
+//               </h2>
+//             </div>
+//             <p className="text-xs text-slate-400 font-medium">Select your targeted domain</p>
+//           </div>
+
+//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//             {class11to12Data.map((item) => (
+//               <div
+//                 key={item.id}
+//                 onClick={() => handleStreamClick(item)}
+//                 className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[240px] cursor-pointer group`}
+//               >
+//                 <div>
+//                   <div className="flex justify-between items-start mb-3">
+//                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
+//                       {item.title}
+//                     </span>
+//                     <div className="w-12 h-12 p-1">
+//                       <img src={item.imgUrl} alt={item.stream} className="w-full h-full object-contain" />
+//                     </div>
+//                   </div>
+//                   <h3 className={`text-lg font-bold mb-1.5 ${item.color}`}>{item.stream}</h3>
+//                   <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
+//                     {item.tagline}
+//                   </p>
+//                 </div>
+
+//                 <div className="flex justify-end pt-4 border-t border-slate-100 mt-4">
+//                   <div
+//                     className={`w-8 h-8 rounded-full ${item.btnBg} text-white flex items-center justify-center shadow-sm`}
+//                   >
+//                     <ArrowRight className="w-4 h-4" />
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
 //       </div>
 //     </section>
 //   );
@@ -2024,7 +2727,7 @@
 
 
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Users,
@@ -2192,6 +2895,7 @@ const class1to5Data = [
     btnBg: "bg-indigo-600 hover:bg-indigo-700",
     tagText: "Olympiad Level",
     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
+    customRoute: "/juniorolympiad",
   },
 ];
 
@@ -2503,6 +3207,18 @@ function DynamicSectionBlock({
   const navigate = useSafeNavigate();
 
   const handleCardClick = (item: any) => {
+    if (item.customRoute || item.title === "Junior Olympiad") {
+      navigate(item.customRoute || "/juniorolympiad", {
+        state: {
+          id: item.id,
+          title: item.title,
+          subtitle: item.subtitle,
+          tag: item.tagText || item.badge,
+        },
+      });
+      return;
+    }
+
     const classNum =
       item.classNumber || (item.title.match(/\d+/) ? item.title.match(/\d+/)[0] : "6");
     navigate(`/mysubjectdetail?class=${classNum}`, {
@@ -2518,9 +3234,10 @@ function DynamicSectionBlock({
 
   return (
     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-slate-100 gap-4">
+      {/* Header Center Aligned */}
+      <div className="flex flex-col items-center justify-center text-center mb-8 pb-6 border-b border-slate-100 gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-xs uppercase mb-1">
+          <div className="inline-flex items-center justify-center gap-2 text-orange-600 font-extrabold tracking-widest text-xl uppercase mb-1">
             <GraduationCap className="w-4 h-4" />
             <span>{sectionBadge}</span>
           </div>
@@ -2529,7 +3246,7 @@ function DynamicSectionBlock({
           </h2>
         </div>
 
-        <div className="inline-flex p-1 bg-slate-100 rounded-2xl self-start md:self-auto">
+        <div className="inline-flex p-1 bg-slate-100 rounded-2xl">
           <button
             onClick={() => setActiveView("classes")}
             className={`px-5 py-2 text-xs font-bold rounded-xl transition-all ${
@@ -2615,7 +3332,7 @@ export function Features() {
   return (
     <section id="features" className="py-12 bg-slate-50 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Header */}
+        {/* Main Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1 rounded-full text-orange-700 text-xs font-bold tracking-wide uppercase">
             <Sparkles className="w-3.5 h-3.5" />
@@ -2653,25 +3370,25 @@ export function Features() {
           ))}
         </div>
 
-        {/* Section 1: Classes 1-5 */}
+        {/* Section 1: Classes 1-5 (Header Centered) */}
         <DynamicSectionBlock
           sectionBadge="Classes 1–5"
           sectionTitle="Explore. Learn. Grow."
-          data={class11to12Data ? class1to5Data : []}
+          data={class1to5Data}
         />
 
-        {/* Section 2: Classes 6-10 */}
+        {/* Section 2: Classes 6-10 (Header Centered) */}
         <DynamicSectionBlock
           sectionBadge="Classes 6–10"
           sectionTitle="Choose Your Class"
           data={class6to10Data}
         />
 
-        {/* Section 3: Classes 11-12 */}
+        {/* Section 3: Classes 11-12 (Header Centered) */}
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-6 border-b border-slate-100 gap-2">
+          <div className="flex flex-col items-center justify-center text-center mb-8 pb-6 border-b border-slate-100 gap-2">
             <div>
-              <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-xs uppercase mb-1">
+              <div className="inline-flex items-center justify-center gap-2 text-orange-600 font-extrabold tracking-widest text-xl uppercase mb-1">
                 <GraduationCap className="w-4 h-4" />
                 <span>Senior Secondary</span>
               </div>
