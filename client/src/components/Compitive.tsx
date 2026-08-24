@@ -599,9 +599,6 @@
 
 // export default ExploreExams;
 
-
-
-
 import React, { useState } from 'react';
 import { 
   BookOpen, 
@@ -1165,8 +1162,8 @@ export const ExploreExams: React.FC = () => {
       </div>
 
       {/* --- Bottom Features Bar --- */}
-      {/* <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="flex items-center gap-3">
+      {/* <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> */}
+        {/* <div className="flex items-center gap-3">
           <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <GraduationCap className="w-6 h-6" />
           </div>
@@ -1196,16 +1193,16 @@ export const ExploreExams: React.FC = () => {
           </div>
         </div> */}
 
-        {/* <div className="flex items-center gap-3"> */}
-          {/* <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
+        {/* <div className="flex items-center gap-3">
+          <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <UserCheck className="w-6 h-6" />
           </div>
           <div>
             <h4 className="text-xs font-bold text-slate-900">Achieve Your Goal</h4>
             <p className="text-[11px] text-slate-500">Get into top colleges and build your future.</p>
           </div>
-        </div>
-      </div> */}
+        </div> */}
+      {/* </div> */}
     </section>
   );
 };
