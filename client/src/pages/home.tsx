@@ -26,7 +26,7 @@ export default function Home() {
       {/* <EarlyRegistration /> */}
       <Testimonials />
       <Contact />
-      <News />
+      {/* <News /> */}
       <Footer />
       <WhatsAppFloat />
     </div>

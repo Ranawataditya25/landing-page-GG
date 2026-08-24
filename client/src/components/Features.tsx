@@ -2984,6 +2984,7 @@ const class6to10Data = [
     btnBg: "bg-purple-600 hover:bg-purple-700",
     tagText: "Competitive Prep",
     imgUrl: "https://cdn-icons-png.flaticon.com/512/2583/2583319.png",
+     customRoute: "/juniorolympiad",
   },
 ];
 

@@ -1165,7 +1165,7 @@ export const ExploreExams: React.FC = () => {
       </div>
 
       {/* --- Bottom Features Bar --- */}
-      <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex items-center gap-3">
           <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <GraduationCap className="w-6 h-6" />
@@ -1174,9 +1174,9 @@ export const ExploreExams: React.FC = () => {
             <h4 className="text-xs font-bold text-slate-900">Expert Guidance</h4>
             <p className="text-[11px] text-slate-500">Learn from top mentors and subject experts.</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <Target className="w-6 h-6" />
           </div>
@@ -1184,9 +1184,9 @@ export const ExploreExams: React.FC = () => {
             <h4 className="text-xs font-bold text-slate-900">Smart Preparation</h4>
             <p className="text-[11px] text-slate-500">Practice with the best questions & tests.</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
           <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <TrendingUp className="w-6 h-6" />
           </div>
@@ -1194,10 +1194,10 @@ export const ExploreExams: React.FC = () => {
             <h4 className="text-xs font-bold text-slate-900">Track Progress</h4>
             <p className="text-[11px] text-slate-500">Analyze performance and improve.</p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex items-center gap-3">
-          <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
+        {/* <div className="flex items-center gap-3"> */}
+          {/* <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
             <UserCheck className="w-6 h-6" />
           </div>
           <div>
@@ -1205,7 +1205,7 @@ export const ExploreExams: React.FC = () => {
             <p className="text-[11px] text-slate-500">Get into top colleges and build your future.</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
