@@ -18040,72 +18040,7 @@ export default function MentorProfilePage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Filter Video Lectures Card */}
-                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Choose Class</option>
-                          <option>Class 11</option>
-                          <option>Class 12</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Choose Subject</option>
-                          <option>Physics</option>
-                          <option>Chemistry</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Choose Chapter</option>
-                          <option>Kinematics</option>
-                          <option>Laws of Motion</option>
-                          <option>Work, Energy & Power</option>
-                          <option>Electrostatics</option>
-                          <option>Current Electricity</option>
-                          <option>Thermodynamics</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Choose Topic</option>
-                          <option>Current Electricity</option>
-                          <option>Laws of Motion</option>
-                          <option>Electrostatics</option>
-                          <option>Thermodynamics</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <button className="w-full bg-indigo-900 hover:bg-indigo-950 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
-                      <Filter size={13} /> Apply
-                    </button>
-                  </div>
-                </div>
-
-                {/* Choose Exam / Class Selection */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+   <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                   <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
                     <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
                       U
@@ -18156,6 +18091,111 @@ export default function MentorProfilePage() {
                     </div>
                   </div>
                 </div>
+                {/* Filter Video Lectures Card */}
+                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
+                  
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Choose Subject</option>
+                          <option>Physics</option>
+                          <option>Chemistry</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Choose Chapter</option>
+                          <option>Kinematics</option>
+                          <option>Laws of Motion</option>
+                          <option>Work, Energy & Power</option>
+                          <option>Electrostatics</option>
+                          <option>Current Electricity</option>
+                          <option>Thermodynamics</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Choose Topic</option>
+                          <option>Current Electricity</option>
+                          <option>Laws of Motion</option>
+                          <option>Electrostatics</option>
+                          <option>Thermodynamics</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <button className="w-full bg-indigo-900 hover:bg-indigo-950 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
+                      <Filter size={13} /> Apply
+                    </button>
+                  </div>
+                </div>
+
+                {/* Choose Exam / Class Selection */}
+                {/* <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                  <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
+                    <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      U
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">NEET</p>
+                      <p className="text-gray-400 text-[9px]">UG</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <BookOpen size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">JEE</p>
+                      <p className="text-gray-400 text-[9px]">(Main + Adv)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 11</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 12</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Layers size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">More</p>
+                      <p className="text-gray-400 text-[9px]">Exams</p>
+                    </div>
+                  </div>
+                </div> */}
 
                 {/* Video Lectures Card List */}
                 <div className="space-y-4">
@@ -18371,70 +18411,7 @@ export default function MentorProfilePage() {
                   </p>
                 </div>
 
-                {/* Filter Assignments Card */}
-                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
-                  <h3 className="font-bold text-blue-950 text-xs">Filter Assignments</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Class</option>
-                          <option>Class 11</option>
-                          <option>Class 12</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Subject</option>
-                          <option>Physics</option>
-                          <option>Chemistry</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Chapter</option>
-                          <option>Kinematics</option>
-                          <option>Laws of Motion</option>
-                          <option>Work, Energy & Power</option>
-                          <option>System of Particles</option>
-                          <option>Rotational Motion</option>
-                          <option>Gravitation</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Topic</option>
-                          <option>Kinematics</option>
-                          <option>Laws of Motion</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
-                      <Filter size={13} /> Apply
-                    </button>
-                  </div>
-                </div>
-
-                {/* Choose Exam / Class Selection */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+             <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                   <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
                     <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
                       U
@@ -18485,6 +18462,111 @@ export default function MentorProfilePage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Filter Assignments Card */}
+                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
+                  <h3 className="font-bold text-blue-950 text-xs">Filter Assignments</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
+                    
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Subject</option>
+                          <option>Physics</option>
+                          <option>Chemistry</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Chapter</option>
+                          <option>Kinematics</option>
+                          <option>Laws of Motion</option>
+                          <option>Work, Energy & Power</option>
+                          <option>System of Particles</option>
+                          <option>Rotational Motion</option>
+                          <option>Gravitation</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Topic</option>
+                          <option>Kinematics</option>
+                          <option>Laws of Motion</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
+                      <Filter size={13} /> Apply
+                    </button>
+                  </div>
+                </div>
+
+                {/* Choose Exam / Class Selection */}
+                {/* <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                  <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
+                    <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      U
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">NEET</p>
+                      <p className="text-gray-400 text-[9px]">UG</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <BookOpen size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">JEE</p>
+                      <p className="text-gray-400 text-[9px]">(Main + Adv)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 11</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 12</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Layers size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">More</p>
+                      <p className="text-gray-400 text-[9px]">Exams</p>
+                    </div>
+                  </div>
+                </div> */}
 
                 {/* Per Assignment Fee Banner */}
                 <div className="bg-amber-50/70 border border-amber-200/80 rounded-2xl p-3.5 flex items-center gap-3">
@@ -18802,14 +18884,8 @@ export default function MentorProfilePage() {
 
                 {/* 2. Topic Wise Mock Tests */}
                 <div className="space-y-2.5">
-                  {/* <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-bold text-gray-900 text-xs">2. Topic Wise Mock Tests</h3>
-                      <p className="text-gray-400 text-[10px]">Practice individual topics to strengthen specific concepts.</p>
-                    </div>
-                   
-                  </div> */}
-
+               
+{/* 
 <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
  <div className="flex items-center justify-between">
                     <div>
@@ -18820,17 +18896,7 @@ export default function MentorProfilePage() {
                   </div>
                   <h3 className="font-bold text-blue-950 text-xs">Filter Mock Tests</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Class</option>
-                          <option>Class 11</option>
-                          <option>Class 12</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
+                  
 
                     <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
@@ -18881,9 +18947,73 @@ export default function MentorProfilePage() {
                     </button>
                   </div>
                 </div>
+ */}
 
+<div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4">
+  <div className="flex flex-row items-end gap-3 w-full">
+    
+    {/* 1. Title & Description Block */}
+    <div className="min-w-[180px] shrink-0">
+      <h3 className="font-bold text-gray-900 text-xs whitespace-nowrap">2. Topic Wise Mock Tests</h3>
+      <p className="text-gray-400 text-[10px] whitespace-nowrap">Practice individual topics</p>
+    </div>
 
+    {/* 2. Select Subject */}
+    <div className="flex-1 min-w-[130px]">
+      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
+      <div className="relative">
+        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+          <option>Select Subject</option>
+          <option>Physics</option>
+          <option>Chemistry</option>
+          <option>Botany</option>
+          <option>Zoology</option>
+        </select>
+        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+      </div>
+    </div>
 
+    {/* 3. Select Chapter */}
+    <div className="flex-1 min-w-[130px]">
+      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
+      <div className="relative">
+        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+          <option>Select Chapter</option>
+          <option>Current Electricity</option>
+          <option>Moving Charges & Magnetism</option>
+          <option>EMI & AC</option>
+          <option>Optics</option>
+          <option>Dual Nature of Radiation</option>
+        </select>
+        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+      </div>
+    </div>
+
+    {/* 4. Select Topic */}
+    <div className="flex-1 min-w-[130px]">
+      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
+      <div className="relative">
+        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+          <option>Select Topic</option>
+          <option>Current Electricity</option>
+          <option>Magnetism</option>
+          <option>Ray Optics</option>
+          <option>Thermodynamics</option>
+          <option>Oscillations</option>
+        </select>
+        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+      </div>
+    </div>
+
+    {/* 5. Apply Button */}
+    <div className="shrink-0">
+      <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm whitespace-nowrap">
+        <Filter size={13} /> Apply
+      </button>
+    </div>
+
+  </div>
+</div>
 
 
 
@@ -18935,14 +19065,8 @@ export default function MentorProfilePage() {
 
                 {/* 3. Chapter Wise Mock Tests */}
                 <div className="space-y-2.5">
-                  {/* <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-bold text-gray-900 text-xs">3. Chapter Wise Mock Tests</h3>
-                      <p className="text-gray-400 text-[10px]">Practice complete chapters to build strong fundamentals.</p>
-                    </div>
-                  
-                  </div> */}
-<div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
+                 
+{/* <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
    <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-bold text-gray-900 text-xs">3. Chapter Wise Mock Tests</h3>
@@ -18952,31 +19076,7 @@ export default function MentorProfilePage() {
                   </div>
                   <h3 className="font-bold text-blue-950 text-xs">Filter Mock Tests</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Class</option>
-                          <option>Class 11</option>
-                          <option>Class 12</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
-
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Subject</option>
-                          <option>Physics</option>
-                          <option>Chemistry</option>
-                          <option>Botany</option>
-                          <option>Zoology</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
+                    
 
                     <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
@@ -19012,13 +19112,62 @@ export default function MentorProfilePage() {
                       <Filter size={13} /> Apply
                     </button>
                   </div>
-                </div>
+                </div> */}
 
 
 
 
 
+<div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4">
+  <div className="flex flex-row items-end gap-3 w-full">
+    
+    {/* 1. Title & Description Block */}
+    <div className="min-w-[180px] shrink-0">
+      <h3 className="font-bold text-gray-900 text-xs whitespace-nowrap">3. Chapter Wise Mock Tests</h3>
+      <p className="text-gray-400 text-[10px] whitespace-nowrap">Practice complete chapters</p>
+    </div>
 
+    {/* 2. Select Chapter */}
+    <div className="flex-1 min-w-[140px]">
+      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
+      <div className="relative">
+        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+          <option>Select Chapter</option>
+          <option>Current Electricity</option>
+          <option>Moving Charges & Magnetism</option>
+          <option>EMI & AC</option>
+          <option>Optics</option>
+          <option>Dual Nature of Radiation</option>
+        </select>
+        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+      </div>
+    </div>
+
+    {/* 3. Select Topic */}
+    <div className="flex-1 min-w-[140px]">
+      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
+      <div className="relative">
+        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+          <option>Select Topic</option>
+          <option>Current Electricity</option>
+          <option>Magnetism</option>
+          <option>Ray Optics</option>
+          <option>Thermodynamics</option>
+          <option>Oscillations</option>
+        </select>
+        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+      </div>
+    </div>
+
+    {/* 4. Apply Button */}
+    <div className="shrink-0">
+      <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm whitespace-nowrap">
+        <Filter size={13} /> Apply
+      </button>
+    </div>
+
+  </div>
+</div>
 
 
 
@@ -19543,69 +19692,7 @@ export default function MentorProfilePage() {
                   </p>
                 </div>
 
-                {/* Filter Study Materials Card */}
-                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
-                  <h3 className="font-bold text-blue-950 text-xs">Filter Study Materials</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    {/* <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Class</option>
-                          <option>Class 11</option>
-                          <option>Class 12</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div> */}
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Subject</option>
-                          <option>Physics</option>
-                          <option>Chemistry</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Chapter</option>
-                          <option>Complete Syllabus</option>
-                          <option>Laws of Motion</option>
-                          <option>Electrostatics</option>
-                          <option>Current Electricity</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
-                      <div className="relative">
-                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
-                          <option>Select Topic</option>
-                          <option>Complete Syllabus</option>
-                          <option>Formulas</option>
-                          <option>Laws of Motion</option>
-                        </select>
-                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                      </div>
-                    </div>
-
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
-                      <Filter size={13} /> Apply
-                    </button>
-                  </div>
-                </div>
-
-                {/* Choose Exam / Class Selection */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                   <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
                     <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
                       U
@@ -19656,6 +19743,110 @@ export default function MentorProfilePage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Filter Study Materials Card */}
+                <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
+                  <h3 className="font-bold text-blue-950 text-xs">Filter Study Materials</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
+                    
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Subject</option>
+                          <option>Physics</option>
+                          <option>Chemistry</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Chapter</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Chapter</option>
+                          <option>Complete Syllabus</option>
+                          <option>Laws of Motion</option>
+                          <option>Electrostatics</option>
+                          <option>Current Electricity</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Topic</label>
+                      <div className="relative">
+                        <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
+                          <option>Select Topic</option>
+                          <option>Complete Syllabus</option>
+                          <option>Formulas</option>
+                          <option>Laws of Motion</option>
+                        </select>
+                        <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 shadow-sm">
+                      <Filter size={13} /> Apply
+                    </button>
+                  </div>
+                </div>
+
+                {/* Choose Exam / Class Selection */}
+                {/* <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                  <div className="bg-blue-50/40 border-2 border-blue-600 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer shadow-sm">
+                    <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      U
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">NEET</p>
+                      <p className="text-gray-400 text-[9px]">UG</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <BookOpen size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">JEE</p>
+                      <p className="text-gray-400 text-[9px]">(Main + Adv)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 11</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Book size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">Class 12</p>
+                      <p className="text-gray-400 text-[9px]">(Physics)</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-gray-200 hover:border-gray-300 rounded-xl p-2.5 flex items-center gap-2 cursor-pointer">
+                    <div className="w-7 h-7 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center font-bold text-xs flex-shrink-0">
+                      <Layers size={14} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 text-[11px]">More</p>
+                      <p className="text-gray-400 text-[9px]">Exams</p>
+                    </div>
+                  </div>
+                </div> */}
 
                 {/* Top Banner Info */}
                 <div className="bg-emerald-50/60 border border-emerald-100 rounded-2xl p-3.5 flex items-center justify-between gap-3">
