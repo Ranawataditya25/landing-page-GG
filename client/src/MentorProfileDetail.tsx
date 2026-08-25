@@ -18044,7 +18044,7 @@ export default function MentorProfilePage() {
                 {/* Filter Video Lectures Card */}
                 <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    <div>
+                    {/* <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
                       <div className="relative">
                         <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
@@ -18054,7 +18054,7 @@ export default function MentorProfilePage() {
                         </select>
                         <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
@@ -18375,7 +18375,7 @@ export default function MentorProfilePage() {
                 <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
                   <h3 className="font-bold text-blue-950 text-xs">Filter Assignments</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    <div>
+                    {/* <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
                       <div className="relative">
                         <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
@@ -18385,7 +18385,7 @@ export default function MentorProfilePage() {
                         </select>
                         <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
@@ -19547,7 +19547,7 @@ export default function MentorProfilePage() {
                 <div className="bg-blue-50/30 border border-blue-100 rounded-2xl p-4 space-y-3">
                   <h3 className="font-bold text-blue-950 text-xs">Filter Study Materials</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-end">
-                    <div>
+                    {/* <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Class</label>
                       <div className="relative">
                         <select className="w-full bg-white border border-gray-200 rounded-xl px-3 py-2 text-xs appearance-none focus:outline-none focus:border-blue-500 cursor-pointer text-gray-700 font-semibold">
@@ -19557,7 +19557,7 @@ export default function MentorProfilePage() {
                         </select>
                         <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div>
                       <label className="block text-[10px] font-bold text-gray-700 mb-1">Select Subject</label>
