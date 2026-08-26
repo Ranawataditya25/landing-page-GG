@@ -9,6 +9,7 @@ import  MentorProfileDetail from "./MentorProfileDetail";
 import Mysubjectdetail from "./Mysubjectdetail";
 import JuniorOlympiad from "./JuniorOlympiad";
 import SelectedSubjects from "./SelectedSubjects";
+import LocalTutor from "./LocalTutor";
 
 
 import NotFound from "@/pages/not-found";
@@ -22,7 +23,7 @@ function Router() {
            <Route path="/mysubjectdetail" component={ Mysubjectdetail} />
               <Route path="/selectedsubjects" component={ SelectedSubjects} />
               <Route path="/juniorolympiad" component={   JuniorOlympiad} />
-
+  <Route path="/localtutor" component={LocalTutor} />
       
       <Route component={NotFound} />
     </Switch>

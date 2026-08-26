@@ -2478,7 +2478,7 @@ import {
   ArrowRight,
   Landmark,
 } from "lucide-react";
-
+import { Header } from '../src/components/Header';
 // State / Board list
 const statesList: string[] = [
   "CBSE",
@@ -2648,7 +2648,7 @@ export default function ClassSubjectsDashboard() {
   return (
     <div className="min-h-screen bg-[#f4f7fa] p-4 md:p-6 lg:p-8 font-sans text-slate-700 antialiased">
       <div className="max-w-[1340px] mx-auto space-y-6">
-        
+        <Header />
         {/* TOP HERO BANNER CARD */}
         <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
           

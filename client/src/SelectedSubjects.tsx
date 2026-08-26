@@ -2191,7 +2191,7 @@ import {
   PhoneCall,
   Lightbulb,
 } from "lucide-react";
-
+import { Header } from '../src/components/Header';
 export default function StudyDashboard() {
   // Safe extraction without router crash
   let navState: any = null;
@@ -2318,6 +2318,7 @@ export default function StudyDashboard() {
 
   const renderResourceCard = (title: string, desc: string) => (
     <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm space-y-4">
+
       <div>
         <h3 className="font-bold text-slate-800 text-base">{title}</h3>
         <p className="text-sm text-slate-500 mt-0.5">{desc}</p>
@@ -2415,7 +2416,7 @@ export default function StudyDashboard() {
   return (
     <div className="min-h-screen bg-slate-100 p-4 md:p-6 font-sans text-slate-800 antialiased">
       <div className="max-w-[1340px] mx-auto">
-        
+        <Header/>
         {/* TOP SUBJECTS NAVBAR */}
         <div className="bg-white rounded-2xl shadow-xs border border-slate-200/80 p-3 mb-6 flex items-center gap-2.5 overflow-x-auto">
           {subjects.map((sub) => {

@@ -900,7 +900,7 @@ import {
   Info, Grid, List, MessageSquare, RotateCcw, SlidersHorizontal, Zap
 } from 'lucide-react';
 import  Banner  from './components/Banner';
-
+import { Header } from '../src/components/Header';
 // Safe Fallback Banner Component in case local `./components/Banner` doesn't exist
 const SafeBanner = () => (
   <div className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-white py-6 px-4 text-center shadow-md">
@@ -1205,10 +1205,11 @@ export default function MentorsPage() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-gray-800 font-sans text-xs">
-      <Banner />
+      <Header/>
+    
 
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
-        
+          <Banner />
         <nav className="text-gray-400 text-xs mb-4 flex items-center gap-1.5 font-medium">
           <span className="hover:text-orange-500 cursor-pointer transition">Home</span>
           <span>&gt;</span>

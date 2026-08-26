@@ -361,6 +361,7 @@ import {
   Award,
   FileCheck2
 } from 'lucide-react';
+import { Header } from '../src/components/Header';
 
 export default function JuniorOlympiadDashboard() {
   const [selectedClass, setSelectedClass] = useState('Class 1');
@@ -438,6 +439,7 @@ export default function JuniorOlympiadDashboard() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 p-4 md:p-8 font-sans">
+        <Header />
       <div className="max-w-7xl mx-auto space-y-6">
 
         {/* Top Hero Banner */}
