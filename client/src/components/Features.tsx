@@ -3440,2500 +3440,9 @@
 
 // // // // // export default Features;
 
-// // // // import React, { useState } from "react";
-// // // // import { useNavigate } from "react-router-dom";
-// // // // import {
-// // // //   Users,
-// // // //   ArrowRight,
-// // // //   Bookmark,
-// // // //   CheckCircle2,
-// // // //   Star,
-// // // //   Clock,
-// // // //   Sparkles,
-// // // //   GraduationCap,
-// // // //   BarChart2,
-// // // //   FileText,
-// // // //   TrendingUp,
-// // // //   X,
-// // // // } from "lucide-react";
 
-// // // // // Safe Navigation helper to prevent router crashes
-// // // // function useSafeNavigate() {
-// // // //   try {
-// // // //     return useNavigate();
-// // // //   } catch (error) {
-// // // //     return (path: string, options?: { state?: any }) => {
-// // // //       window.location.href = path;
-// // // //     };
-// // // //   }
-// // // // }
 
-// // // // // 1. TOP 3 PILLARS
-// // // // const topFeatures = [
-// // // //   {
-// // // //     id: 0,
-// // // //     title: "Evaluate",
-// // // //     icon: "🤝",
-// // // //     description: "1-on-1 personalized guidance with top mentors to calibrate your academic roadmap.",
-// // // //     gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
-// // // //     border: "border-emerald-200/60",
-// // // //     btnColor: "bg-emerald-600 hover:bg-emerald-700",
-// // // //     planBadge: "PERSONALIZED EVALUATION PLAN",
-// // // //     planDescription: "1:1 mentorship sessions, weak-subject analysis, target roadmap, and progress tracking.",
-// // // //   },
-// // // //   {
-// // // //     id: 1,
-// // // //     title: "Educate",
-// // // //     icon: "🧪",
-// // // //     description: "Adaptive mock tests, 10+ years PYQs, and AI-driven deep performance diagnostics.",
-// // // //     gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
-// // // //     border: "border-rose-200/60",
-// // // //     btnColor: "bg-rose-600 hover:bg-rose-700",
-// // // //     planBadge: "COMPREHENSIVE EDUCATE PLAN",
-// // // //     planDescription: "Adaptive mock tests, curated 10+ years PYQs, and AI-driven performance diagnostics.",
-// // // //   },
-// // // //   {
-// // // //     id: 2,
-// // // //     title: "Elevate",
-// // // //     icon: "🧠",
-// // // //     description: "Mental well-being, strategic stress mitigation, and continuous counselor support.",
-// // // //     gradient: "from-cyan-500/10 via-cyan-500/5 to-transparent",
-// // // //     border: "border-cyan-200/60",
-// // // //     btnColor: "bg-cyan-600 hover:bg-cyan-700",
-// // // //     planBadge: "HOLISTIC ELEVATE PLAN",
-// // // //     planDescription: "Mental wellness strategies, stress management frameworks, and active counselor support.",
-// // // //   },
-// // // // ];
 
-// // // // // 2. CLASSES 1-5
-// // // // const class1to5Data = [
-// // // //   {
-// // // //     id: 101,
-// // // //     classNumber: "1-5",
-// // // //     title: "Learn Maths",
-// // // //     subtitle: "Build strong numbers, mental arithmetic & logic foundation",
-// // // //     badge: "FOUNDATION",
-// // // //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// // // //     color: "text-purple-700",
-// // // //     bgGradient: "from-purple-50/50 via-white to-white",
-// // // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // // //     tagText: "Interactive Maths",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3771/3771278.png",
-// // // //   },
-// // // //   {
-// // // //     id: 102,
-// // // //     classNumber: "1-5",
-// // // //     title: "Learn English",
-// // // //     subtitle: "Enhance vocabulary, grammar, phonics & reading mastery",
-// // // //     badge: "LANGUAGE",
-// // // //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// // // //     color: "text-rose-700",
-// // // //     bgGradient: "from-rose-50/50 via-white to-white",
-// // // //     borderColor: "border-rose-200 hover:border-rose-300",
-// // // //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// // // //     tagText: "Fun English",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3389/3389011.png",
-// // // //   },
-// // // //   {
-// // // //     id: 103,
-// // // //     classNumber: "1-5",
-// // // //     title: "Science Discovery",
-// // // //     subtitle: "Explore natural phenomena and fun visual experiments",
-// // // //     badge: "DISCOVERY",
-// // // //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// // // //     color: "text-emerald-700",
-// // // //     bgGradient: "from-emerald-50/50 via-white to-white",
-// // // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // // //     tagText: "Basic Science",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
-// // // //   },
-// // // //   {
-// // // //     id: 104,
-// // // //     classNumber: "1-5",
-// // // //     title: "General Knowledge",
-// // // //     subtitle: "Discover world facts, geography & dynamic current affairs",
-// // // //     badge: "AWARENESS",
-// // // //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// // // //     color: "text-amber-700",
-// // // //     bgGradient: "from-amber-50/50 via-white to-white",
-// // // //     borderColor: "border-amber-200 hover:border-amber-300",
-// // // //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// // // //     tagText: "GK Essentials",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2784/2784403.png",
-// // // //   },
-// // // //   {
-// // // //     id: 105,
-// // // //     classNumber: "6",
-// // // //     title: "JNV Entrance",
-// // // //     subtitle: "Targeted entrance prep for Jawahar Navodaya Vidyalaya",
-// // // //     badge: "ENTRANCE",
-// // // //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// // // //     color: "text-blue-700",
-// // // //     bgGradient: "from-blue-50/50 via-white to-white",
-// // // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // // //     tagText: "JNV Special",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2231/2231605.png",
-// // // //   },
-// // // //   {
-// // // //     id: 106,
-// // // //     classNumber: "1-5",
-// // // //     title: "KVS Prep",
-// // // //     subtitle: "Structured syllabus modules for Kendriya Vidyalayas",
-// // // //     badge: "SCHOOL PREP",
-// // // //     badgeBg: "bg-teal-50 text-teal-700 border border-teal-200",
-// // // //     color: "text-teal-700",
-// // // //     bgGradient: "from-teal-50/50 via-white to-white",
-// // // //     borderColor: "border-teal-200 hover:border-teal-300",
-// // // //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// // // //     tagText: "KVS Curriculum",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2997/2997295.png",
-// // // //   },
-// // // //   {
-// // // //     id: 107,
-// // // //     classNumber: "6",
-// // // //     title: "Sainik School",
-// // // //     subtitle: "Comprehensive entrance training for AISSEE examination",
-// // // //     badge: "DEFENCE PREP",
-// // // //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// // // //     color: "text-orange-700",
-// // // //     bgGradient: "from-orange-50/50 via-white to-white",
-// // // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // // //     tagText: "Sainik Entrance",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/167/167707.png",
-// // // //   },
-// // // //   {
-// // // //     id: 108,
-// // // //     classNumber: "1-5",
-// // // //     title: "Junior Olympiad",
-// // // //     subtitle: "Early competitive aptitude, logical reasoning & analytical mind",
-// // // //     badge: "COMPETITIVE",
-// // // //     badgeBg: "bg-indigo-50 text-indigo-700 border border-indigo-200",
-// // // //     color: "text-indigo-700",
-// // // //     bgGradient: "from-indigo-50/50 via-white to-white",
-// // // //     borderColor: "border-indigo-200 hover:border-indigo-300",
-// // // //     btnBg: "bg-indigo-600 hover:bg-indigo-700",
-// // // //     tagText: "Olympiad Level",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// // // //     customRoute: "/juniorolympiad",
-// // // //   },
-// // // // ];
-
-// // // // // 3. CLASSES 6-10
-// // // // const class6to10Data = [
-// // // //   {
-// // // //     id: 3,
-// // // //     classNumber: "6",
-// // // //     title: "Class 6",
-// // // //     subtitle: "Solidify core fundamentals in Maths, Science & Languages",
-// // // //     badge: "FOUNDATION",
-// // // //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// // // //     color: "text-blue-700",
-// // // //     bgGradient: "from-blue-50/50 via-white to-white",
-// // // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // // //     tagText: "Class 6 Prep",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2883/2883823.png",
-// // // //   },
-// // // //   {
-// // // //     id: 4,
-// // // //     classNumber: "7",
-// // // //     title: "Class 7",
-// // // //     subtitle: "Strengthen concepts and intermediate problem solving",
-// // // //     badge: "FOUNDATION",
-// // // //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// // // //     color: "text-emerald-700",
-// // // //     bgGradient: "from-emerald-50/50 via-white to-white",
-// // // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // // //     tagText: "Class 7 Prep",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3429/3429149.png",
-// // // //   },
-// // // //   {
-// // // //     id: 5,
-// // // //     classNumber: "8",
-// // // //     title: "Class 8",
-// // // //     subtitle: "Prepare critical bridging concepts for senior high school",
-// // // //     badge: "ADVANCED",
-// // // //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// // // //     color: "text-amber-700",
-// // // //     bgGradient: "from-amber-50/50 via-white to-white",
-// // // //     borderColor: "border-amber-200 hover:border-amber-300",
-// // // //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// // // //     tagText: "Class 8 Prep",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// // // //   },
-// // // //   {
-// // // //     id: 6,
-// // // //     classNumber: "9",
-// // // //     title: "Class 9",
-// // // //     subtitle: "Pre-board rigor with extensive numerical & theory practice",
-// // // //     badge: "BOARD PREP",
-// // // //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// // // //     color: "text-orange-700",
-// // // //     bgGradient: "from-orange-50/50 via-white to-white",
-// // // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // // //     tagText: "Class 9 Prep",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/29/29302.png",
-// // // //   },
-// // // //   {
-// // // //     id: 7,
-// // // //     classNumber: "10",
-// // // //     title: "Class 10",
-// // // //     subtitle: "Complete Board exam mastery with test series & PYQs",
-// // // //     badge: "BOARD MASTER",
-// // // //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// // // //     color: "text-rose-700",
-// // // //     bgGradient: "from-rose-50/50 via-white to-white",
-// // // //     borderColor: "border-rose-200 hover:border-rose-300",
-// // // //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// // // //     tagText: "Class 10 Board",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// // // //   },
-// // // //   {
-// // // //     id: 8,
-// // // //     classNumber: "Olympiad",
-// // // //     title: "Olympiad & NTSE",
-// // // //     subtitle: "High-tier competitive aptitude, NTSE & national Olympiads",
-// // // //     badge: "COMPETITIVE",
-// // // //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// // // //     color: "text-purple-700",
-// // // //     bgGradient: "from-purple-50/50 via-white to-white",
-// // // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // // //     tagText: "Competitive Prep",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2583/2583319.png",
-// // // //     customRoute: "/juniorolympiad",
-// // // //   },
-// // // // ];
-
-// // // // // 4. CLASSES 11-12
-// // // // const class11to12Data = [
-// // // //   {
-// // // //     id: 9,
-// // // //     classNumber: "11",
-// // // //     title: "Class 11",
-// // // //     stream: "Arts & Humanities",
-// // // //     tagline: "History, Political Science, Psychology & Sociology",
-// // // //     color: "text-purple-700",
-// // // //     bgGradient: "from-purple-50/40 via-white to-white",
-// // // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
-// // // //   },
-// // // //   {
-// // // //     id: 10,
-// // // //     classNumber: "11",
-// // // //     title: "Class 11",
-// // // //     stream: "Commerce",
-// // // //     tagline: "Accountancy, Business Studies, Economics & Core Maths",
-// // // //     color: "text-emerald-700",
-// // // //     bgGradient: "from-emerald-50/40 via-white to-white",
-// // // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2422/2422796.png",
-// // // //   },
-// // // //   {
-// // // //     id: 11,
-// // // //     classNumber: "11",
-// // // //     title: "Class 11",
-// // // //     stream: "Science (PCM / PCB)",
-// // // //     tagline: "Physics, Chemistry, Advanced Maths & Biology",
-// // // //     color: "text-blue-700",
-// // // //     bgGradient: "from-blue-50/40 via-white to-white",
-// // // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1085/1085461.png",
-// // // //   },
-// // // //   {
-// // // //     id: 12,
-// // // //     classNumber: "12",
-// // // //     title: "Class 12",
-// // // //     stream: "Arts & Humanities",
-// // // //     tagline: "Target 98%+ in Boards & CUET entrance preparation",
-// // // //     color: "text-orange-700",
-// // // //     bgGradient: "from-orange-50/40 via-white to-white",
-// // // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// // // //   },
-// // // //   {
-// // // //     id: 13,
-// // // //     classNumber: "12",
-// // // //     title: "Class 12",
-// // // //     stream: "Commerce",
-// // // //     tagline: "CA Foundation alignment, Board tests & case analysis",
-// // // //     color: "text-teal-700",
-// // // //     bgGradient: "from-teal-50/40 via-white to-white",
-// // // //     borderColor: "border-teal-200 hover:border-teal-300",
-// // // //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3076/3076416.png",
-// // // //   },
-// // // //   {
-// // // //     id: 14,
-// // // //     classNumber: "12",
-// // // //     title: "Class 12",
-// // // //     stream: "Science (PCM / PCB)",
-// // // //     tagline: "Master Board Syllabus alongside JEE & NEET prep",
-// // // //     color: "text-sky-700",
-// // // //     bgGradient: "from-sky-50/40 via-white to-white",
-// // // //     borderColor: "border-sky-200 hover:border-sky-300",
-// // // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1356/1356479.png",
-// // // //   },
-// // // // ];
-
-// // // // // 5. MENTORS
-// // // // const mentorsList = [
-// // // //   {
-// // // //     id: 1,
-// // // //     name: "Rahul Sharma",
-// // // //     badge: "JEE MAIN & ADV",
-// // // //     badgeBg: "bg-orange-500 text-white",
-// // // //     college: "IIT Delhi Alumnus",
-// // // //     role: "JEE Physics Lead",
-// // // //     roleColor: "text-orange-600",
-// // // //     rating: "4.9",
-// // // //     students: "1,200+ Students",
-// // // //     exp: "8+ Years",
-// // // //     imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-// // // //   },
-// // // //   {
-// // // //     id: 2,
-// // // //     name: "Dr. Aditi Verma",
-// // // //     badge: "NEET SPECIALIST",
-// // // //     badgeBg: "bg-emerald-600 text-white",
-// // // //     college: "AIIMS Delhi Graduate",
-// // // //     role: "NEET Biology Mentor",
-// // // //     roleColor: "text-emerald-600",
-// // // //     rating: "4.9",
-// // // //     students: "950+ Students",
-// // // //     exp: "7+ Years",
-// // // //     imgUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-// // // //   },
-// // // //   {
-// // // //     id: 3,
-// // // //     name: "Ankit Jain",
-// // // //     badge: "CLASS 6-10",
-// // // //     badgeBg: "bg-blue-600 text-white",
-// // // //     college: "IIT Bombay Alumnus",
-// // // //     role: "Maths Olympiad Head",
-// // // //     roleColor: "text-blue-600",
-// // // //     rating: "4.8",
-// // // //     students: "1,500+ Students",
-// // // //     exp: "9+ Years",
-// // // //     imgUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-// // // //   },
-// // // //   {
-// // // //     id: 4,
-// // // //     name: "Neha Kapoor",
-// // // //     badge: "CAREER & PROFILE",
-// // // //     badgeBg: "bg-purple-600 text-white",
-// // // //     college: "Ex-Career Analyst",
-// // // //     role: "Higher Education Counselor",
-// // // //     roleColor: "text-purple-600",
-// // // //     rating: "4.9",
-// // // //     students: "1,100+ Students",
-// // // //     exp: "6+ Years",
-// // // //     imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
-// // // //   },
-// // // // ];
-
-// // // // function MentorSlider() {
-// // // //   const navigate = useSafeNavigate();
-
-// // // //   return (
-// // // //     <div className="w-full py-2">
-// // // //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-// // // //         {mentorsList.map((mentor) => (
-// // // //           <div
-// // // //             key={mentor.id}
-// // // //             className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between h-[390px]"
-// // // //           >
-// // // //             <div>
-// // // //               <div className="flex justify-between items-center mb-3">
-// // // //                 <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${mentor.badgeBg}`}>
-// // // //                   {mentor.badge}
-// // // //                 </span>
-// // // //                 <button className="text-slate-300 hover:text-orange-500">
-// // // //                   <Bookmark className="w-4 h-4" />
-// // // //                 </button>
-// // // //               </div>
-
-// // // //               <div className="flex justify-center my-3">
-// // // //                 <div className="w-20 h-20 rounded-full overflow-hidden p-1 ring-2 ring-slate-100">
-// // // //                   <img src={mentor.imgUrl} alt={mentor.name} className="w-full h-full object-cover rounded-full" />
-// // // //                 </div>
-// // // //               </div>
-
-// // // //               <div className="text-center">
-// // // //                 <div className="flex items-center justify-center gap-1.5">
-// // // //                   <h3 className="text-base font-bold text-slate-900">{mentor.name}</h3>
-// // // //                   <CheckCircle2 className="w-4 h-4 text-orange-500" />
-// // // //                 </div>
-// // // //                 <p className="text-xs text-slate-400 font-medium">{mentor.college}</p>
-// // // //                 <p className={`text-xs font-bold mt-1 ${mentor.roleColor}`}>{mentor.role}</p>
-// // // //               </div>
-// // // //             </div>
-
-// // // //             <div>
-// // // //               <div className="flex items-center justify-between text-[11px] font-semibold text-slate-500 px-3 py-2 bg-slate-50 rounded-xl mb-3">
-// // // //                 <div className="flex items-center gap-1">
-// // // //                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-// // // //                   <span className="text-slate-800 font-bold">{mentor.rating}</span>
-// // // //                 </div>
-// // // //                 <div className="flex items-center gap-1">
-// // // //                   <Users className="w-3.5 h-3.5 text-slate-400" />
-// // // //                   <span>{mentor.students}</span>
-// // // //                 </div>
-// // // //                 <div className="flex items-center gap-1">
-// // // //                   <Clock className="w-3.5 h-3.5 text-slate-400" />
-// // // //                   <span>{mentor.exp}</span>
-// // // //                 </div>
-// // // //               </div>
-
-// // // //               <div className="grid grid-cols-2 gap-2">
-// // // //                 <button
-// // // //                   onClick={() => navigate("/mentordetail")}
-// // // //                   className="py-2 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition"
-// // // //                 >
-// // // //                   Profile
-// // // //                 </button>
-// // // //                 <button
-// // // //                   onClick={() => navigate("/mentordetail")}
-// // // //                   className="py-2 text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition shadow-sm"
-// // // //                 >
-// // // //                   Book Slot
-// // // //                 </button>
-// // // //               </div>
-// // // //             </div>
-// // // //           </div>
-// // // //         ))}
-// // // //       </div>
-// // // //     </div>
-// // // //   );
-// // // // }
-
-// // // // function DynamicSectionBlock({
-// // // //   sectionTitle,
-// // // //   sectionBadge,
-// // // //   data,
-// // // // }: {
-// // // //   sectionTitle: string;
-// // // //   sectionBadge: string;
-// // // //   data: any[];
-// // // // }) {
-// // // //   const [activeView, setActiveView] = useState<"classes" | "mentors">("classes");
-// // // //   const navigate = useSafeNavigate();
-
-// // // //   const handleCardClick = (item: any) => {
-// // // //     if (item.customRoute || item.title === "Junior Olympiad") {
-// // // //       navigate(item.customRoute || "/juniorolympiad", {
-// // // //         state: {
-// // // //           id: item.id,
-// // // //           title: item.title,
-// // // //           subtitle: item.subtitle,
-// // // //           tag: item.tagText || item.badge,
-// // // //         },
-// // // //       });
-// // // //       return;
-// // // //     }
-
-// // // //     const classNum =
-// // // //       item.classNumber || (item.title.match(/\d+/) ? item.title.match(/\d+/)[0] : "6");
-// // // //     navigate(`/mysubjectdetail?class=${classNum}`, {
-// // // //       state: {
-// // // //         id: item.id,
-// // // //         title: item.title,
-// // // //         subtitle: item.subtitle,
-// // // //         tag: item.tagText || item.badge,
-// // // //         classNumber: classNum,
-// // // //       },
-// // // //     });
-// // // //   };
-
-// // // //   return (
-// // // //     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-// // // //       {/* Header Center Aligned */}
-// // // //       <div className="flex flex-col items-center justify-center text-center mb-8 pb-6 border-b border-slate-100 gap-4">
-// // // //         <div>
-// // // //           <div className="inline-flex items-center justify-center gap-2 text-orange-600 font-extrabold tracking-widest text-xl uppercase mb-1">
-// // // //             <GraduationCap className="w-4 h-4" />
-// // // //             <span>{sectionBadge}</span>
-// // // //           </div>
-// // // //           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-// // // //             {activeView === "classes" ? sectionTitle : "Verified Subject Mentors"}
-// // // //           </h2>
-// // // //         </div>
-
-// // // //         <div className="inline-flex p-1 bg-slate-100 rounded-2xl">
-// // // //           <button
-// // // //             onClick={() => setActiveView("classes")}
-// // // //             className={`px-5 py-2 text-xs font-bold rounded-xl transition-all ${
-// // // //               activeView === "classes"
-// // // //                 ? "bg-white text-slate-900 shadow-sm"
-// // // //                 : "text-slate-500 hover:text-slate-800"
-// // // //             }`}
-// // // //           >
-// // // //             Explore Classes
-// // // //           </button>
-// // // //           <button
-// // // //             onClick={() => setActiveView("mentors")}
-// // // //             className={`px-5 py-2 text-xs font-bold rounded-xl transition-all ${
-// // // //               activeView === "mentors"
-// // // //                 ? "bg-slate-900 text-white shadow-sm"
-// // // //                 : "text-slate-500 hover:text-slate-800"
-// // // //             }`}
-// // // //           >
-// // // //             Online Mentors
-// // // //           </button>
-// // // //         </div>
-// // // //       </div>
-
-// // // //       {activeView === "mentors" ? (
-// // // //         <MentorSlider />
-// // // //       ) : (
-// // // //         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-// // // //           {data.map((item) => (
-// // // //             <div
-// // // //               key={item.id}
-// // // //               onClick={() => handleCardClick(item)}
-// // // //               className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[280px] cursor-pointer group`}
-// // // //             >
-// // // //               <div>
-// // // //                 <div className="flex items-center justify-between mb-4">
-// // // //                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${item.badgeBg}`}>
-// // // //                     {item.badge}
-// // // //                   </span>
-// // // //                   <div className="w-12 h-12 p-1.5 flex items-center justify-center">
-// // // //                     <img src={item.imgUrl} alt={item.title} className="w-full h-full object-contain" />
-// // // //                   </div>
-// // // //                 </div>
-
-// // // //                 <h3 className={`text-xl font-bold mb-1.5 ${item.color}`}>{item.title}</h3>
-// // // //                 <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// // // //                   {item.subtitle}
-// // // //                 </p>
-// // // //               </div>
-
-// // // //               <div className="flex items-center justify-between pt-4 border-t border-slate-100 mt-4">
-// // // //                 <span className="text-[11px] font-semibold text-slate-500">
-// // // //                   {item.tagText || "Curriculum"}
-// // // //                 </span>
-// // // //                 <div
-// // // //                   className={`px-3 py-1.5 text-xs font-bold text-white rounded-xl ${item.btnBg} transition-all flex items-center gap-1 shadow-sm`}
-// // // //                 >
-// // // //                   <span>Explore</span>
-// // // //                   <ArrowRight className="w-3.5 h-3.5" />
-// // // //                 </div>
-// // // //               </div>
-// // // //             </div>
-// // // //           ))}
-// // // //         </div>
-// // // //       )}
-// // // //     </div>
-// // // //   );
-// // // // }
-
-// // // // export function Features() {
-// // // //   const navigate = useSafeNavigate();
-// // // //   const [selectedFeature, setSelectedFeature] = useState<typeof topFeatures[0] | null>(null);
-
-// // // //   const handleStreamClick = (item: any) => {
-// // // //     navigate(`/mysubjectdetail?class=${item.classNumber}&stream=${encodeURIComponent(item.stream)}`, {
-// // // //       state: {
-// // // //         id: item.id,
-// // // //         title: item.title,
-// // // //         stream: item.stream,
-// // // //         classNumber: item.classNumber,
-// // // //       },
-// // // //     });
-// // // //   };
-
-// // // //   const handleLearnMore = (feat: typeof topFeatures[0]) => {
-// // // //     setSelectedFeature((prev) => (prev?.id === feat.id ? null : feat));
-// // // //   };
-
-// // // //   return (
-// // // //     <section id="features" className="py-12 bg-slate-50 font-sans text-slate-800">
-// // // //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-// // // //         {/* Main Header */}
-// // // //         <div className="text-center max-w-3xl mx-auto space-y-3">
-// // // //           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1 rounded-full text-orange-700 text-xs font-bold tracking-wide uppercase">
-// // // //             <Sparkles className="w-3.5 h-3.5" />
-// // // //             <span>Targeted Learning & Mentorship</span>
-// // // //           </div>
-// // // //           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-// // // //             Comprehensive Guidance for Every Student
-// // // //           </h2>
-// // // //           <p className="text-sm sm:text-base text-slate-600">
-// // // //             Good Guiders brings together realistic Mock Tests, interactive Online Learning, and personalized Mentorship to help students learn smarter.
-// // // //           </p>
-// // // //         </div>
-
-// // // //         {/* Top 3 Core Features */}
-// // // //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-// // // //           {topFeatures.map((feat) => (
-// // // //             <div
-// // // //               key={feat.id}
-// // // //               className={`bg-gradient-to-b ${feat.gradient} bg-white border ${feat.border} rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
-// // // //             >
-// // // //               <div>
-// // // //                 <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
-// // // //                   {feat.icon}
-// // // //                 </div>
-// // // //                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
-// // // //                 <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
-// // // //               </div>
-// // // //               <button
-// // // //                 onClick={() => handleLearnMore(feat)}
-// // // //                 className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${feat.btnColor}`}
-// // // //               >
-// // // //                 Learn More
-// // // //               </button>
-// // // //             </div>
-// // // //           ))}
-// // // //         </div>
-
-// // // //         {/* Expandable Selected Feature Detail Banner */}
-// // // //         {selectedFeature && (
-// // // //           <div className="relative bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-sm transition-all animate-fadeIn">
-// // // //             <button
-// // // //               onClick={() => setSelectedFeature(null)}
-// // // //               className="absolute top-4 right-4 sm:top-6 sm:right-6 p-1.5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full transition"
-// // // //             >
-// // // //               <X className="w-4 h-4" />
-// // // //             </button>
-
-// // // //             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-// // // //               {/* Dotted Box Graphic */}
-// // // //               <div
-// // // //                 className="lg:col-span-6 bg-slate-50/70 border border-slate-200/60 rounded-2xl p-8 sm:p-10 flex items-center justify-center gap-4 shadow-inner"
-// // // //                 style={{
-// // // //                   backgroundImage: "radial-gradient(#93c5fd 1px, transparent 1px)",
-// // // //                   backgroundSize: "16px 16px",
-// // // //                 }}
-// // // //               >
-// // // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-// // // //                   <BarChart2 className="w-8 h-8 sm:w-9 sm:h-9" />
-// // // //                 </div>
-// // // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20">
-// // // //                   <FileText className="w-8 h-8 sm:w-9 sm:h-9" />
-// // // //                 </div>
-// // // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
-// // // //                   <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9" />
-// // // //                 </div>
-// // // //               </div>
-
-// // // //               {/* Detail Content */}
-// // // //               <div className="lg:col-span-6 space-y-4">
-// // // //                 <div className="inline-flex items-center gap-2">
-// // // //                   <span className="text-xl sm:text-2xl">{selectedFeature.icon}</span>
-// // // //                   <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900">
-// // // //                     {selectedFeature.planBadge}
-// // // //                   </h4>
-// // // //                 </div>
-
-// // // //                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-// // // //                   {selectedFeature.planDescription}
-// // // //                 </p>
-
-// // // //                 <div className="pt-2">
-// // // //                   <button
-// // // //                     onClick={() => navigate("/mentordetail")}
-// // // //                     className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all tracking-wide uppercase"
-// // // //                   >
-// // // //                     JOIN US NOW
-// // // //                   </button>
-// // // //                 </div>
-// // // //               </div>
-// // // //             </div>
-// // // //           </div>
-// // // //         )}
-
-// // // //         {/* Section 1: Classes 1-5 (Header Centered) */}
-// // // //         <DynamicSectionBlock
-// // // //           sectionBadge="Classes 1–5"
-// // // //           sectionTitle="Explore. Learn. Grow."
-// // // //           data={class1to5Data}
-// // // //         />
-
-// // // //         {/* Section 2: Classes 6-10 (Header Centered) */}
-// // // //         <DynamicSectionBlock
-// // // //           sectionBadge="Classes 6–10"
-// // // //           sectionTitle="Choose Your Class"
-// // // //           data={class6to10Data}
-// // // //         />
-
-// // // //         {/* Section 3: Classes 11-12 (Header Centered) */}
-// // // //         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-// // // //           <div className="flex flex-col items-center justify-center text-center mb-8 pb-6 border-b border-slate-100 gap-2">
-// // // //             <div>
-// // // //               <div className="inline-flex items-center justify-center gap-2 text-orange-600 font-extrabold tracking-widest text-xl uppercase mb-1">
-// // // //                 <GraduationCap className="w-4 h-4" />
-// // // //                 <span>Senior Secondary</span>
-// // // //               </div>
-// // // //               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-// // // //                 Classes 11 & 12 Specialized Streams
-// // // //               </h2>
-// // // //             </div>
-// // // //             <p className="text-xs text-slate-400 font-medium">Select your targeted domain</p>
-// // // //           </div>
-
-// // // //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-// // // //             {class11to12Data.map((item) => (
-// // // //               <div
-// // // //                 key={item.id}
-// // // //                 onClick={() => handleStreamClick(item)}
-// // // //                 className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[240px] cursor-pointer group`}
-// // // //               >
-// // // //                 <div>
-// // // //                   <div className="flex justify-between items-start mb-3">
-// // // //                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
-// // // //                       {item.title}
-// // // //                     </span>
-// // // //                     <div className="w-12 h-12 p-1">
-// // // //                       <img src={item.imgUrl} alt={item.stream} className="w-full h-full object-contain" />
-// // // //                     </div>
-// // // //                   </div>
-// // // //                   <h3 className={`text-lg font-bold mb-1.5 ${item.color}`}>{item.stream}</h3>
-// // // //                   <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// // // //                     {item.tagline}
-// // // //                   </p>
-// // // //                 </div>
-
-// // // //                 <div className="flex justify-end pt-4 border-t border-slate-100 mt-4">
-// // // //                   <div
-// // // //                     className={`w-8 h-8 rounded-full ${item.btnBg} text-white flex items-center justify-center shadow-sm`}
-// // // //                   >
-// // // //                     <ArrowRight className="w-4 h-4" />
-// // // //                   </div>
-// // // //                 </div>
-// // // //               </div>
-// // // //             ))}
-// // // //           </div>
-// // // //         </div>
-// // // //       </div>
-// // // //     </section>
-// // // //   );
-// // // // }
-
-// // // // export default Features;
-
-// // // import React, { useState } from "react";
-// // // import { useNavigate } from "react-router-dom";
-// // // import {
-// // //   Users,
-// // //   ArrowRight,
-// // //   Bookmark,
-// // //   CheckCircle2,
-// // //   Star,
-// // //   Clock,
-// // //   Sparkles,
-// // //   GraduationCap,
-// // //   BarChart2,
-// // //   FileText,
-// // //   TrendingUp,
-// // //   X,
-// // //   BookOpen,
-// // // } from "lucide-react";
-
-// // // // Safe Navigation helper to prevent router crashes
-// // // function useSafeNavigate() {
-// // //   try {
-// // //     return useNavigate();
-// // //   } catch (error) {
-// // //     return (path: string, options?: { state?: any }) => {
-// // //       window.location.href = path;
-// // //     };
-// // //   }
-// // // }
-
-// // // // 1. TOP 3 PILLARS
-// // // const topFeatures = [
-// // //   {
-// // //     id: 0,
-// // //     title: "Evaluate",
-// // //     icon: "🤝",
-// // //     description: "1-on-1 personalized guidance with top mentors to calibrate your academic roadmap.",
-// // //     gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
-// // //     border: "border-emerald-200/60",
-// // //     btnColor: "bg-emerald-600 hover:bg-emerald-700",
-// // //     planBadge: "PERSONALIZED EVALUATION PLAN",
-// // //     planDescription: "1:1 mentorship sessions, weak-subject analysis, target roadmap, and progress tracking.",
-// // //   },
-// // //   {
-// // //     id: 1,
-// // //     title: "Educate",
-// // //     icon: "🧪",
-// // //     description: "Adaptive mock tests, 10+ years PYQs, and AI-driven deep performance diagnostics.",
-// // //     gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
-// // //     border: "border-rose-200/60",
-// // //     btnColor: "bg-rose-600 hover:bg-rose-700",
-// // //     planBadge: "COMPREHENSIVE EDUCATE PLAN",
-// // //     planDescription: "Adaptive mock tests, curated 10+ years PYQs, and AI-driven performance diagnostics.",
-// // //   },
-// // //   {
-// // //     id: 2,
-// // //     title: "Elevate",
-// // //     icon: "🧠",
-// // //     description: "Mental well-being, strategic stress mitigation, and continuous counselor support.",
-// // //     gradient: "from-cyan-500/10 via-cyan-500/5 to-transparent",
-// // //     border: "border-cyan-200/60",
-// // //     btnColor: "bg-cyan-600 hover:bg-cyan-700",
-// // //     planBadge: "HOLISTIC ELEVATE PLAN",
-// // //     planDescription: "Mental wellness strategies, stress management frameworks, and active counselor support.",
-// // //   },
-// // // ];
-
-// // // // 2. CLASSES 1-5
-// // // const class1to5Data = [
-// // //   {
-// // //     id: 101,
-// // //     classNumber: "1-5",
-// // //     title: "Learn Maths",
-// // //     subtitle: "Build strong numbers, mental arithmetic & logic foundation",
-// // //     badge: "FOUNDATION",
-// // //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// // //     color: "text-purple-700",
-// // //     bgGradient: "from-purple-50/50 via-white to-white",
-// // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // //     tagText: "Interactive Maths",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3771/3771278.png",
-// // //   },
-// // //   {
-// // //     id: 102,
-// // //     classNumber: "1-5",
-// // //     title: "Learn English",
-// // //     subtitle: "Enhance vocabulary, grammar, phonics & reading mastery",
-// // //     badge: "LANGUAGE",
-// // //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// // //     color: "text-rose-700",
-// // //     bgGradient: "from-rose-50/50 via-white to-white",
-// // //     borderColor: "border-rose-200 hover:border-rose-300",
-// // //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// // //     tagText: "Fun English",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3389/3389011.png",
-// // //   },
-// // //   {
-// // //     id: 103,
-// // //     classNumber: "1-5",
-// // //     title: "Science Discovery",
-// // //     subtitle: "Explore natural phenomena and fun visual experiments",
-// // //     badge: "DISCOVERY",
-// // //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// // //     color: "text-emerald-700",
-// // //     bgGradient: "from-emerald-50/50 via-white to-white",
-// // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // //     tagText: "Basic Science",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
-// // //   },
-// // //   {
-// // //     id: 104,
-// // //     classNumber: "1-5",
-// // //     title: "General Knowledge",
-// // //     subtitle: "Discover world facts, geography & dynamic current affairs",
-// // //     badge: "AWARENESS",
-// // //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// // //     color: "text-amber-700",
-// // //     bgGradient: "from-amber-50/50 via-white to-white",
-// // //     borderColor: "border-amber-200 hover:border-amber-300",
-// // //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// // //     tagText: "GK Essentials",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2784/2784403.png",
-// // //   },
-// // //   {
-// // //     id: 105,
-// // //     classNumber: "6",
-// // //     title: "JNV Entrance",
-// // //     subtitle: "Targeted entrance prep for Jawahar Navodaya Vidyalaya",
-// // //     badge: "ENTRANCE",
-// // //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// // //     color: "text-blue-700",
-// // //     bgGradient: "from-blue-50/50 via-white to-white",
-// // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // //     tagText: "JNV Special",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2231/2231605.png",
-// // //   },
-// // //   {
-// // //     id: 106,
-// // //     classNumber: "1-5",
-// // //     title: "KVS Prep",
-// // //     subtitle: "Structured syllabus modules for Kendriya Vidyalayas",
-// // //     badge: "SCHOOL PREP",
-// // //     badgeBg: "bg-teal-50 text-teal-700 border border-teal-200",
-// // //     color: "text-teal-700",
-// // //     bgGradient: "from-teal-50/50 via-white to-white",
-// // //     borderColor: "border-teal-200 hover:border-teal-300",
-// // //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// // //     tagText: "KVS Curriculum",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2997/2997295.png",
-// // //   },
-// // //   {
-// // //     id: 107,
-// // //     classNumber: "6",
-// // //     title: "Sainik School",
-// // //     subtitle: "Comprehensive entrance training for AISSEE examination",
-// // //     badge: "DEFENCE PREP",
-// // //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// // //     color: "text-orange-700",
-// // //     bgGradient: "from-orange-50/50 via-white to-white",
-// // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // //     tagText: "Sainik Entrance",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/167/167707.png",
-// // //   },
-// // //   {
-// // //     id: 108,
-// // //     classNumber: "1-5",
-// // //     title: "Junior Olympiad",
-// // //     subtitle: "Early competitive aptitude, logical reasoning & analytical mind",
-// // //     badge: "COMPETITIVE",
-// // //     badgeBg: "bg-indigo-50 text-indigo-700 border border-indigo-200",
-// // //     color: "text-indigo-700",
-// // //     bgGradient: "from-indigo-50/50 via-white to-white",
-// // //     borderColor: "border-indigo-200 hover:border-indigo-300",
-// // //     btnBg: "bg-indigo-600 hover:bg-indigo-700",
-// // //     tagText: "Olympiad Level",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// // //     customRoute: "/juniorolympiad",
-// // //   },
-// // // ];
-
-// // // // 3. CLASSES 6-10
-// // // const class6to10Data = [
-// // //   {
-// // //     id: 3,
-// // //     classNumber: "6",
-// // //     title: "Class 6",
-// // //     subtitle: "Solidify core fundamentals in Maths, Science & Languages",
-// // //     badge: "FOUNDATION",
-// // //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// // //     color: "text-blue-700",
-// // //     bgGradient: "from-blue-50/50 via-white to-white",
-// // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // //     tagText: "Class 6 Prep",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2883/2883823.png",
-// // //   },
-// // //   {
-// // //     id: 4,
-// // //     classNumber: "7",
-// // //     title: "Class 7",
-// // //     subtitle: "Strengthen concepts and intermediate problem solving",
-// // //     badge: "FOUNDATION",
-// // //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// // //     color: "text-emerald-700",
-// // //     bgGradient: "from-emerald-50/50 via-white to-white",
-// // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // //     tagText: "Class 7 Prep",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3429/3429149.png",
-// // //   },
-// // //   {
-// // //     id: 5,
-// // //     classNumber: "8",
-// // //     title: "Class 8",
-// // //     subtitle: "Prepare critical bridging concepts for senior high school",
-// // //     badge: "ADVANCED",
-// // //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// // //     color: "text-amber-700",
-// // //     bgGradient: "from-amber-50/50 via-white to-white",
-// // //     borderColor: "border-amber-200 hover:border-amber-300",
-// // //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// // //     tagText: "Class 8 Prep",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// // //   },
-// // //   {
-// // //     id: 6,
-// // //     classNumber: "9",
-// // //     title: "Class 9",
-// // //     subtitle: "Pre-board rigor with extensive numerical & theory practice",
-// // //     badge: "BOARD PREP",
-// // //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// // //     color: "text-orange-700",
-// // //     bgGradient: "from-orange-50/50 via-white to-white",
-// // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // //     tagText: "Class 9 Prep",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/29/29302.png",
-// // //   },
-// // //   {
-// // //     id: 7,
-// // //     classNumber: "10",
-// // //     title: "Class 10",
-// // //     subtitle: "Complete Board exam mastery with test series & PYQs",
-// // //     badge: "BOARD MASTER",
-// // //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// // //     color: "text-rose-700",
-// // //     bgGradient: "from-rose-50/50 via-white to-white",
-// // //     borderColor: "border-rose-200 hover:border-rose-300",
-// // //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// // //     tagText: "Class 10 Board",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// // //   },
-// // //   {
-// // //     id: 8,
-// // //     classNumber: "Olympiad",
-// // //     title: "Olympiad & NTSE",
-// // //     subtitle: "High-tier competitive aptitude, NTSE & national Olympiads",
-// // //     badge: "COMPETITIVE",
-// // //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// // //     color: "text-purple-700",
-// // //     bgGradient: "from-purple-50/50 via-white to-white",
-// // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // //     tagText: "Competitive Prep",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2583/2583319.png",
-// // //     customRoute: "/juniorolympiad",
-// // //   },
-// // // ];
-
-// // // // 4. CLASSES 11-12
-// // // const class11to12Data = [
-// // //   {
-// // //     id: 9,
-// // //     classNumber: "11",
-// // //     title: "Class 11",
-// // //     stream: "Arts & Humanities",
-// // //     tagline: "History, Political Science, Psychology & Sociology",
-// // //     color: "text-purple-700",
-// // //     bgGradient: "from-purple-50/40 via-white to-white",
-// // //     borderColor: "border-purple-200 hover:border-purple-300",
-// // //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
-// // //   },
-// // //   {
-// // //     id: 10,
-// // //     classNumber: "11",
-// // //     title: "Class 11",
-// // //     stream: "Commerce",
-// // //     tagline: "Accountancy, Business Studies, Economics & Core Maths",
-// // //     color: "text-emerald-700",
-// // //     bgGradient: "from-emerald-50/40 via-white to-white",
-// // //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// // //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2422/2422796.png",
-// // //   },
-// // //   {
-// // //     id: 11,
-// // //     classNumber: "11",
-// // //     title: "Class 11",
-// // //     stream: "Science (PCM / PCB)",
-// // //     tagline: "Physics, Chemistry, Advanced Maths & Biology",
-// // //     color: "text-blue-700",
-// // //     bgGradient: "from-blue-50/40 via-white to-white",
-// // //     borderColor: "border-blue-200 hover:border-blue-300",
-// // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1085/1085461.png",
-// // //   },
-// // //   {
-// // //     id: 12,
-// // //     classNumber: "12",
-// // //     title: "Class 12",
-// // //     stream: "Arts & Humanities",
-// // //     tagline: "Target 98%+ in Boards & CUET entrance preparation",
-// // //     color: "text-orange-700",
-// // //     bgGradient: "from-orange-50/40 via-white to-white",
-// // //     borderColor: "border-orange-200 hover:border-orange-300",
-// // //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// // //   },
-// // //   {
-// // //     id: 13,
-// // //     classNumber: "12",
-// // //     title: "Class 12",
-// // //     stream: "Commerce",
-// // //     tagline: "CA Foundation alignment, Board tests & case analysis",
-// // //     color: "text-teal-700",
-// // //     bgGradient: "from-teal-50/40 via-white to-white",
-// // //     borderColor: "border-teal-200 hover:border-teal-300",
-// // //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3076/3076416.png",
-// // //   },
-// // //   {
-// // //     id: 14,
-// // //     classNumber: "12",
-// // //     title: "Class 12",
-// // //     stream: "Science (PCM / PCB)",
-// // //     tagline: "Master Board Syllabus alongside JEE & NEET prep",
-// // //     color: "text-sky-700",
-// // //     bgGradient: "from-sky-50/40 via-white to-white",
-// // //     borderColor: "border-sky-200 hover:border-sky-300",
-// // //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// // //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1356/1356479.png",
-// // //   },
-// // // ];
-
-// // // // 5. MENTORS & TUTORS DATA
-// // // const mentorsList = [
-// // //   {
-// // //     id: 1,
-// // //     name: "Rahul Sharma",
-// // //     badge: "JEE MAIN & ADV",
-// // //     badgeBg: "bg-orange-500 text-white",
-// // //     college: "IIT Delhi Alumnus",
-// // //     role: "JEE Physics Lead",
-// // //     roleColor: "text-orange-600",
-// // //     rating: "4.9",
-// // //     students: "1,200+ Students",
-// // //     exp: "8+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 2,
-// // //     name: "Dr. Aditi Verma",
-// // //     badge: "NEET SPECIALIST",
-// // //     badgeBg: "bg-emerald-600 text-white",
-// // //     college: "AIIMS Delhi Graduate",
-// // //     role: "NEET Biology Mentor",
-// // //     roleColor: "text-emerald-600",
-// // //     rating: "4.9",
-// // //     students: "950+ Students",
-// // //     exp: "7+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 3,
-// // //     name: "Ankit Jain",
-// // //     badge: "CLASS 6-10",
-// // //     badgeBg: "bg-blue-600 text-white",
-// // //     college: "IIT Bombay Alumnus",
-// // //     role: "Maths Olympiad Head",
-// // //     roleColor: "text-blue-600",
-// // //     rating: "4.8",
-// // //     students: "1,500+ Students",
-// // //     exp: "9+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 4,
-// // //     name: "Neha Kapoor",
-// // //     badge: "CAREER & PROFILE",
-// // //     badgeBg: "bg-purple-600 text-white",
-// // //     college: "Ex-Career Analyst",
-// // //     role: "Higher Education Counselor",
-// // //     roleColor: "text-purple-600",
-// // //     rating: "4.9",
-// // //     students: "1,100+ Students",
-// // //     exp: "6+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // // ];
-
-// // // const tutorsList = [
-// // //   {
-// // //     id: 101,
-// // //     name: "Pooja Malhotra",
-// // //     badge: "K-12 MATHS",
-// // //     badgeBg: "bg-purple-600 text-white",
-// // //     college: "M.Sc Mathematics",
-// // //     role: "Senior Math Tutor",
-// // //     roleColor: "text-purple-600",
-// // //     rating: "4.9",
-// // //     students: "850+ Students",
-// // //     exp: "6+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1580894732488-8254b7914e6b?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 102,
-// // //     name: "Vikram Sengupta",
-// // //     badge: "SCIENCE SPECIALIST",
-// // //     badgeBg: "bg-teal-600 text-white",
-// // //     college: "B.Tech & B.Ed",
-// // //     role: "Science & Physics Tutor",
-// // //     roleColor: "text-teal-600",
-// // //     rating: "4.8",
-// // //     students: "1,020+ Students",
-// // //     exp: "8+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 103,
-// // //     name: "Sunita Deshmukh",
-// // //     badge: "ENGLISH & GRAMMAR",
-// // //     badgeBg: "bg-rose-600 text-white",
-// // //     college: "M.A. English Literature",
-// // //     role: "Language Expert",
-// // //     roleColor: "text-rose-600",
-// // //     rating: "4.9",
-// // //     students: "1,400+ Students",
-// // //     exp: "10+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // //   {
-// // //     id: 104,
-// // //     name: "Rameshwar Patel",
-// // //     badge: "JUNIOR COMPETITIVE",
-// // //     badgeBg: "bg-amber-600 text-white",
-// // //     college: "Olympiad Trainer",
-// // //     role: "Aptitude & Reasoning Tutor",
-// // //     roleColor: "text-amber-600",
-// // //     rating: "4.9",
-// // //     students: "780+ Students",
-// // //     exp: "7+ Years",
-// // //     imgUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80",
-// // //   },
-// // // ];
-
-// // // function MentorSlider({ list = mentorsList }: { list?: typeof mentorsList }) {
-// // //   const navigate = useSafeNavigate();
-
-// // //   return (
-// // //     <div className="w-full py-2">
-// // //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-// // //         {list.map((mentor) => (
-// // //           <div
-// // //             key={mentor.id}
-// // //             className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between h-[390px]"
-// // //           >
-// // //             <div>
-// // //               <div className="flex justify-between items-center mb-3">
-// // //                 <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${mentor.badgeBg}`}>
-// // //                   {mentor.badge}
-// // //                 </span>
-// // //                 <button className="text-slate-300 hover:text-orange-500">
-// // //                   <Bookmark className="w-4 h-4" />
-// // //                 </button>
-// // //               </div>
-
-// // //               <div className="flex justify-center my-3">
-// // //                 <div className="w-20 h-20 rounded-full overflow-hidden p-1 ring-2 ring-slate-100">
-// // //                   <img src={mentor.imgUrl} alt={mentor.name} className="w-full h-full object-cover rounded-full" />
-// // //                 </div>
-// // //               </div>
-
-// // //               <div className="text-center">
-// // //                 <div className="flex items-center justify-center gap-1.5">
-// // //                   <h3 className="text-base font-bold text-slate-900">{mentor.name}</h3>
-// // //                   <CheckCircle2 className="w-4 h-4 text-orange-500" />
-// // //                 </div>
-// // //                 <p className="text-xs text-slate-400 font-medium">{mentor.college}</p>
-// // //                 <p className={`text-xs font-bold mt-1 ${mentor.roleColor}`}>{mentor.role}</p>
-// // //               </div>
-// // //             </div>
-
-// // //             <div>
-// // //               <div className="flex items-center justify-between text-[11px] font-semibold text-slate-500 px-3 py-2 bg-slate-50 rounded-xl mb-3">
-// // //                 <div className="flex items-center gap-1">
-// // //                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-// // //                   <span className="text-slate-800 font-bold">{mentor.rating}</span>
-// // //                 </div>
-// // //                 <div className="flex items-center gap-1">
-// // //                   <Users className="w-3.5 h-3.5 text-slate-400" />
-// // //                   <span>{mentor.students}</span>
-// // //                 </div>
-// // //                 <div className="flex items-center gap-1">
-// // //                   <Clock className="w-3.5 h-3.5 text-slate-400" />
-// // //                   <span>{mentor.exp}</span>
-// // //                 </div>
-// // //               </div>
-
-// // //               <div className="grid grid-cols-2 gap-2">
-// // //                 <button
-// // //                   onClick={() => navigate("/mentordetail")}
-// // //                   className="py-2 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition"
-// // //                 >
-// // //                   Profile
-// // //                 </button>
-// // //                 <button
-// // //                   onClick={() => navigate("/mentordetail")}
-// // //                   className="py-2 text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition shadow-sm"
-// // //                 >
-// // //                   Book Slot
-// // //                 </button>
-// // //               </div>
-// // //             </div>
-// // //           </div>
-// // //         ))}
-// // //       </div>
-// // //     </div>
-// // //   );
-// // // }
-
-// // // function DynamicSectionBlock({
-// // //   sectionTitle,
-// // //   sectionBadge,
-// // //   data,
-// // //   children,
-// // // }: {
-// // //   sectionTitle: string;
-// // //   sectionBadge: string;
-// // //   data?: any[];
-// // //   children?: React.ReactNode;
-// // // }) {
-// // //   const [activeView, setActiveView] = useState<"classes" | "mentors" | "tutors">("classes");
-// // //   const navigate = useSafeNavigate();
-
-// // //   const handleCardClick = (item: any) => {
-// // //     if (item.customRoute || item.title === "Junior Olympiad") {
-// // //       navigate(item.customRoute || "/juniorolympiad", {
-// // //         state: {
-// // //           id: item.id,
-// // //           title: item.title,
-// // //           subtitle: item.subtitle,
-// // //           tag: item.tagText || item.badge,
-// // //         },
-// // //       });
-// // //       return;
-// // //     }
-
-// // //     const classNum =
-// // //       item.classNumber || (item.title.match(/\d+/) ? item.title.match(/\d+/)[0] : "6");
-// // //     navigate(`/mysubjectdetail?class=${classNum}`, {
-// // //       state: {
-// // //         id: item.id,
-// // //         title: item.title,
-// // //         subtitle: item.subtitle,
-// // //         tag: item.tagText || item.badge,
-// // //         classNumber: classNum,
-// // //       },
-// // //     });
-// // //   };
-
-// // //   const getHeadingTitle = () => {
-// // //     if (activeView === "mentors") return "Verified Subject Mentors";
-// // //     if (activeView === "tutors") return "Verified Online Tutors";
-// // //     return sectionTitle;
-// // //   };
-
-// // //   return (
-// // //     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-// // //       {/* Row Header: Left side Title + Right side 3 Toggle Buttons */}
-// // //       <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-slate-100 gap-4">
-// // //         {/* Left Side Content */}
-// // //         <div className="text-left">
-// // //           <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-lg sm:text-xl uppercase mb-1">
-// // //             <GraduationCap className="w-5 h-5" />
-// // //             <span>{sectionBadge}</span>
-// // //           </div>
-// // //           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-// // //             {getHeadingTitle()}
-// // //           </h2>
-// // //         </div>
-
-// // //         {/* Right Side 3 Tabs */}
-// // //         <div className="inline-flex p-1 bg-slate-100/90 rounded-2xl self-start md:self-auto overflow-x-auto max-w-full">
-// // //           <button
-// // //             onClick={() => setActiveView("classes")}
-// // //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// // //               activeView === "classes"
-// // //                 ? "bg-white text-slate-900 shadow-sm"
-// // //                 : "text-slate-500 hover:text-slate-800"
-// // //             }`}
-// // //           >
-// // //             Explore Classes
-// // //           </button>
-// // //           <button
-// // //             onClick={() => setActiveView("mentors")}
-// // //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// // //               activeView === "mentors"
-// // //                 ? "bg-slate-900 text-white shadow-sm"
-// // //                 : "text-slate-500 hover:text-slate-800"
-// // //             }`}
-// // //           >
-// // //             Online Mentors
-// // //           </button>
-// // //           <button
-// // //             onClick={() => setActiveView("tutors")}
-// // //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// // //               activeView === "tutors"
-// // //                 ? "bg-orange-600 text-white shadow-sm"
-// // //                 : "text-slate-500 hover:text-slate-800"
-// // //             }`}
-// // //           >
-// // //             Online Tutor
-// // //           </button>
-// // //         </div>
-// // //       </div>
-
-// // //       {activeView === "mentors" ? (
-// // //         <MentorSlider list={mentorsList} />
-// // //       ) : activeView === "tutors" ? (
-// // //         <MentorSlider list={tutorsList} />
-// // //       ) : children ? (
-// // //         children
-// // //       ) : (
-// // //         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-// // //           {data?.map((item) => (
-// // //             <div
-// // //               key={item.id}
-// // //               onClick={() => handleCardClick(item)}
-// // //               className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[280px] cursor-pointer group`}
-// // //             >
-// // //               <div>
-// // //                 <div className="flex items-center justify-between mb-4">
-// // //                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${item.badgeBg}`}>
-// // //                     {item.badge}
-// // //                   </span>
-// // //                   <div className="w-12 h-12 p-1.5 flex items-center justify-center">
-// // //                     <img src={item.imgUrl} alt={item.title} className="w-full h-full object-contain" />
-// // //                   </div>
-// // //                 </div>
-
-// // //                 <h3 className={`text-xl font-bold mb-1.5 ${item.color}`}>{item.title}</h3>
-// // //                 <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// // //                   {item.subtitle}
-// // //                 </p>
-// // //               </div>
-
-// // //               <div className="flex items-center justify-between pt-4 border-t border-slate-100 mt-4">
-// // //                 <span className="text-[11px] font-semibold text-slate-500">
-// // //                   {item.tagText || "Curriculum"}
-// // //                 </span>
-// // //                 <div
-// // //                   className={`px-3 py-1.5 text-xs font-bold text-white rounded-xl ${item.btnBg} transition-all flex items-center gap-1 shadow-sm`}
-// // //                 >
-// // //                   <span>Explore</span>
-// // //                   <ArrowRight className="w-3.5 h-3.5" />
-// // //                 </div>
-// // //               </div>
-// // //             </div>
-// // //           ))}
-// // //         </div>
-// // //       )}
-// // //     </div>
-// // //   );
-// // // }
-
-// // // export function Features() {
-// // //   const navigate = useSafeNavigate();
-// // //   const [selectedFeature, setSelectedFeature] = useState<typeof topFeatures[0] | null>(null);
-
-// // //   const handleStreamClick = (item: any) => {
-// // //     navigate(`/mysubjectdetail?class=${item.classNumber}&stream=${encodeURIComponent(item.stream)}`, {
-// // //       state: {
-// // //         id: item.id,
-// // //         title: item.title,
-// // //         stream: item.stream,
-// // //         classNumber: item.classNumber,
-// // //       },
-// // //     });
-// // //   };
-
-// // //   const handleLearnMore = (feat: typeof topFeatures[0]) => {
-// // //     setSelectedFeature((prev) => (prev?.id === feat.id ? null : feat));
-// // //   };
-
-// // //   return (
-// // //     <section id="features" className="py-12 bg-slate-50 font-sans text-slate-800">
-// // //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-// // //         {/* Main Header */}
-// // //         <div className="text-center max-w-3xl mx-auto space-y-3">
-// // //           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1 rounded-full text-orange-700 text-xs font-bold tracking-wide uppercase">
-// // //             <Sparkles className="w-3.5 h-3.5" />
-// // //             <span>Targeted Learning & Mentorship</span>
-// // //           </div>
-// // //           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-// // //             Comprehensive Guidance for Every Student
-// // //           </h2>
-// // //           <p className="text-sm sm:text-base text-slate-600">
-// // //             Good Guiders brings together realistic Mock Tests, interactive Online Learning, and personalized Mentorship to help students learn smarter.
-// // //           </p>
-// // //         </div>
-
-// // //         {/* Top 3 Core Features */}
-// // //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-// // //           {topFeatures.map((feat) => (
-// // //             <div
-// // //               key={feat.id}
-// // //               className={`bg-gradient-to-b ${feat.gradient} bg-white border ${feat.border} rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
-// // //             >
-// // //               <div>
-// // //                 <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
-// // //                   {feat.icon}
-// // //                 </div>
-// // //                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
-// // //                 <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
-// // //               </div>
-// // //               <button
-// // //                 onClick={() => handleLearnMore(feat)}
-// // //                 className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${feat.btnColor}`}
-// // //               >
-// // //                 Learn More
-// // //               </button>
-// // //             </div>
-// // //           ))}
-// // //         </div>
-
-// // //         {/* Expandable Selected Feature Detail Banner */}
-// // //         {selectedFeature && (
-// // //           <div className="relative bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-sm transition-all">
-// // //             <button
-// // //               onClick={() => setSelectedFeature(null)}
-// // //               className="absolute top-4 right-4 sm:top-6 sm:right-6 p-1.5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full transition"
-// // //             >
-// // //               <X className="w-4 h-4" />
-// // //             </button>
-
-// // //             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-// // //               {/* Dotted Graphic Container */}
-// // //               <div
-// // //                 className="lg:col-span-6 bg-slate-50/70 border border-slate-200/60 rounded-2xl p-8 sm:p-10 flex items-center justify-center gap-4 shadow-inner"
-// // //                 style={{
-// // //                   backgroundImage: "radial-gradient(#93c5fd 1px, transparent 1px)",
-// // //                   backgroundSize: "16px 16px",
-// // //                 }}
-// // //               >
-// // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-// // //                   <BarChart2 className="w-8 h-8 sm:w-9 sm:h-9" />
-// // //                 </div>
-// // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20">
-// // //                   <FileText className="w-8 h-8 sm:w-9 sm:h-9" />
-// // //                 </div>
-// // //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
-// // //                   <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9" />
-// // //                 </div>
-// // //               </div>
-
-// // //               {/* Detail Content */}
-// // //               <div className="lg:col-span-6 space-y-4">
-// // //                 <div className="inline-flex items-center gap-2">
-// // //                   <span className="text-xl sm:text-2xl">{selectedFeature.icon}</span>
-// // //                   <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900">
-// // //                     {selectedFeature.planBadge}
-// // //                   </h4>
-// // //                 </div>
-
-// // //                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-// // //                   {selectedFeature.planDescription}
-// // //                 </p>
-
-// // //                 <div className="pt-2">
-// // //                   <button
-// // //                     onClick={() => navigate("/mentordetail")}
-// // //                     className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all tracking-wide uppercase"
-// // //                   >
-// // //                     JOIN US NOW
-// // //                   </button>
-// // //                 </div>
-// // //               </div>
-// // //             </div>
-// // //           </div>
-// // //         )}
-
-// // //         {/* Section 1: Classes 1-5 (Left Title + 3 Tabs in Same Row) */}
-// // //         <DynamicSectionBlock
-// // //           sectionBadge="Classes 1–5"
-// // //           sectionTitle="Explore. Learn. Grow."
-// // //           data={class1to5Data}
-// // //         />
-
-// // //         {/* Section 2: Classes 6-10 (Left Title + 3 Tabs in Same Row) */}
-// // //         <DynamicSectionBlock
-// // //           sectionBadge="Classes 6–10"
-// // //           sectionTitle="Choose Your Class"
-// // //           data={class6to10Data}
-// // //         />
-
-// // //         {/* Section 3: Classes 11-12 (Left Title + 3 Tabs in Same Row) */}
-// // //         <DynamicSectionBlock
-// // //           sectionBadge="Senior Secondary"
-// // //           sectionTitle="Classes 11 & 12 Specialized Streams"
-// // //         >
-// // //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-// // //             {class11to12Data.map((item) => (
-// // //               <div
-// // //                 key={item.id}
-// // //                 onClick={() => handleStreamClick(item)}
-// // //                 className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[240px] cursor-pointer group`}
-// // //               >
-// // //                 <div>
-// // //                   <div className="flex justify-between items-start mb-3">
-// // //                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
-// // //                       {item.title}
-// // //                     </span>
-// // //                     <div className="w-12 h-12 p-1">
-// // //                       <img src={item.imgUrl} alt={item.stream} className="w-full h-full object-contain" />
-// // //                     </div>
-// // //                   </div>
-// // //                   <h3 className={`text-lg font-bold mb-1.5 ${item.color}`}>{item.stream}</h3>
-// // //                   <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// // //                     {item.tagline}
-// // //                   </p>
-// // //                 </div>
-
-// // //                 <div className="flex justify-end pt-4 border-t border-slate-100 mt-4">
-// // //                   <div
-// // //                     className={`w-8 h-8 rounded-full ${item.btnBg} text-white flex items-center justify-center shadow-sm`}
-// // //                   >
-// // //                     <ArrowRight className="w-4 h-4" />
-// // //                   </div>
-// // //                 </div>
-// // //               </div>
-// // //             ))}
-// // //           </div>
-// // //         </DynamicSectionBlock>
-// // //       </div>
-// // //     </section>
-// // //   );
-// // // }
-
-// // // export default Features;
-
-
-
-
-
-// // import React, { useState } from "react";
-// // import { useNavigate } from "react-router-dom";
-// // import {
-// //   Users,
-// //   ArrowRight,
-// //   Bookmark,
-// //   CheckCircle2,
-// //   Star,
-// //   Clock,
-// //   Sparkles,
-// //   GraduationCap,
-// //   BarChart2,
-// //   FileText,
-// //   TrendingUp,
-// //   X,
-// // } from "lucide-react";
-
-// // // Safe Navigation helper to prevent router crashes
-// // function useSafeNavigate() {
-// //   try {
-// //     return useNavigate();
-// //   } catch (error) {
-// //     return (path: string, options?: { state?: any }) => {
-// //       window.location.href = path;
-// //     };
-// //   }
-// // }
-
-// // // 1. TOP 3 PILLARS
-// // const topFeatures = [
-// //   {
-// //     id: 0,
-// //     title: "Evaluate",
-// //     icon: "🤝",
-// //     description: "1-on-1 personalized guidance with top mentors to calibrate your academic roadmap.",
-// //     gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
-// //     border: "border-emerald-200/60",
-// //     btnColor: "bg-emerald-600 hover:bg-emerald-700",
-// //     planBadge: "PERSONALIZED EVALUATION PLAN",
-// //     planDescription: "1:1 mentorship sessions, weak-subject analysis, target roadmap, and progress tracking.",
-// //   },
-// //   {
-// //     id: 1,
-// //     title: "Educate",
-// //     icon: "🧪",
-// //     description: "Adaptive mock tests, 10+ years PYQs, and AI-driven deep performance diagnostics.",
-// //     gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
-// //     border: "border-rose-200/60",
-// //     btnColor: "bg-rose-600 hover:bg-rose-700",
-// //     planBadge: "COMPREHENSIVE EDUCATE PLAN",
-// //     planDescription: "Adaptive mock tests, curated 10+ years PYQs, and AI-driven performance diagnostics.",
-// //   },
-// //   {
-// //     id: 2,
-// //     title: "Elevate",
-// //     icon: "🧠",
-// //     description: "Mental well-being, strategic stress mitigation, and continuous counselor support.",
-// //     gradient: "from-cyan-500/10 via-cyan-500/5 to-transparent",
-// //     border: "border-cyan-200/60",
-// //     btnColor: "bg-cyan-600 hover:bg-cyan-700",
-// //     planBadge: "HOLISTIC ELEVATE PLAN",
-// //     planDescription: "Mental wellness strategies, stress management frameworks, and active counselor support.",
-// //   },
-// // ];
-
-// // // 2. CLASSES 1-5
-// // const class1to5Data = [
-// //   {
-// //     id: 101,
-// //     classNumber: "1-5",
-// //     title: "Learn Maths",
-// //     subtitle: "Build strong numbers, mental arithmetic & logic foundation",
-// //     badge: "FOUNDATION",
-// //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// //     color: "text-purple-700",
-// //     bgGradient: "from-purple-50/50 via-white to-white",
-// //     borderColor: "border-purple-200 hover:border-purple-300",
-// //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// //     tagText: "Interactive Maths",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3771/3771278.png",
-// //   },
-// //   {
-// //     id: 102,
-// //     classNumber: "1-5",
-// //     title: "Learn English",
-// //     subtitle: "Enhance vocabulary, grammar, phonics & reading mastery",
-// //     badge: "LANGUAGE",
-// //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// //     color: "text-rose-700",
-// //     bgGradient: "from-rose-50/50 via-white to-white",
-// //     borderColor: "border-rose-200 hover:border-rose-300",
-// //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// //     tagText: "Fun English",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3389/3389011.png",
-// //   },
-// //   {
-// //     id: 103,
-// //     classNumber: "1-5",
-// //     title: "Science Discovery",
-// //     subtitle: "Explore natural phenomena and fun visual experiments",
-// //     badge: "DISCOVERY",
-// //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// //     color: "text-emerald-700",
-// //     bgGradient: "from-emerald-50/50 via-white to-white",
-// //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// //     tagText: "Basic Science",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
-// //   },
-// //   {
-// //     id: 104,
-// //     classNumber: "1-5",
-// //     title: "General Knowledge",
-// //     subtitle: "Discover world facts, geography & dynamic current affairs",
-// //     badge: "AWARENESS",
-// //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// //     color: "text-amber-700",
-// //     bgGradient: "from-amber-50/50 via-white to-white",
-// //     borderColor: "border-amber-200 hover:border-amber-300",
-// //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// //     tagText: "GK Essentials",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2784/2784403.png",
-// //   },
-// //   {
-// //     id: 105,
-// //     classNumber: "6",
-// //     title: "JNV Entrance",
-// //     subtitle: "Targeted entrance prep for Jawahar Navodaya Vidyalaya",
-// //     badge: "ENTRANCE",
-// //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// //     color: "text-blue-700",
-// //     bgGradient: "from-blue-50/50 via-white to-white",
-// //     borderColor: "border-blue-200 hover:border-blue-300",
-// //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// //     tagText: "JNV Special",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2231/2231605.png",
-// //   },
-// //   {
-// //     id: 106,
-// //     classNumber: "1-5",
-// //     title: "KVS Prep",
-// //     subtitle: "Structured syllabus modules for Kendriya Vidyalayas",
-// //     badge: "SCHOOL PREP",
-// //     badgeBg: "bg-teal-50 text-teal-700 border border-teal-200",
-// //     color: "text-teal-700",
-// //     bgGradient: "from-teal-50/50 via-white to-white",
-// //     borderColor: "border-teal-200 hover:border-teal-300",
-// //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// //     tagText: "KVS Curriculum",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2997/2997295.png",
-// //   },
-// //   {
-// //     id: 107,
-// //     classNumber: "6",
-// //     title: "Sainik School",
-// //     subtitle: "Comprehensive entrance training for AISSEE examination",
-// //     badge: "DEFENCE PREP",
-// //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// //     color: "text-orange-700",
-// //     bgGradient: "from-orange-50/50 via-white to-white",
-// //     borderColor: "border-orange-200 hover:border-orange-300",
-// //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// //     tagText: "Sainik Entrance",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/167/167707.png",
-// //   },
-// //   {
-// //     id: 108,
-// //     classNumber: "1-5",
-// //     title: "Junior Olympiad",
-// //     subtitle: "Early competitive aptitude, logical reasoning & analytical mind",
-// //     badge: "COMPETITIVE",
-// //     badgeBg: "bg-indigo-50 text-indigo-700 border border-indigo-200",
-// //     color: "text-indigo-700",
-// //     bgGradient: "from-indigo-50/50 via-white to-white",
-// //     borderColor: "border-indigo-200 hover:border-indigo-300",
-// //     btnBg: "bg-indigo-600 hover:bg-indigo-700",
-// //     tagText: "Olympiad Level",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// //     customRoute: "/juniorolympiad",
-// //   },
-// // ];
-
-// // // 3. CLASSES 6-10
-// // const class6to10Data = [
-// //   {
-// //     id: 3,
-// //     classNumber: "6",
-// //     title: "Class 6",
-// //     subtitle: "Solidify core fundamentals in Maths, Science & Languages",
-// //     badge: "FOUNDATION",
-// //     badgeBg: "bg-blue-50 text-blue-700 border border-blue-200",
-// //     color: "text-blue-700",
-// //     bgGradient: "from-blue-50/50 via-white to-white",
-// //     borderColor: "border-blue-200 hover:border-blue-300",
-// //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// //     tagText: "Class 6 Prep",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2883/2883823.png",
-// //   },
-// //   {
-// //     id: 4,
-// //     classNumber: "7",
-// //     title: "Class 7",
-// //     subtitle: "Strengthen concepts and intermediate problem solving",
-// //     badge: "FOUNDATION",
-// //     badgeBg: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-// //     color: "text-emerald-700",
-// //     bgGradient: "from-emerald-50/50 via-white to-white",
-// //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// //     tagText: "Class 7 Prep",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3429/3429149.png",
-// //   },
-// //   {
-// //     id: 5,
-// //     classNumber: "8",
-// //     title: "Class 8",
-// //     subtitle: "Prepare critical bridging concepts for senior high school",
-// //     badge: "ADVANCED",
-// //     badgeBg: "bg-amber-50 text-amber-800 border border-amber-200",
-// //     color: "text-amber-700",
-// //     bgGradient: "from-amber-50/50 via-white to-white",
-// //     borderColor: "border-amber-200 hover:border-amber-300",
-// //     btnBg: "bg-amber-600 hover:bg-amber-700",
-// //     tagText: "Class 8 Prep",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// //   },
-// //   {
-// //     id: 6,
-// //     classNumber: "9",
-// //     title: "Class 9",
-// //     subtitle: "Pre-board rigor with extensive numerical & theory practice",
-// //     badge: "BOARD PREP",
-// //     badgeBg: "bg-orange-50 text-orange-700 border border-orange-200",
-// //     color: "text-orange-700",
-// //     bgGradient: "from-orange-50/50 via-white to-white",
-// //     borderColor: "border-orange-200 hover:border-orange-300",
-// //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// //     tagText: "Class 9 Prep",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/29/29302.png",
-// //   },
-// //   {
-// //     id: 7,
-// //     classNumber: "10",
-// //     title: "Class 10",
-// //     subtitle: "Complete Board exam mastery with test series & PYQs",
-// //     badge: "BOARD MASTER",
-// //     badgeBg: "bg-rose-50 text-rose-700 border border-rose-200",
-// //     color: "text-rose-700",
-// //     bgGradient: "from-rose-50/50 via-white to-white",
-// //     borderColor: "border-rose-200 hover:border-rose-300",
-// //     btnBg: "bg-rose-600 hover:bg-rose-700",
-// //     tagText: "Class 10 Board",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3112/3112946.png",
-// //   },
-// //   {
-// //     id: 8,
-// //     classNumber: "Olympiad",
-// //     title: "Olympiad & NTSE",
-// //     subtitle: "High-tier competitive aptitude, NTSE & national Olympiads",
-// //     badge: "COMPETITIVE",
-// //     badgeBg: "bg-purple-50 text-purple-700 border border-purple-200",
-// //     color: "text-purple-700",
-// //     bgGradient: "from-purple-50/50 via-white to-white",
-// //     borderColor: "border-purple-200 hover:border-purple-300",
-// //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// //     tagText: "Competitive Prep",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2583/2583319.png",
-// //     customRoute: "/juniorolympiad",
-// //   },
-// // ];
-
-// // // 4. CLASSES 11-12
-// // const class11to12Data = [
-// //   {
-// //     id: 9,
-// //     classNumber: "11",
-// //     title: "Class 11",
-// //     stream: "Arts & Humanities",
-// //     tagline: "History, Political Science, Psychology & Sociology",
-// //     color: "text-purple-700",
-// //     bgGradient: "from-purple-50/40 via-white to-white",
-// //     borderColor: "border-purple-200 hover:border-purple-300",
-// //     btnBg: "bg-purple-600 hover:bg-purple-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png",
-// //   },
-// //   {
-// //     id: 10,
-// //     classNumber: "11",
-// //     title: "Class 11",
-// //     stream: "Commerce",
-// //     tagline: "Accountancy, Business Studies, Economics & Core Maths",
-// //     color: "text-emerald-700",
-// //     bgGradient: "from-emerald-50/40 via-white to-white",
-// //     borderColor: "border-emerald-200 hover:border-emerald-300",
-// //     btnBg: "bg-emerald-600 hover:bg-emerald-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/2422/2422796.png",
-// //   },
-// //   {
-// //     id: 11,
-// //     classNumber: "11",
-// //     title: "Class 11",
-// //     stream: "Science (PCM / PCB)",
-// //     tagline: "Physics, Chemistry, Advanced Maths & Biology",
-// //     color: "text-blue-700",
-// //     bgGradient: "from-blue-50/40 via-white to-white",
-// //     borderColor: "border-blue-200 hover:border-blue-300",
-// //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1085/1085461.png",
-// //   },
-// //   {
-// //     id: 12,
-// //     classNumber: "12",
-// //     title: "Class 12",
-// //     stream: "Arts & Humanities",
-// //     tagline: "Target 98%+ in Boards & CUET entrance preparation",
-// //     color: "text-orange-700",
-// //     bgGradient: "from-orange-50/40 via-white to-white",
-// //     borderColor: "border-orange-200 hover:border-orange-300",
-// //     btnBg: "bg-orange-600 hover:bg-orange-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3135/3135753.png",
-// //   },
-// //   {
-// //     id: 13,
-// //     classNumber: "12",
-// //     title: "Class 12",
-// //     stream: "Commerce",
-// //     tagline: "CA Foundation alignment, Board tests & case analysis",
-// //     color: "text-teal-700",
-// //     bgGradient: "from-teal-50/40 via-white to-white",
-// //     borderColor: "border-teal-200 hover:border-teal-300",
-// //     btnBg: "bg-teal-600 hover:bg-teal-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/3076/3076416.png",
-// //   },
-// //   {
-// //     id: 14,
-// //     classNumber: "12",
-// //     title: "Class 12",
-// //     stream: "Science (PCM / PCB)",
-// //     tagline: "Master Board Syllabus alongside JEE & NEET prep",
-// //     color: "text-sky-700",
-// //     bgGradient: "from-sky-50/40 via-white to-white",
-// //     borderColor: "border-sky-200 hover:border-sky-300",
-// //     btnBg: "bg-blue-600 hover:bg-blue-700",
-// //     imgUrl: "https://cdn-icons-png.flaticon.com/512/1356/1356479.png",
-// //   },
-// // ];
-
-// // // 5. MENTORS & TUTORS DATA
-// // const mentorsList = [
-// //   {
-// //     id: 1,
-// //     name: "Rahul Sharma",
-// //     badge: "JEE MAIN & ADV",
-// //     badgeBg: "bg-orange-500 text-white",
-// //     college: "IIT Delhi Alumnus",
-// //     role: "JEE Physics Lead",
-// //     roleColor: "text-orange-600",
-// //     rating: "4.9",
-// //     students: "1,200+ Students",
-// //     exp: "8+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 2,
-// //     name: "Dr. Aditi Verma",
-// //     badge: "NEET SPECIALIST",
-// //     badgeBg: "bg-emerald-600 text-white",
-// //     college: "AIIMS Delhi Graduate",
-// //     role: "NEET Biology Mentor",
-// //     roleColor: "text-emerald-600",
-// //     rating: "4.9",
-// //     students: "950+ Students",
-// //     exp: "7+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 3,
-// //     name: "Ankit Jain",
-// //     badge: "CLASS 6-10",
-// //     badgeBg: "bg-blue-600 text-white",
-// //     college: "IIT Bombay Alumnus",
-// //     role: "Maths Olympiad Head",
-// //     roleColor: "text-blue-600",
-// //     rating: "4.8",
-// //     students: "1,500+ Students",
-// //     exp: "9+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 4,
-// //     name: "Neha Kapoor",
-// //     badge: "CAREER & PROFILE",
-// //     badgeBg: "bg-purple-600 text-white",
-// //     college: "Ex-Career Analyst",
-// //     role: "Higher Education Counselor",
-// //     roleColor: "text-purple-600",
-// //     rating: "4.9",
-// //     students: "1,100+ Students",
-// //     exp: "6+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
-// //   },
-// // ];
-
-// // const tutorsList = [
-// //   {
-// //     id: 101,
-// //     name: "Pooja Malhotra",
-// //     badge: "K-12 MATHS",
-// //     badgeBg: "bg-purple-600 text-white",
-// //     college: "M.Sc Mathematics",
-// //     role: "Senior Math Tutor",
-// //     roleColor: "text-purple-600",
-// //     rating: "4.9",
-// //     students: "850+ Students",
-// //     exp: "6+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1580894732488-8254b7914e6b?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 102,
-// //     name: "Vikram Sengupta",
-// //     badge: "SCIENCE SPECIALIST",
-// //     badgeBg: "bg-teal-600 text-white",
-// //     college: "B.Tech & B.Ed",
-// //     role: "Science & Physics Tutor",
-// //     roleColor: "text-teal-600",
-// //     rating: "4.8",
-// //     students: "1,020+ Students",
-// //     exp: "8+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 103,
-// //     name: "Sunita Deshmukh",
-// //     badge: "ENGLISH & GRAMMAR",
-// //     badgeBg: "bg-rose-600 text-white",
-// //     college: "M.A. English Literature",
-// //     role: "Language Expert",
-// //     roleColor: "text-rose-600",
-// //     rating: "4.9",
-// //     students: "1,400+ Students",
-// //     exp: "10+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=300&q=80",
-// //   },
-// //   {
-// //     id: 104,
-// //     name: "Rameshwar Patel",
-// //     badge: "JUNIOR COMPETITIVE",
-// //     badgeBg: "bg-amber-600 text-white",
-// //     college: "Olympiad Trainer",
-// //     role: "Aptitude & Reasoning Tutor",
-// //     roleColor: "text-amber-600",
-// //     rating: "4.9",
-// //     students: "780+ Students",
-// //     exp: "7+ Years",
-// //     imgUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80",
-// //   },
-// // ];
-
-// // function MentorSlider({ list = mentorsList }: { list?: typeof mentorsList }) {
-// //   const navigate = useSafeNavigate();
-
-// //   return (
-// //     <div className="w-full py-2">
-// //       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-// //         {list.map((mentor) => (
-// //           <div
-// //             key={mentor.id}
-// //             className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between h-[390px]"
-// //           >
-// //             <div>
-// //               <div className="flex justify-between items-center mb-3">
-// //                 <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${mentor.badgeBg}`}>
-// //                   {mentor.badge}
-// //                 </span>
-// //                 <button className="text-slate-300 hover:text-orange-500">
-// //                   <Bookmark className="w-4 h-4" />
-// //                 </button>
-// //               </div>
-
-// //               <div className="flex justify-center my-3">
-// //                 <div className="w-20 h-20 rounded-full overflow-hidden p-1 ring-2 ring-slate-100">
-// //                   <img src={mentor.imgUrl} alt={mentor.name} className="w-full h-full object-cover rounded-full" />
-// //                 </div>
-// //               </div>
-
-// //               <div className="text-center">
-// //                 <div className="flex items-center justify-center gap-1.5">
-// //                   <h3 className="text-base font-bold text-slate-900">{mentor.name}</h3>
-// //                   <CheckCircle2 className="w-4 h-4 text-orange-500" />
-// //                 </div>
-// //                 <p className="text-xs text-slate-400 font-medium">{mentor.college}</p>
-// //                 <p className={`text-xs font-bold mt-1 ${mentor.roleColor}`}>{mentor.role}</p>
-// //               </div>
-// //             </div>
-
-// //             <div>
-// //               <div className="flex items-center justify-between text-[11px] font-semibold text-slate-500 px-3 py-2 bg-slate-50 rounded-xl mb-3">
-// //                 <div className="flex items-center gap-1">
-// //                   <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-// //                   <span className="text-slate-800 font-bold">{mentor.rating}</span>
-// //                 </div>
-// //                 <div className="flex items-center gap-1">
-// //                   <Users className="w-3.5 h-3.5 text-slate-400" />
-// //                   <span>{mentor.students}</span>
-// //                 </div>
-// //                 <div className="flex items-center gap-1">
-// //                   <Clock className="w-3.5 h-3.5 text-slate-400" />
-// //                   <span>{mentor.exp}</span>
-// //                 </div>
-// //               </div>
-
-// //               <div className="grid grid-cols-2 gap-2">
-// //                 <button
-// //                   onClick={() => navigate("/mentordetail")}
-// //                   className="py-2 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition"
-// //                 >
-// //                   Profile
-// //                 </button>
-// //                 <button
-// //                   onClick={() => navigate("/mentordetail")}
-// //                   className="py-2 text-xs font-bold text-white bg-orange-600 hover:bg-orange-700 rounded-xl transition shadow-sm"
-// //                 >
-// //                   Book Slot
-// //                 </button>
-// //               </div>
-// //             </div>
-// //           </div>
-// //         ))}
-// //       </div>
-// //     </div>
-// //   );
-// // }
-
-// // function DynamicSectionBlock({
-// //   sectionTitle,
-// //   sectionBadge,
-// //   data,
-// //   children,
-// // }: {
-// //   sectionTitle: string;
-// //   sectionBadge: string;
-// //   data?: any[];
-// //   children?: React.ReactNode;
-// // }) {
-// //   const [activeView, setActiveView] = useState<"classes" | "mentors" | "tutors">("classes");
-// //   const navigate = useSafeNavigate();
-
-// //   const handleCardClick = (item: any) => {
-// //     if (item.customRoute || item.title === "Junior Olympiad") {
-// //       navigate(item.customRoute || "/juniorolympiad", {
-// //         state: {
-// //           id: item.id,
-// //           title: item.title,
-// //           subtitle: item.subtitle,
-// //           tag: item.tagText || item.badge,
-// //         },
-// //       });
-// //       return;
-// //     }
-
-// //     const classNum =
-// //       item.classNumber || (item.title.match(/\d+/) ? item.title.match(/\d+/)[0] : "6");
-// //     navigate(`/mysubjectdetail?class=${classNum}`, {
-// //       state: {
-// //         id: item.id,
-// //         title: item.title,
-// //         subtitle: item.subtitle,
-// //         tag: item.tagText || item.badge,
-// //         classNumber: classNum,
-// //       },
-// //     });
-// //   };
-
-// //   const getHeadingTitle = () => {
-// //     if (activeView === "mentors") return "Verified Subject Mentors";
-// //     if (activeView === "tutors") return "Verified Online Tutors";
-// //     return sectionTitle;
-// //   };
-
-// //   return (
-// //     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-// //       {/* Row Header: Left side Title + Right side 3 Toggle Buttons */}
-// //       <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-slate-100 gap-4">
-// //         {/* Left Side Content */}
-// //         <div className="text-left">
-// //           <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-lg sm:text-xl uppercase mb-1">
-// //             <GraduationCap className="w-5 h-5" />
-// //             <span>{sectionBadge}</span>
-// //           </div>
-// //           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-// //             {getHeadingTitle()}
-// //           </h2>
-// //         </div>
-
-// //         {/* Right Side 3 Tabs */}
-// //         <div className="inline-flex p-1 bg-slate-100/90 rounded-2xl self-start md:self-auto overflow-x-auto max-w-full">
-// //           <button
-// //             onClick={() => setActiveView("classes")}
-// //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// //               activeView === "classes"
-// //                 ? "bg-white text-slate-900 shadow-sm"
-// //                 : "text-slate-500 hover:text-slate-800"
-// //             }`}
-// //           >
-// //             Explore Classes
-// //           </button>
-// //           <button
-// //             onClick={() => setActiveView("mentors")}
-// //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// //               activeView === "mentors"
-// //                 ? "bg-slate-900 text-white shadow-sm"
-// //                 : "text-slate-500 hover:text-slate-800"
-// //             }`}
-// //           >
-// //             Online Mentors
-// //           </button>
-// //           <button
-// //             onClick={() => setActiveView("tutors")}
-// //             className={`px-4 sm:px-5 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
-// //               activeView === "tutors"
-// //                 ? "bg-orange-600 text-white shadow-sm"
-// //                 : "text-slate-500 hover:text-slate-800"
-// //             }`}
-// //           >
-// //             Online Tutor
-// //           </button>
-// //         </div>
-// //       </div>
-
-// //       {activeView === "mentors" ? (
-// //         <MentorSlider list={mentorsList} />
-// //       ) : activeView === "tutors" ? (
-// //         <MentorSlider list={tutorsList} />
-// //       ) : children ? (
-// //         children
-// //       ) : (
-// //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-// //           {data?.map((item) => (
-// //             <div
-// //               key={item.id}
-// //               onClick={() => handleCardClick(item)}
-// //               className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[280px] cursor-pointer group`}
-// //             >
-// //               <div>
-// //                 <div className="flex items-center justify-between mb-4">
-// //                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md tracking-wider ${item.badgeBg}`}>
-// //                     {item.badge}
-// //                   </span>
-// //                   <div className="w-12 h-12 p-1.5 flex items-center justify-center">
-// //                     <img src={item.imgUrl} alt={item.title} className="w-full h-full object-contain" />
-// //                   </div>
-// //                 </div>
-
-// //                 <h3 className={`text-xl font-bold mb-1.5 ${item.color}`}>{item.title}</h3>
-// //                 <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// //                   {item.subtitle}
-// //                 </p>
-// //               </div>
-
-// //               <div className="flex items-center justify-between pt-4 border-t border-slate-100 mt-4">
-// //                 <span className="text-[11px] font-semibold text-slate-500">
-// //                   {item.tagText || "Curriculum"}
-// //                 </span>
-// //                 <div
-// //                   className={`px-3 py-1.5 text-xs font-bold text-white rounded-xl ${item.btnBg} transition-all flex items-center gap-1 shadow-sm`}
-// //                 >
-// //                   <span>Explore</span>
-// //                   <ArrowRight className="w-3.5 h-3.5" />
-// //                 </div>
-// //               </div>
-// //             </div>
-// //           ))}
-// //         </div>
-// //       )}
-// //     </div>
-// //   );
-// // }
-
-// // export function Features() {
-// //   const navigate = useSafeNavigate();
-// //   const [selectedFeature, setSelectedFeature] = useState<typeof topFeatures[0] | null>(null);
-
-// //   const handleStreamClick = (item: any) => {
-// //     navigate(`/mysubjectdetail?class=${item.classNumber}&stream=${encodeURIComponent(item.stream)}`, {
-// //       state: {
-// //         id: item.id,
-// //         title: item.title,
-// //         stream: item.stream,
-// //         classNumber: item.classNumber,
-// //       },
-// //     });
-// //   };
-
-// //   const handleLearnMore = (feat: typeof topFeatures[0]) => {
-// //     setSelectedFeature((prev) => (prev?.id === feat.id ? null : feat));
-// //   };
-
-// //   return (
-// //     <section id="features" className="py-12 bg-slate-50 font-sans text-slate-800">
-// //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-// //         {/* Main Header */}
-// //         <div className="text-center max-w-3xl mx-auto space-y-3">
-// //           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 px-3.5 py-1 rounded-full text-orange-700 text-xs font-bold tracking-wide uppercase">
-// //             <Sparkles className="w-3.5 h-3.5" />
-// //             <span>Targeted Learning & Mentorship</span>
-// //           </div>
-// //           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-// //             Comprehensive Guidance for Every Student
-// //           </h2>
-// //           <p className="text-sm sm:text-base text-slate-600">
-// //             Good Guiders brings together realistic Mock Tests, interactive Online Learning, and personalized Mentorship to help students learn smarter.
-// //           </p>
-// //         </div>
-
-// //         {/* Top 3 Core Features */}
-// //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-// //           {topFeatures.map((feat) => (
-// //             <div
-// //               key={feat.id}
-// //               className={`bg-gradient-to-b ${feat.gradient} bg-white border ${feat.border} rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
-// //             >
-// //               <div>
-// //                 <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
-// //                   {feat.icon}
-// //                 </div>
-// //                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
-// //                 <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
-// //               </div>
-// //               <button
-// //                 onClick={() => handleLearnMore(feat)}
-// //                 className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${feat.btnColor}`}
-// //               >
-// //                 Learn More
-// //               </button>
-// //             </div>
-// //           ))}
-// //         </div>
-
-// //         {/* Expandable Selected Feature Detail Banner */}
-// //         {selectedFeature && (
-// //           <div className="relative bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-sm transition-all">
-// //             <button
-// //               onClick={() => setSelectedFeature(null)}
-// //               className="absolute top-4 right-4 sm:top-6 sm:right-6 p-1.5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full transition"
-// //             >
-// //               <X className="w-4 h-4" />
-// //             </button>
-
-// //             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-// //               {/* Dotted Graphic Container */}
-// //               <div
-// //                 className="lg:col-span-6 bg-slate-50/70 border border-slate-200/60 rounded-2xl p-8 sm:p-10 flex items-center justify-center gap-4 shadow-inner"
-// //                 style={{
-// //                   backgroundImage: "radial-gradient(#93c5fd 1px, transparent 1px)",
-// //                   backgroundSize: "16px 16px",
-// //                 }}
-// //               >
-// //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-// //                   <BarChart2 className="w-8 h-8 sm:w-9 sm:h-9" />
-// //                 </div>
-// //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20">
-// //                   <FileText className="w-8 h-8 sm:w-9 sm:h-9" />
-// //                 </div>
-// //                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
-// //                   <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9" />
-// //                 </div>
-// //               </div>
-
-// //               {/* Detail Content */}
-// //               <div className="lg:col-span-6 space-y-4">
-// //                 <div className="inline-flex items-center gap-2">
-// //                   <span className="text-xl sm:text-2xl">{selectedFeature.icon}</span>
-// //                   <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900">
-// //                     {selectedFeature.planBadge}
-// //                   </h4>
-// //                 </div>
-
-// //                 <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-// //                   {selectedFeature.planDescription}
-// //                 </p>
-
-// //                 <div className="pt-2">
-// //                   <button
-// //                     onClick={() => navigate("/mentordetail")}
-// //                     className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all tracking-wide uppercase"
-// //                   >
-// //                     JOIN US NOW
-// //                   </button>
-// //                 </div>
-// //               </div>
-// //             </div>
-// //           </div>
-// //         )}
-
-// //         {/* Section 1: Classes 1-5 */}
-// //         <DynamicSectionBlock
-// //           sectionBadge="Classes 1–5"
-// //           sectionTitle="Explore. Learn. Grow."
-// //           data={class1to5Data}
-// //         />
-
-// //         {/* Section 2: Classes 6-10 (3 in 1st row, 3 in 2nd row) */}
-// //         <DynamicSectionBlock
-// //           sectionBadge="Classes 6–10"
-// //           sectionTitle="Choose Your Class"
-// //           data={class6to10Data}
-// //         />
-
-// //         {/* Section 3: Classes 11-12 */}
-// //         <DynamicSectionBlock
-// //           sectionBadge="Senior Secondary"
-// //           sectionTitle="Classes 11 & 12 Specialized Streams"
-// //         >
-// //           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-// //             {class11to12Data.map((item) => (
-// //               <div
-// //                 key={item.id}
-// //                 onClick={() => handleStreamClick(item)}
-// //                 className={`bg-gradient-to-b ${item.bgGradient} border ${item.borderColor} rounded-3xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[240px] cursor-pointer group`}
-// //               >
-// //                 <div>
-// //                   <div className="flex justify-between items-start mb-3">
-// //                     <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
-// //                       {item.title}
-// //                     </span>
-// //                     <div className="w-12 h-12 p-1">
-// //                       <img src={item.imgUrl} alt={item.stream} className="w-full h-full object-contain" />
-// //                     </div>
-// //                   </div>
-// //                   <h3 className={`text-lg font-bold mb-1.5 ${item.color}`}>{item.stream}</h3>
-// //                   <p className="text-slate-500 text-xs font-medium leading-relaxed line-clamp-2">
-// //                     {item.tagline}
-// //                   </p>
-// //                 </div>
-
-// //                 <div className="flex justify-end pt-4 border-t border-slate-100 mt-4">
-// //                   <div
-// //                     className={`w-8 h-8 rounded-full ${item.btnBg} text-white flex items-center justify-center shadow-sm`}
-// //                   >
-// //                     <ArrowRight className="w-4 h-4" />
-// //                   </div>
-// //                 </div>
-// //               </div>
-// //             ))}
-// //           </div>
-// //         </DynamicSectionBlock>
-// //       </div>
-// //     </section>
-// //   );
-// // }
-
-// // export default Features;
 
 
 
@@ -6003,7 +3512,7 @@
 //   },
 // ];
 
-// // 2. CLASSES 1-5 (8 Items: 4 in top row, 4 in bottom row)
+// // 2. CLASSES 1-5 (8 items: 4 top, 4 bottom)
 // const class1to5Data = [
 //   {
 //     id: 101,
@@ -6120,7 +3629,7 @@
 //   },
 // ];
 
-// // 3. CLASSES 6-10 (6 Items: 3 in top row, 3 in bottom row)
+// // 3. CLASSES 6-10 (6 items: 3 top, 3 bottom)
 // const class6to10Data = [
 //   {
 //     id: 3,
@@ -6603,9 +4112,19 @@
 //     return sectionTitle;
 //   };
 
+//   const handleBottomAction = () => {
+//     if (activeView === "classes") {
+//       navigate("/localtutor");
+//     } else if (activeView === "mentors") {
+//       navigate("/mentordetail");
+//     } else if (activeView === "tutors") {
+//       navigate("/onlinetutors");
+//     }
+//   };
+
 //   return (
 //     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-//       {/* Row Header: Left side Title & Subtitle + Right side 3 Toggle Buttons in the same row */}
+//       {/* Row Header: Left side Title & Subtitle + Right side 3 Toggle Buttons in same row */}
 //       <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-slate-100 gap-4">
 //         {/* Left Side Content */}
 //         <div className="text-left">
@@ -6703,6 +4222,39 @@
 //           ))}
 //         </div>
 //       )}
+
+//       {/* Dynamic Action Button at Bottom of Cards */}
+//       <div className="mt-8 pt-6 border-t border-slate-100 flex justify-center">
+//         {activeView === "classes" && (
+//           <button
+//             onClick={handleBottomAction}
+//             className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+//           >
+//             <span>Find Your Local Tutor</span>
+//             <ArrowRight className="w-4 h-4" />
+//           </button>
+//         )}
+
+//         {activeView === "mentors" && (
+//           <button
+//             onClick={handleBottomAction}
+//             className="px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+//           >
+//             <span>Explore All Online Mentors</span>
+//             <ArrowRight className="w-4 h-4" />
+//           </button>
+//         )}
+
+//         {activeView === "tutors" && (
+//           <button
+//             onClick={handleBottomAction}
+//             className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+//           >
+//             <span>Explore All Online Tutors</span>
+//             <ArrowRight className="w-4 h-4" />
+//           </button>
+//         )}
+//       </div>
 //     </div>
 //   );
 // }
@@ -6823,7 +4375,7 @@
 //           </div>
 //         )}
 
-//         {/* Section 1: Classes 1–5 (4 in top row, 4 in bottom row) */}
+//         {/* Section 1: Classes 1–5 (4 top, 4 bottom) */}
 //         <DynamicSectionBlock
 //           sectionBadge="Classes 1–5"
 //           sectionTitle="Explore. Learn. Grow."
@@ -6831,7 +4383,7 @@
 //           gridCols="lg:grid-cols-4"
 //         />
 
-//         {/* Section 2: Classes 6–10 (3 in top row, 3 in bottom row) */}
+//         {/* Section 2: Classes 6–10 (3 top, 3 bottom) */}
 //         <DynamicSectionBlock
 //           sectionBadge="Classes 6–10"
 //           sectionTitle="Choose Your Class"
@@ -6878,7 +4430,7 @@
 //           </div>
 //         </DynamicSectionBlock>
 
-//         {/* Section 4: Exams After 12th (3 in top row, 3 in bottom row) */}
+//         {/* Section 4: Exams After 12th (3 top, 3 bottom) */}
 //         <DynamicSectionBlock
 //           sectionBadge="YOUR FUTURE STARTS HERE"
 //           sectionTitle="Explore Exams After 12th"
@@ -6893,9 +4445,6 @@
 
 // export default Features;
 
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -6907,10 +4456,23 @@ import {
   Clock,
   Sparkles,
   GraduationCap,
-  BarChart2,
-  FileText,
-  TrendingUp,
   X,
+  FileSpreadsheet,
+  ListChecks,
+  BarChart3,
+  Crosshair,
+  Timer,
+  Award,
+  Video,
+  CalendarCheck,
+  BookOpenCheck,
+  LineChart,
+  Headphones,
+  Compass,
+  HelpCircle,
+  Flag,
+  BrainCircuit,
+  Rocket,
 } from "lucide-react";
 
 // Safe Navigation helper to prevent router crashes
@@ -6924,44 +4486,146 @@ function useSafeNavigate() {
   }
 }
 
-// 1. TOP 3 PILLARS
+// 1. TOP 3 PILLARS WITH DETAILED BREAKDOWNS
 const topFeatures = [
   {
     id: 0,
     title: "Evaluate",
     icon: "🤝",
-    description: "1-on-1 personalized guidance with top mentors to calibrate your academic roadmap.",
+    description: "1-on-1 personalized guidance from top mentors to understand your strengths, identify the right opportunities, and build a clear, customized academic roadmap for your future success.",
     gradient: "from-emerald-500/10 via-emerald-500/5 to-transparent",
     border: "border-emerald-200/60",
     btnColor: "bg-emerald-600 hover:bg-emerald-700",
-    planBadge: "PERSONALIZED EVALUATION PLAN",
-    planDescription: "1:1 mentorship sessions, weak-subject analysis, target roadmap, and progress tracking.",
+    themeBg: "bg-[#f4fbf7]",
+    themeBorder: "border-[#d1fae5]",
+    titleColor: "text-[#047857]",
+    mainIconBg: "bg-emerald-100/70 border border-emerald-300",
+    featureItems: [
+      {
+        title: "Mock Tests & Test Series",
+        desc: "Practice with full-length mock tests and test series for real exam experience.",
+        icon: FileSpreadsheet,
+      },
+      {
+        title: "Topic-wise & Subject Quizzes",
+        desc: "Attempt quizzes across topics, chapters and subjects to strengthen concepts.",
+        icon: ListChecks,
+      },
+      {
+        title: "Detailed Reports & Analysis",
+        desc: "Get in-depth analysis and score reports to know where you stand.",
+        icon: BarChart3,
+      },
+      {
+        title: "Identify Strengths & Weaknesses",
+        desc: "Pinpoint your strong and weak areas to focus on what matters most.",
+        icon: Crosshair,
+      },
+      {
+        title: "Time & Speed Optimization",
+        desc: "Analyze time spent on each section to improve speed and accuracy.",
+        icon: Timer,
+      },
+      {
+        title: "Progress & Peer Comparison",
+        desc: "Track your progress over time and compare your performance with others.",
+        icon: Award,
+      },
+    ],
   },
   {
     id: 1,
     title: "Educate",
     icon: "🧪",
-    description: "Adaptive mock tests, 10+ years PYQs, and AI-driven deep performance diagnostics.",
+    description: "Learn conceptually with expert tutors and strengthen your preparation.",
     gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
     border: "border-rose-200/60",
     btnColor: "bg-rose-600 hover:bg-rose-700",
-    planBadge: "COMPREHENSIVE EDUCATE PLAN",
-    planDescription: "Adaptive mock tests, curated 10+ years PYQs, and AI-driven performance diagnostics.",
+    themeBg: "bg-[#fff7f7]",
+    themeBorder: "border-[#ffe4e6]",
+    titleColor: "text-[#be123c]",
+    mainIconBg: "bg-rose-100/70 border border-rose-300",
+    featureItems: [
+      {
+        title: "Verified Local & Online Tutors",
+        desc: "Learn from experienced and verified tutors who understand your exact needs.",
+        icon: Users,
+      },
+      {
+        title: "1-on-1 Live Classes & Doubts",
+        desc: "Get personalized attention and clear your doubts in live interactive sessions.",
+        icon: Video,
+      },
+      {
+        title: "Flexible Class Scheduling",
+        desc: "Choose class timings that fit your schedule and learn at your convenience.",
+        icon: CalendarCheck,
+      },
+      {
+        title: "Personalized Study Roadmap",
+        desc: "Follow a customized study plan designed to suit your goals and learning pace.",
+        icon: BookOpenCheck,
+      },
+      {
+        title: "Regular Assessments & Tracking",
+        desc: "Take regular assessments and track your progress to stay on the right path.",
+        icon: LineChart,
+      },
+      {
+        title: "Continuous Mentor Support",
+        desc: "Receive ongoing support and academic guidance whenever you need it.",
+        icon: Headphones,
+      },
+    ],
   },
   {
     id: 2,
     title: "Elevate",
     icon: "🧠",
-    description: "Mental well-being, strategic stress mitigation, and continuous counselor support.",
-    gradient: "from-cyan-500/10 via-cyan-500/5 to-transparent",
-    border: "border-cyan-200/60",
-    btnColor: "bg-cyan-600 hover:bg-cyan-700",
-    planBadge: "HOLISTIC ELEVATE PLAN",
-    planDescription: "Mental wellness strategies, stress management frameworks, and active counselor support.",
+    description: "Get mentored by experts to make the right career choices and achieve your dreams.",
+    gradient: "from-blue-500/10 via-blue-500/5 to-transparent",
+    border: "border-blue-200/60",
+    btnColor: "bg-blue-600 hover:bg-blue-700",
+    themeBg: "bg-[#f8faff]",
+    themeBorder: "border-[#dbeafe]",
+    titleColor: "text-[#1d4ed8]",
+    mainIconBg: "bg-blue-100/70 border border-blue-300",
+    featureItems: [
+      {
+        title: "Career Guidance by Mentors",
+        desc: "Get insights and advice from experienced mentors with real-world industry experience.",
+        icon: Users,
+      },
+      {
+        title: "Discover Right Career Path",
+        desc: "Explore options and find the career path that suits your interests and strengths.",
+        icon: Compass,
+      },
+      {
+        title: "Personalized Counselling",
+        desc: "Receive one-on-one counselling to set clear goals and a focused action plan.",
+        icon: HelpCircle,
+      },
+      {
+        title: "Step-by-Step Goal Roadmap",
+        desc: "Get a strategic plan and roadmap to help you achieve your academic goals.",
+        icon: Flag,
+      },
+      {
+        title: "Overcome Confusion & Indecision",
+        desc: "Clear your doubts and make confident, well-informed decisions about your future.",
+        icon: BrainCircuit,
+      },
+      {
+        title: "Stay Motivated & Elevate",
+        desc: "Stay inspired, motivated and take the right steps towards a successful future.",
+        icon: Rocket,
+      },
+    ],
   },
 ];
 
-// 2. CLASSES 1-5 (8 items: 4 top, 4 bottom)
+// 2. CLASSES 1-5
 const class1to5Data = [
   {
     id: 101,
@@ -7078,7 +4742,7 @@ const class1to5Data = [
   },
 ];
 
-// 3. CLASSES 6-10 (6 items: 3 top, 3 bottom)
+// 3. CLASSES 6-10
 const class6to10Data = [
   {
     id: 3,
@@ -7325,7 +4989,7 @@ const after12thExamsData = [
   },
 ];
 
-// 6. MENTORS & TUTORS DATA
+// 6. MENTORS & TUTORS DATA (Expanded to 8 items each for 4 top + 4 bottom grid display)
 const mentorsList = [
   {
     id: 1,
@@ -7378,6 +5042,58 @@ const mentorsList = [
     students: "1,100+ Students",
     exp: "6+ Years",
     imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 5,
+    name: "Siddharth Mehta",
+    badge: "JEE ADVANCED",
+    badgeBg: "bg-rose-600 text-white",
+    college: "IIT Kharagpur Alumnus",
+    role: "Chemistry Specialist",
+    roleColor: "text-rose-600",
+    rating: "4.9",
+    students: "890+ Students",
+    exp: "7+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 6,
+    name: "Dr. Shalini Rao",
+    badge: "NEET SPECIALIST",
+    badgeBg: "bg-emerald-600 text-white",
+    college: "MAMC New Delhi",
+    role: "Zoology & Botany Expert",
+    roleColor: "text-emerald-600",
+    rating: "4.9",
+    students: "1,350+ Students",
+    exp: "10+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 7,
+    name: "Kunal Singhania",
+    badge: "COMMERCE & CUET",
+    badgeBg: "bg-teal-600 text-white",
+    college: "SRCC Alumnus",
+    role: "Economics & Accountancy Lead",
+    roleColor: "text-teal-600",
+    rating: "4.8",
+    students: "980+ Students",
+    exp: "8+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 8,
+    name: "Rohan Varma",
+    badge: "DEFENCE & NDA",
+    badgeBg: "bg-amber-600 text-white",
+    college: "Ex-NDA Officer",
+    role: "SSB & Aptitude Coach",
+    roleColor: "text-amber-600",
+    rating: "4.9",
+    students: "1,250+ Students",
+    exp: "9+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80",
   },
 ];
 
@@ -7433,6 +5149,58 @@ const tutorsList = [
     students: "780+ Students",
     exp: "7+ Years",
     imgUrl: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 105,
+    name: "Deepak Choudhary",
+    badge: "SENIOR PHYSICS",
+    badgeBg: "bg-blue-600 text-white",
+    college: "M.Sc Physics",
+    role: "CBSE & Board Expert",
+    roleColor: "text-blue-600",
+    rating: "4.9",
+    students: "1,150+ Students",
+    exp: "9+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 106,
+    name: "Ananya Iyer",
+    badge: "CHEMISTRY SPECIALIST",
+    badgeBg: "bg-emerald-600 text-white",
+    college: "M.Sc Chemistry",
+    role: "Organic & Physical Chemistry",
+    roleColor: "text-emerald-600",
+    rating: "4.8",
+    students: "920+ Students",
+    exp: "6+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 107,
+    name: "Manish Agarwal",
+    badge: "COMMERCE & ACCOUNTS",
+    badgeBg: "bg-indigo-600 text-white",
+    college: "Chartered Accountant (CA)",
+    role: "Accountancy & Tax Tutor",
+    roleColor: "text-indigo-600",
+    rating: "4.9",
+    students: "1,300+ Students",
+    exp: "8+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+  },
+  {
+    id: 108,
+    name: "Priyanka Joshi",
+    badge: "SOCIAL SCIENCE",
+    badgeBg: "bg-pink-600 text-white",
+    college: "M.A. History & Pol. Sc.",
+    role: "Social Studies & Civics Tutor",
+    roleColor: "text-pink-600",
+    rating: "4.9",
+    students: "870+ Students",
+    exp: "7+ Years",
+    imgUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
   },
 ];
 
@@ -7567,15 +5335,13 @@ function DynamicSectionBlock({
     } else if (activeView === "mentors") {
       navigate("/mentordetail");
     } else if (activeView === "tutors") {
-      navigate("/onlinetutors");
+      navigate("/localtutor");
     }
   };
 
   return (
     <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
-      {/* Row Header: Left side Title & Subtitle + Right side 3 Toggle Buttons in same row */}
       <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-8 border-b border-slate-100 gap-4">
-        {/* Left Side Content */}
         <div className="text-left">
           <div className="inline-flex items-center gap-2 text-orange-600 font-extrabold tracking-widest text-base sm:text-lg uppercase mb-1">
             <GraduationCap className="w-5 h-5" />
@@ -7591,7 +5357,6 @@ function DynamicSectionBlock({
           )}
         </div>
 
-        {/* Right Side 3 Tabs in Same Row */}
         <div className="inline-flex p-1 bg-slate-100/90 rounded-2xl self-start md:self-auto overflow-x-auto max-w-full">
           <button
             onClick={() => setActiveView("classes")}
@@ -7672,7 +5437,6 @@ function DynamicSectionBlock({
         </div>
       )}
 
-      {/* Dynamic Action Button at Bottom of Cards */}
       <div className="mt-8 pt-6 border-t border-slate-100 flex justify-center">
         {activeView === "classes" && (
           <button
@@ -7746,85 +5510,95 @@ export function Features() {
 
         {/* Top 3 Core Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {topFeatures.map((feat) => (
-            <div
-              key={feat.id}
-              className={`bg-gradient-to-b ${feat.gradient} bg-white border ${feat.border} rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
-            >
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
-                  {feat.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
-                <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
-              </div>
-              <button
-                onClick={() => handleLearnMore(feat)}
-                className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${feat.btnColor}`}
+          {topFeatures.map((feat) => {
+            const isSelected = selectedFeature?.id === feat.id;
+            return (
+              <div
+                key={feat.id}
+                className={`bg-gradient-to-b ${feat.gradient} bg-white border ${
+                  isSelected ? "border-slate-800 ring-2 ring-slate-800/10" : feat.border
+                } rounded-3xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between min-h-[230px]`}
               >
-                Learn More
-              </button>
-            </div>
-          ))}
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center text-2xl mb-4">
+                    {feat.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{feat.title}</h3>
+                  <p className="text-slate-600 text-xs leading-relaxed">{feat.description}</p>
+                </div>
+                <button
+                  onClick={() => handleLearnMore(feat)}
+                  className={`mt-6 w-full py-2.5 rounded-xl text-white text-xs font-bold shadow-sm transition-all ${
+                    isSelected ? "bg-slate-900 hover:bg-slate-800" : feat.btnColor
+                  }`}
+                >
+                  {isSelected ? "Close Details" : "Learn More"}
+                </button>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Expandable Selected Feature Detail Banner */}
+        {/* Dynamic Horizontal Breakdown matching Screenshot */}
         {selectedFeature && (
-          <div className="relative bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 shadow-sm transition-all">
+          <div
+            className={`relative ${selectedFeature.themeBg} border ${selectedFeature.themeBorder} rounded-3xl p-6 sm:p-8 shadow-sm transition-all animate-in fade-in slide-in-from-top-4 duration-300`}
+          >
+            {/* Close Button */}
             <button
               onClick={() => setSelectedFeature(null)}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 p-1.5 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full transition"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 p-1 text-slate-400 hover:text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 rounded-full transition shadow-xs"
             >
               <X className="w-4 h-4" />
             </button>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              {/* Dotted Graphic Container */}
-              <div
-                className="lg:col-span-6 bg-slate-50/70 border border-slate-200/60 rounded-2xl p-8 sm:p-10 flex items-center justify-center gap-4 shadow-inner"
-                style={{
-                  backgroundImage: "radial-gradient(#93c5fd 1px, transparent 1px)",
-                  backgroundSize: "16px 16px",
-                }}
-              >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-500/20">
-                  <BarChart2 className="w-8 h-8 sm:w-9 sm:h-9" />
-                </div>
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-indigo-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-600/20">
-                  <FileText className="w-8 h-8 sm:w-9 sm:h-9" />
-                </div>
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
-                  <TrendingUp className="w-8 h-8 sm:w-9 sm:h-9" />
+            <div className="flex flex-col lg:flex-row items-stretch gap-6">
+              {/* Left Pillar Info Box */}
+              <div className="lg:w-1/4 flex flex-col justify-between pr-0 lg:pr-6 lg:border-r border-slate-200/80">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div
+                      className={`w-12 h-12 rounded-2xl ${selectedFeature.mainIconBg} flex items-center justify-center text-2xl shadow-xs`}
+                    >
+                      {selectedFeature.icon}
+                    </div>
+                    <h3 className={`text-2xl font-black tracking-tight ${selectedFeature.titleColor}`}>
+                      {selectedFeature.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed mt-2">
+                    {selectedFeature.description}
+                  </p>
                 </div>
               </div>
 
-              {/* Detail Content */}
-              <div className="lg:col-span-6 space-y-4">
-                <div className="inline-flex items-center gap-2">
-                  <span className="text-xl sm:text-2xl">{selectedFeature.icon}</span>
-                  <h4 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900">
-                    {selectedFeature.planBadge}
-                  </h4>
-                </div>
-
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                  {selectedFeature.planDescription}
-                </p>
-
-                <div className="pt-2">
-                  <button
-                    onClick={() => navigate("/mentordetail")}
-                    className="px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all tracking-wide uppercase"
-                  >
-                    JOIN US NOW
-                  </button>
-                </div>
+              {/* Right Side 6-Item Cards Grid */}
+              <div className="lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-4">
+                {selectedFeature.featureItems.map((item, idx) => {
+                  const IconComp = item.icon;
+                  return (
+                    <div
+                      key={idx}
+                      className="bg-white/95 border border-slate-200/90 rounded-2xl p-4 shadow-xs flex flex-col justify-start hover:shadow-md hover:border-slate-300 transition-all duration-150"
+                    >
+                      <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-700 mb-2.5">
+                        <IconComp className={`w-4 h-4 ${selectedFeature.titleColor}`} />
+                      </div>
+                      <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 mb-1 leading-snug">
+                        {item.title}
+                      </h4>
+                      <p className="text-[11px] text-slate-500 font-normal leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         )}
 
-        {/* Section 1: Classes 1–5 (4 top, 4 bottom) */}
+        {/* Section 1: Classes 1–5 */}
         <DynamicSectionBlock
           sectionBadge="Classes 1–5"
           sectionTitle="Explore. Learn. Grow."
@@ -7832,7 +5606,7 @@ export function Features() {
           gridCols="lg:grid-cols-4"
         />
 
-        {/* Section 2: Classes 6–10 (3 top, 3 bottom) */}
+        {/* Section 2: Classes 6–10 */}
         <DynamicSectionBlock
           sectionBadge="Classes 6–10"
           sectionTitle="Choose Your Class"
@@ -7879,7 +5653,7 @@ export function Features() {
           </div>
         </DynamicSectionBlock>
 
-        {/* Section 4: Exams After 12th (3 top, 3 bottom) */}
+        {/* Section 4: Exams After 12th */}
         <DynamicSectionBlock
           sectionBadge="YOUR FUTURE STARTS HERE"
           sectionTitle="Explore Exams After 12th"

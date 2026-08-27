@@ -654,7 +654,7 @@ export function Header() {
       ],
     },
     {
-      title: "Test-Series",
+      title: "Exam Prep",
       subItems: [
         { label: "Exam 1", sectionId: "exam-1" },
         { label: "Exam 2", sectionId: "exam-2" },
@@ -663,9 +663,35 @@ export function Header() {
         { label: "Exam 5", sectionId: "exam-5" },
       ],
     },
-    { title: "Local-Tutors", sectionId: "local-tutors" },
-    { title: "Online-Tutors", sectionId: "online-tutors" },
-    { title: "Online-Mentors", sectionId: "online-mentors" },
+    { title: "Local Tutors", 
+        subItems: [
+        { label: "Class 1 to 5", sectionId: "courses-1-5" },
+        { label: "Class 6 to 10", sectionId: "courses-6-10" },
+        { label: "Class 11 to 12", sectionId: "courses-11-12" },
+       
+      ],
+     },
+    { title: "Online Tutors", 
+        subItems: [
+        { label: "Class 1 to 5", sectionId: "courses-1-5" },
+        { label: "Class 6 to 10", sectionId: "courses-6-10" },
+        { label: "Class 11 to 12", sectionId: "courses-11-12" },
+        
+      ],
+     },
+    { title: "Online Mentors",   subItems: [
+        { label: "Class 1 to 5", sectionId: "courses-1-5" },
+        { label: "Class 6 to 10", sectionId: "courses-6-10" },
+        { label: "Class 11 to 12", sectionId: "courses-11-12" },
+    
+      ],},
+     { title: "Join Us",
+      subItems:[
+ { label: "Become Local Tutor", sectionId: "exam-1" },
+        { label: "Become Online Tutor", sectionId: "exam-2" },
+        { label: "Become Mentor", sectionId: "exam-3" },
+      ]
+    }
   ];
 
   return (
@@ -762,6 +788,18 @@ export function Header() {
           {/* Right: Social Icons + Login + Mobile Menu Toggle */}
           <div className="flex items-center gap-2">
             {/* Facebook */}
+
+
+           <Button
+  size="icon"
+  className="bg-black hover:bg-gray-800 text-white rounded-lg h-9 w-9"
+  onClick={() => window.open("https://x.com", "_blank")}
+  aria-label="X"
+>
+  <X className="w-4 h-4" />
+</Button>
+
+
             <Button
               size="icon"
               className="bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-lg h-9 w-9"
