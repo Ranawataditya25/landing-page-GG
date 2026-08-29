@@ -10,6 +10,9 @@ import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import  Compitive  from "@/components/Compitive";
 import  TopMentors  from "@/components/TopMentor";
+import LocalTutor from "../components/LocalTutor";
+import Tutor from "../components/Tutor";
+import Mentor from "../components/Mentor";
 import PsychologicalSupportMentor from "@/components/PsychologicalSupportMentor"
 export default function Home() {
   return (
@@ -19,10 +22,14 @@ export default function Home() {
       <Features />
 
       <Compitive />
+      <LocalTutor />
+      <Tutor/>
+      <Mentor/>
       <TopMentors />
+       
       <PsychologicalSupportMentor />
       <ReferEarn />
-      
+     
       {/* <EarlyRegistration /> */}
       <Testimonials />
       <Contact />
