@@ -13,6 +13,7 @@ import  TopMentors  from "@/components/TopMentor";
 import LocalTutor from "../components/LocalTutor";
 import Tutor from "../components/Tutor";
 import Mentor from "../components/Mentor";
+import Support from "../components/Support";
 import PsychologicalSupportMentor from "@/components/PsychologicalSupportMentor"
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
       <LocalTutor />
       <Tutor/>
       <Mentor/>
+<Support/>
+
       <TopMentors />
        
       <PsychologicalSupportMentor />
