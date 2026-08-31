@@ -59,6 +59,10 @@ import JuniorOlympiad from "./JuniorOlympiad";
 import SelectedSubjects from "./SelectedSubjects";
 import LocalTutor from "./LocalTutor";
 import ProfileLocalTutor from "./ProfileLocalTutor";
+
+import HeaderClass from "./HeaderClass";
+
+import PhyClass from "./PhyClass";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -76,6 +80,10 @@ function Router() {
       <Route path="/profilelocaltutor/:id" component={ProfileLocalTutor} />
       <Route path="/profilelocaltutor" component={ProfileLocalTutor} />
       
+          <Route path="/headerclass" component={HeaderClass} />
+
+          <Route path="/phyclass" component={PhyClass} />
+
       <Route component={NotFound} />
     </Switch>
   );

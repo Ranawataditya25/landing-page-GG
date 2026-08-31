@@ -28,7 +28,7 @@ export default function Home() {
       <Mentor/>
 <Support/>
 
-      <TopMentors />
+      {/* <TopMentors /> */}
        
       <PsychologicalSupportMentor />
       <ReferEarn />
