@@ -435,6 +435,7 @@ import {
   BookMarked,
   ChevronDown
 } from 'lucide-react';
+import  {Header}  from './Header';
 
 interface Tutor {
   id: string;
@@ -553,7 +554,7 @@ export default function TutorFinderPage() {
         {/* ================= HERO SECTION ================= */}
         <div className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-slate-100 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+            <Header/>
             {/* Left Column: Heading & Text */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-100 text-orange-600 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold">

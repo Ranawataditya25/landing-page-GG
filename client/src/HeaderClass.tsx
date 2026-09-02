@@ -1269,6 +1269,8 @@ import {
   GraduationCap,
 } from "lucide-react";
 
+import  {Header}  from '../src/components/Header';
+
 interface Mentor {
   id: string;
   name: string;
@@ -1539,7 +1541,7 @@ export default function HeaderClass() {
     return (
       <div className="min-h-screen bg-[#F8FAFC] text-slate-800 antialiased py-8 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto space-y-6">
-          
+       
           {/* Back Navigation Button */}
           <button
             onClick={() => setSelectedMentor(null)}
@@ -1914,7 +1916,12 @@ export default function HeaderClass() {
      ========================================================= */
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-800 antialiased">
-      <div className="max-w-[1400px] mx-auto px-4 py-8">
+      
+      <div className="max-w-[1600px] mx-auto px-4 py-8">
+            <Header/> 
+
+            <div className="flex items-center justify-between gap-4 mb-6"/>
+              
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* ================= LEFT SIDEBAR - FILTERS ================= */}
