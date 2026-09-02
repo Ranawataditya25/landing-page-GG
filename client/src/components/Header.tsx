@@ -1756,6 +1756,7 @@ export function Header() {
         { label: "Class 1 to 5", sectionId: "courses-1-5" },
         { label: "Class 6 to 10", sectionId: "courses-6-10" },
         { label: "Class 11 to 12", sectionId: "courses-11-12" },
+         { label: "Exam Preparation", sectionId: "Exam Preparation" },
       ],
     },
     {
@@ -1764,6 +1765,7 @@ export function Header() {
         { label: "Class 1 to 5", sectionId: "courses-1-5" },
         { label: "Class 6 to 10", sectionId: "courses-6-10" },
         { label: "Class 11 to 12", sectionId: "courses-11-12" },
+         { label: "Exam Preparation", sectionId: "Exam Preparation" },
       ],
     },
     {
@@ -1772,6 +1774,7 @@ export function Header() {
         { label: "Class 1 to 5", path: "/headerclass?class=1-5" },
         { label: "Class 6 to 10", path: "/headerclass?class=6-10" },
         { label: "Class 11 to 12", path: "/headerclass?class=11-12" },
+         { label: "Exam Preparation", sectionId: "Exam Preparation" },
       ],
     },
     {

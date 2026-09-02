@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* <TopMentors /> */}
        
-      <PsychologicalSupportMentor />
+      {/* <PsychologicalSupportMentor /> */}
       <ReferEarn />
      
       {/* <EarlyRegistration /> */}
