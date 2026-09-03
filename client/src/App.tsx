@@ -61,7 +61,7 @@ import LocalTutor from "./LocalTutor";
 import ProfileLocalTutor from "./ProfileLocalTutor";
 
 import HeaderClass from "./HeaderClass";
-
+import OtherMentor from "./OtherMentor";
 import PhyClass from "./PhyClass";
 import NotFound from "@/pages/not-found";
 
@@ -83,6 +83,8 @@ function Router() {
           <Route path="/headerclass" component={HeaderClass} />
 
           <Route path="/phyclass" component={PhyClass} />
+
+          <Route path="/othermentor" component={OtherMentor} />
 
       <Route component={NotFound} />
     </Switch>

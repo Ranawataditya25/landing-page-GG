@@ -23,14 +23,14 @@ export default function Home() {
       <Features />
 
       <Compitive />
-      <LocalTutor />
+      {/* <LocalTutor /> */}
       <Tutor/>
       <Mentor/>
 <Support/>
 
       {/* <TopMentors /> */}
        
-      {/* <PsychologicalSupportMentor /> */}
+     <PsychologicalSupportMentor />  
       <ReferEarn />
      
       {/* <EarlyRegistration /> */}
