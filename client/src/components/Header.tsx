@@ -2497,14 +2497,14 @@ export function Header() {
         { label: "Exam Preparation", sectionId: "Exam Preparation" },
       ],
     },
-    {
-      title: "Join Us",
-      subItems: [
-        { label: "Become Local Tutor", sectionId: "exam-1" },
-        { label: "Become Online Tutor", sectionId: "exam-2" },
-        { label: "Become Mentor", sectionId: "exam-3" },
-      ],
-    },
+    // {
+    //   title: "Join Us",
+    //   subItems: [
+    //     { label: "Become Local Tutor",  path: "/becometutor?class=1-5" },
+    //     { label: "Become Online Tutor", path: "/becomeonlinetut?class=1-5" },
+    //     { label: "Become Mentor",  path: "/comementor?" },
+    //   ],
+    // },
   ];
 
   return (
