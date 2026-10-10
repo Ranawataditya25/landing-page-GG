@@ -400,6 +400,7 @@
 // }
 
 
+
 import React, { useState, useEffect } from 'react';
 import { 
   Home, 
@@ -539,19 +540,32 @@ export default function TutorsListingPage() {
         const mentorsList = Array.isArray(data) ? data : data.mentors || data.data || [];
 
         if (mentorsList.length > 0) {
-          const formattedTutors: Tutor[] = mentorsList.map((item: any, index: number) => ({
-            id: item.id || item._id || index + 1,
-            name: item.name || item.fullName || "Verified Tutor",
-            image: item.image || item.photo || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80",
-            degree: item.degree || item.qualification || "Qualified Educator",
-            experience: item.experience || "Experienced Mentor",
-            classes: item.classes || "Class 6 - 12",
-            subjects: item.subjects || "General Subjects",
-            boards: item.boards || "CBSE | ICSE",
-            rating: item.rating || 4.8,
-            reviewsCount: item.reviewsCount || item.reviews || 50,
-            price: item.price || "₹5,000 / month"
-          }));
+          const formattedTutors: Tutor[] = mentorsList.map((item: any, index: number) => {
+            // Handle mentorAbilities array or convert it to a comma-separated string
+            const subjectsStr = Array.isArray(item.mentorAbilities)
+              ? item.mentorAbilities.join(', ')
+              : item.mentorAbilities || item.subjects || "General Subjects";
+
+            // Handle image path (if it returns a relative path like '/default-avatar.png', handle or fallback gracefully)
+            let imageUrl = item.profileImage || item.image || item.photo;
+            if (!imageUrl || imageUrl.startsWith('/')) {
+              imageUrl = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80";
+            }
+
+            return {
+              id: item.id || item._id || index + 1,
+              name: item.name || item.fullName || "Verified Tutor",
+              image: imageUrl,
+              degree: item.degree || item.qualification || "Qualified Educator",
+              experience: item.experience || "Experienced Mentor",
+              classes: item.specializedIn ? `Class ${item.specializedIn}` : (item.classes || "Class 6 - 12"),
+              subjects: subjectsStr,
+              boards: item.boards || "CBSE | ICSE",
+              rating: item.rating || 4.8,
+              reviewsCount: item.reviewsCount || item.reviews || 50,
+              price: item.price || "₹5,000 / month"
+            };
+          });
           setTutors(formattedTutors);
         }
       } catch (err: any) {
@@ -725,7 +739,7 @@ export default function TutorsListingPage() {
           </div>
         </div>
 
-        {/* Loading and Error States */}
+        {/* Loading State */}
         {loading && (
           <div className="flex flex-col items-center justify-center py-20 bg-white rounded-xl border border-slate-200 mb-6">
             <Loader2 className="w-8 h-8 text-blue-600 animate-spin mb-2" />
@@ -774,7 +788,7 @@ export default function TutorsListingPage() {
                     </div>
                     <div className="flex items-start gap-1.5 text-[11px] text-slate-600">
                       <span className="w-3.5 h-3.5 flex items-center justify-center font-serif text-[10px] text-slate-400 shrink-0">ψ</span>
-                      <span>{tutor.subjects}</span>
+                      <span className="capitalize">{tutor.subjects}</span>
                     </div>
                     <div className="flex items-start gap-1.5 text-[11px] text-slate-600">
                       <BookOpen className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
